@@ -1,0 +1,22 @@
+{
+  "registered_at_utc": "2026-09-16T09:04:40.319330+00:00",
+  "q_Benign": 0.16166667640209198,
+  "q_Attack": 0.9805555418133736,
+  "threshold_sum": 1.1422222182154655,
+  "min_p_Benign": 0.838333323597908,
+  "min_p_Attack": 0.019444458186626434,
+  "epsilon": 0.1,
+  "n_Benign": 200,
+  "n_Attack": 200,
+  "order_statistic_one_based": 181,
+  "order_statistic_zero_based": 180,
+  "sorting": "ascending; no interpolation",
+  "scores": {
+    "Benign": "raw_probability",
+    "Attack": "1.0-raw_probability"
+  },
+  "dtype": "float64",
+  "calibration_rank_start": 0,
+  "calibration_rank_end_exclusive": 4020,
+  "evaluation_not_started": true
+}

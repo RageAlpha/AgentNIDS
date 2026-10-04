@@ -1,0 +1,16 @@
+{
+  "committed_at_utc": "2026-09-14T09:28:17.009258+00:00",
+  "labels_opened": false,
+  "probabilities_read": false,
+  "algorithm": "per-domain numpy.random.Generator(numpy.random.PCG64(20260914)).choice(100000, size=400, replace=False); sort after draw",
+  "numpy_version": "2.4.6",
+  "sha256": {
+    "ToN_sorted_ranks.npy": "a62e2a55e810d96cae6880f881854861d89179bac8f538549dda7b0e9b5480ae",
+    "CIC_draw_order_ranks.npy": "18f5f52c6a908c971e0544268b4d8f43575052592944529c252407df2ae47c8f",
+    "calibration_ranks.csv": "b17367ca2e3d85b0ec81b32d0c05615e92608e024fb09bb406d1d4f635618ddf",
+    "CIC_sorted_ranks.npy": "a62e2a55e810d96cae6880f881854861d89179bac8f538549dda7b0e9b5480ae",
+    "ToN_draw_order_ranks.npy": "18f5f52c6a908c971e0544268b4d8f43575052592944529c252407df2ae47c8f",
+    "BoT_draw_order_ranks.npy": "18f5f52c6a908c971e0544268b4d8f43575052592944529c252407df2ae47c8f",
+    "BoT_sorted_ranks.npy": "a62e2a55e810d96cae6880f881854861d89179bac8f538549dda7b0e9b5480ae"
+  }
+}

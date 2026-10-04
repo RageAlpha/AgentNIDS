@@ -1,0 +1,7 @@
+{
+  "project_root": "/home/karri/projects/NIDSProject_Professor_Run",
+  "data_root": "/home/karri/projects/NIDSProject_Professor_Run/datasets",
+  "output_root": "/home/karri/projects/NIDSProject_Professor_Run/outputs",
+  "prepared_run": "/home/karri/projects/NIDSProject_Professor_Run/outputs/round1_data_prep_v1",
+  "python": "python3"
+}

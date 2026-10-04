@@ -1,0 +1,564 @@
+{
+  "version": "source-preprocessing-v2.0",
+  "status": "COMPLETE",
+  "completed_at_utc": "2026-09-05T15:46:06.501992+00:00",
+  "fit_domain": "UNSW",
+  "fit_partition": "S_train",
+  "fit_rank_start": 0,
+  "fit_rank_end_exclusive": 1420000,
+  "fit_rows": 1420000,
+  "numeric_fill": "finite_median",
+  "categorical_fill": "mode_smallest_value_tiebreak",
+  "all_source_missing_fill": 0,
+  "all_source_missing_features": [],
+  "standardization": "S_train_imputed_mean_population_standard_deviation",
+  "constant_scale_features": [],
+  "statistics_file": "preprocessing_stats.npz",
+  "feature_order": [
+    "IN_BYTES",
+    "OUT_BYTES",
+    "IN_PKTS",
+    "OUT_PKTS",
+    "LONGEST_FLOW_PKT",
+    "SHORTEST_FLOW_PKT",
+    "MIN_IP_PKT_LEN",
+    "MAX_IP_PKT_LEN",
+    "SRC_TO_DST_SECOND_BYTES",
+    "DST_TO_SRC_SECOND_BYTES",
+    "SRC_TO_DST_AVG_THROUGHPUT",
+    "DST_TO_SRC_AVG_THROUGHPUT",
+    "NUM_PKTS_UP_TO_128_BYTES",
+    "NUM_PKTS_128_TO_256_BYTES",
+    "NUM_PKTS_256_TO_512_BYTES",
+    "NUM_PKTS_512_TO_1024_BYTES",
+    "NUM_PKTS_1024_TO_1514_BYTES",
+    "L4_SRC_PORT",
+    "L4_DST_PORT",
+    "PROTOCOL",
+    "L7_PROTO",
+    "TCP_FLAGS",
+    "CLIENT_TCP_FLAGS",
+    "SERVER_TCP_FLAGS",
+    "MIN_TTL",
+    "MAX_TTL",
+    "TCP_WIN_MAX_IN",
+    "TCP_WIN_MAX_OUT",
+    "ICMP_TYPE",
+    "ICMP_IPV4_TYPE",
+    "DNS_QUERY_ID",
+    "DNS_QUERY_TYPE",
+    "DNS_TTL_ANSWER",
+    "FTP_COMMAND_RET_CODE",
+    "FLOW_DURATION_MILLISECONDS",
+    "DURATION_IN",
+    "DURATION_OUT",
+    "RETRANSMITTED_IN_BYTES",
+    "RETRANSMITTED_IN_PKTS",
+    "RETRANSMITTED_OUT_BYTES",
+    "RETRANSMITTED_OUT_PKTS",
+    "SRC_TO_DST_IAT_MIN",
+    "SRC_TO_DST_IAT_MAX",
+    "SRC_TO_DST_IAT_AVG",
+    "SRC_TO_DST_IAT_STDDEV",
+    "DST_TO_SRC_IAT_MIN",
+    "DST_TO_SRC_IAT_MAX",
+    "DST_TO_SRC_IAT_AVG",
+    "DST_TO_SRC_IAT_STDDEV"
+  ],
+  "artifact_sizes_bytes": {
+    "preprocessing_stats.npz": 1920,
+    "jsd_numeric_reference.npz": 26132,
+    "jsd_categorical_reference.npz": 3086158,
+    "jsd_source_reference.json": 10088
+  },
+  "fit_device": "NVIDIA RTX A5000",
+  "fit_device_index": 0,
+  "gpu_memory_pool_peak_proxy_bytes": 1739501056,
+  "transformed_full_store_finite_checks": [
+    {
+      "domain": "UNSW",
+      "rows": 2365424,
+      "tree_finite_values": 115905776,
+      "mlp_finite_values": 115905776,
+      "expected_finite_values": 115905776
+    },
+    {
+      "domain": "CIC",
+      "rows": 20115529,
+      "tree_finite_values": 985660921,
+      "mlp_finite_values": 985660921,
+      "expected_finite_values": 985660921
+    },
+    {
+      "domain": "BoT",
+      "rows": 16933808,
+      "tree_finite_values": 829756592,
+      "mlp_finite_values": 829756592,
+      "expected_finite_values": 829756592
+    },
+    {
+      "domain": "ToN",
+      "rows": 27520260,
+      "tree_finite_values": 1348492740,
+      "mlp_finite_values": 1348492740,
+      "expected_finite_values": 1348492740
+    }
+  ],
+  "jsd_reference": {
+    "status": "COMPLETE",
+    "fit_partition": "S_train",
+    "fit_rows": 1420000,
+    "device": "NVIDIA RTX A5000",
+    "numeric_rule": "10_source_equal_frequency_quantiles_duplicate_edges_collapsed",
+    "categorical_rule": "source_vocabulary_plus_OTHER",
+    "logarithm_base": 2,
+    "aggregate": "mean_over_49_marginals",
+    "features": [
+      {
+        "feature": "IN_BYTES",
+        "kind": "numeric",
+        "effective_bins": 10,
+        "duplicate_edges_collapsed": 0,
+        "outer_edges": [
+          "-Infinity",
+          "Infinity"
+        ]
+      },
+      {
+        "feature": "OUT_BYTES",
+        "kind": "numeric",
+        "effective_bins": 10,
+        "duplicate_edges_collapsed": 0,
+        "outer_edges": [
+          "-Infinity",
+          "Infinity"
+        ]
+      },
+      {
+        "feature": "IN_PKTS",
+        "kind": "numeric",
+        "effective_bins": 10,
+        "duplicate_edges_collapsed": 0,
+        "outer_edges": [
+          "-Infinity",
+          "Infinity"
+        ]
+      },
+      {
+        "feature": "OUT_PKTS",
+        "kind": "numeric",
+        "effective_bins": 10,
+        "duplicate_edges_collapsed": 0,
+        "outer_edges": [
+          "-Infinity",
+          "Infinity"
+        ]
+      },
+      {
+        "feature": "LONGEST_FLOW_PKT",
+        "kind": "numeric",
+        "effective_bins": 9,
+        "duplicate_edges_collapsed": 1,
+        "outer_edges": [
+          "-Infinity",
+          "Infinity"
+        ]
+      },
+      {
+        "feature": "SHORTEST_FLOW_PKT",
+        "kind": "numeric",
+        "effective_bins": 3,
+        "duplicate_edges_collapsed": 7,
+        "outer_edges": [
+          "-Infinity",
+          "Infinity"
+        ]
+      },
+      {
+        "feature": "MIN_IP_PKT_LEN",
+        "kind": "numeric",
+        "effective_bins": 3,
+        "duplicate_edges_collapsed": 7,
+        "outer_edges": [
+          "-Infinity",
+          "Infinity"
+        ]
+      },
+      {
+        "feature": "MAX_IP_PKT_LEN",
+        "kind": "numeric",
+        "effective_bins": 9,
+        "duplicate_edges_collapsed": 1,
+        "outer_edges": [
+          "-Infinity",
+          "Infinity"
+        ]
+      },
+      {
+        "feature": "SRC_TO_DST_SECOND_BYTES",
+        "kind": "numeric",
+        "effective_bins": 10,
+        "duplicate_edges_collapsed": 0,
+        "outer_edges": [
+          "-Infinity",
+          "Infinity"
+        ]
+      },
+      {
+        "feature": "DST_TO_SRC_SECOND_BYTES",
+        "kind": "numeric",
+        "effective_bins": 10,
+        "duplicate_edges_collapsed": 0,
+        "outer_edges": [
+          "-Infinity",
+          "Infinity"
+        ]
+      },
+      {
+        "feature": "SRC_TO_DST_AVG_THROUGHPUT",
+        "kind": "numeric",
+        "effective_bins": 10,
+        "duplicate_edges_collapsed": 0,
+        "outer_edges": [
+          "-Infinity",
+          "Infinity"
+        ]
+      },
+      {
+        "feature": "DST_TO_SRC_AVG_THROUGHPUT",
+        "kind": "numeric",
+        "effective_bins": 10,
+        "duplicate_edges_collapsed": 0,
+        "outer_edges": [
+          "-Infinity",
+          "Infinity"
+        ]
+      },
+      {
+        "feature": "NUM_PKTS_UP_TO_128_BYTES",
+        "kind": "numeric",
+        "effective_bins": 10,
+        "duplicate_edges_collapsed": 0,
+        "outer_edges": [
+          "-Infinity",
+          "Infinity"
+        ]
+      },
+      {
+        "feature": "NUM_PKTS_128_TO_256_BYTES",
+        "kind": "numeric",
+        "effective_bins": 4,
+        "duplicate_edges_collapsed": 6,
+        "outer_edges": [
+          "-Infinity",
+          "Infinity"
+        ]
+      },
+      {
+        "feature": "NUM_PKTS_256_TO_512_BYTES",
+        "kind": "numeric",
+        "effective_bins": 4,
+        "duplicate_edges_collapsed": 6,
+        "outer_edges": [
+          "-Infinity",
+          "Infinity"
+        ]
+      },
+      {
+        "feature": "NUM_PKTS_512_TO_1024_BYTES",
+        "kind": "numeric",
+        "effective_bins": 3,
+        "duplicate_edges_collapsed": 7,
+        "outer_edges": [
+          "-Infinity",
+          "Infinity"
+        ]
+      },
+      {
+        "feature": "NUM_PKTS_1024_TO_1514_BYTES",
+        "kind": "numeric",
+        "effective_bins": 6,
+        "duplicate_edges_collapsed": 4,
+        "outer_edges": [
+          "-Infinity",
+          "Infinity"
+        ]
+      },
+      {
+        "feature": "MIN_TTL",
+        "kind": "numeric",
+        "effective_bins": 2,
+        "duplicate_edges_collapsed": 8,
+        "outer_edges": [
+          "-Infinity",
+          "Infinity"
+        ]
+      },
+      {
+        "feature": "MAX_TTL",
+        "kind": "numeric",
+        "effective_bins": 3,
+        "duplicate_edges_collapsed": 7,
+        "outer_edges": [
+          "-Infinity",
+          "Infinity"
+        ]
+      },
+      {
+        "feature": "TCP_WIN_MAX_IN",
+        "kind": "numeric",
+        "effective_bins": 9,
+        "duplicate_edges_collapsed": 1,
+        "outer_edges": [
+          "-Infinity",
+          "Infinity"
+        ]
+      },
+      {
+        "feature": "TCP_WIN_MAX_OUT",
+        "kind": "numeric",
+        "effective_bins": 8,
+        "duplicate_edges_collapsed": 2,
+        "outer_edges": [
+          "-Infinity",
+          "Infinity"
+        ]
+      },
+      {
+        "feature": "DNS_TTL_ANSWER",
+        "kind": "numeric",
+        "effective_bins": 3,
+        "duplicate_edges_collapsed": 7,
+        "outer_edges": [
+          "-Infinity",
+          "Infinity"
+        ]
+      },
+      {
+        "feature": "FLOW_DURATION_MILLISECONDS",
+        "kind": "numeric",
+        "effective_bins": 10,
+        "duplicate_edges_collapsed": 0,
+        "outer_edges": [
+          "-Infinity",
+          "Infinity"
+        ]
+      },
+      {
+        "feature": "DURATION_IN",
+        "kind": "numeric",
+        "effective_bins": 10,
+        "duplicate_edges_collapsed": 0,
+        "outer_edges": [
+          "-Infinity",
+          "Infinity"
+        ]
+      },
+      {
+        "feature": "DURATION_OUT",
+        "kind": "numeric",
+        "effective_bins": 10,
+        "duplicate_edges_collapsed": 0,
+        "outer_edges": [
+          "-Infinity",
+          "Infinity"
+        ]
+      },
+      {
+        "feature": "RETRANSMITTED_IN_BYTES",
+        "kind": "numeric",
+        "effective_bins": 9,
+        "duplicate_edges_collapsed": 1,
+        "outer_edges": [
+          "-Infinity",
+          "Infinity"
+        ]
+      },
+      {
+        "feature": "RETRANSMITTED_IN_PKTS",
+        "kind": "numeric",
+        "effective_bins": 7,
+        "duplicate_edges_collapsed": 3,
+        "outer_edges": [
+          "-Infinity",
+          "Infinity"
+        ]
+      },
+      {
+        "feature": "RETRANSMITTED_OUT_BYTES",
+        "kind": "numeric",
+        "effective_bins": 9,
+        "duplicate_edges_collapsed": 1,
+        "outer_edges": [
+          "-Infinity",
+          "Infinity"
+        ]
+      },
+      {
+        "feature": "RETRANSMITTED_OUT_PKTS",
+        "kind": "numeric",
+        "effective_bins": 9,
+        "duplicate_edges_collapsed": 1,
+        "outer_edges": [
+          "-Infinity",
+          "Infinity"
+        ]
+      },
+      {
+        "feature": "SRC_TO_DST_IAT_MIN",
+        "kind": "numeric",
+        "effective_bins": 2,
+        "duplicate_edges_collapsed": 8,
+        "outer_edges": [
+          "-Infinity",
+          "Infinity"
+        ]
+      },
+      {
+        "feature": "SRC_TO_DST_IAT_MAX",
+        "kind": "numeric",
+        "effective_bins": 10,
+        "duplicate_edges_collapsed": 0,
+        "outer_edges": [
+          "-Infinity",
+          "Infinity"
+        ]
+      },
+      {
+        "feature": "SRC_TO_DST_IAT_AVG",
+        "kind": "numeric",
+        "effective_bins": 6,
+        "duplicate_edges_collapsed": 4,
+        "outer_edges": [
+          "-Infinity",
+          "Infinity"
+        ]
+      },
+      {
+        "feature": "SRC_TO_DST_IAT_STDDEV",
+        "kind": "numeric",
+        "effective_bins": 7,
+        "duplicate_edges_collapsed": 3,
+        "outer_edges": [
+          "-Infinity",
+          "Infinity"
+        ]
+      },
+      {
+        "feature": "DST_TO_SRC_IAT_MIN",
+        "kind": "numeric",
+        "effective_bins": 2,
+        "duplicate_edges_collapsed": 8,
+        "outer_edges": [
+          "-Infinity",
+          "Infinity"
+        ]
+      },
+      {
+        "feature": "DST_TO_SRC_IAT_MAX",
+        "kind": "numeric",
+        "effective_bins": 9,
+        "duplicate_edges_collapsed": 1,
+        "outer_edges": [
+          "-Infinity",
+          "Infinity"
+        ]
+      },
+      {
+        "feature": "DST_TO_SRC_IAT_AVG",
+        "kind": "numeric",
+        "effective_bins": 6,
+        "duplicate_edges_collapsed": 4,
+        "outer_edges": [
+          "-Infinity",
+          "Infinity"
+        ]
+      },
+      {
+        "feature": "DST_TO_SRC_IAT_STDDEV",
+        "kind": "numeric",
+        "effective_bins": 7,
+        "duplicate_edges_collapsed": 3,
+        "outer_edges": [
+          "-Infinity",
+          "Infinity"
+        ]
+      },
+      {
+        "feature": "L4_SRC_PORT",
+        "kind": "categorical",
+        "source_vocabulary_size": 64555,
+        "unseen_category": "OTHER"
+      },
+      {
+        "feature": "L4_DST_PORT",
+        "kind": "categorical",
+        "source_vocabulary_size": 64414,
+        "unseen_category": "OTHER"
+      },
+      {
+        "feature": "PROTOCOL",
+        "kind": "categorical",
+        "source_vocabulary_size": 255,
+        "unseen_category": "OTHER"
+      },
+      {
+        "feature": "L7_PROTO",
+        "kind": "categorical",
+        "source_vocabulary_size": 129,
+        "unseen_category": "OTHER"
+      },
+      {
+        "feature": "TCP_FLAGS",
+        "kind": "categorical",
+        "source_vocabulary_size": 12,
+        "unseen_category": "OTHER"
+      },
+      {
+        "feature": "CLIENT_TCP_FLAGS",
+        "kind": "categorical",
+        "source_vocabulary_size": 11,
+        "unseen_category": "OTHER"
+      },
+      {
+        "feature": "SERVER_TCP_FLAGS",
+        "kind": "categorical",
+        "source_vocabulary_size": 12,
+        "unseen_category": "OTHER"
+      },
+      {
+        "feature": "ICMP_TYPE",
+        "kind": "categorical",
+        "source_vocabulary_size": 804,
+        "unseen_category": "OTHER"
+      },
+      {
+        "feature": "ICMP_IPV4_TYPE",
+        "kind": "categorical",
+        "source_vocabulary_size": 256,
+        "unseen_category": "OTHER"
+      },
+      {
+        "feature": "DNS_QUERY_ID",
+        "kind": "categorical",
+        "source_vocabulary_size": 61984,
+        "unseen_category": "OTHER"
+      },
+      {
+        "feature": "DNS_QUERY_TYPE",
+        "kind": "categorical",
+        "source_vocabulary_size": 16,
+        "unseen_category": "OTHER"
+      },
+      {
+        "feature": "FTP_COMMAND_RET_CODE",
+        "kind": "categorical",
+        "source_vocabulary_size": 16,
+        "unseen_category": "OTHER"
+      }
+    ],
+    "numeric_reference_file": "jsd_numeric_reference.npz",
+    "categorical_reference_file": "jsd_categorical_reference.npz"
+  },
+  "elapsed_seconds": 22.005064981989563
+}

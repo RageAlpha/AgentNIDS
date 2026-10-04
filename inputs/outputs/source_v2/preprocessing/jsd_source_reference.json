@@ -1,0 +1,456 @@
+{
+  "status": "COMPLETE",
+  "fit_partition": "S_train",
+  "fit_rows": 1420000,
+  "device": "NVIDIA RTX A5000",
+  "numeric_rule": "10_source_equal_frequency_quantiles_duplicate_edges_collapsed",
+  "categorical_rule": "source_vocabulary_plus_OTHER",
+  "logarithm_base": 2,
+  "aggregate": "mean_over_49_marginals",
+  "features": [
+    {
+      "feature": "IN_BYTES",
+      "kind": "numeric",
+      "effective_bins": 10,
+      "duplicate_edges_collapsed": 0,
+      "outer_edges": [
+        "-Infinity",
+        "Infinity"
+      ]
+    },
+    {
+      "feature": "OUT_BYTES",
+      "kind": "numeric",
+      "effective_bins": 10,
+      "duplicate_edges_collapsed": 0,
+      "outer_edges": [
+        "-Infinity",
+        "Infinity"
+      ]
+    },
+    {
+      "feature": "IN_PKTS",
+      "kind": "numeric",
+      "effective_bins": 10,
+      "duplicate_edges_collapsed": 0,
+      "outer_edges": [
+        "-Infinity",
+        "Infinity"
+      ]
+    },
+    {
+      "feature": "OUT_PKTS",
+      "kind": "numeric",
+      "effective_bins": 10,
+      "duplicate_edges_collapsed": 0,
+      "outer_edges": [
+        "-Infinity",
+        "Infinity"
+      ]
+    },
+    {
+      "feature": "LONGEST_FLOW_PKT",
+      "kind": "numeric",
+      "effective_bins": 9,
+      "duplicate_edges_collapsed": 1,
+      "outer_edges": [
+        "-Infinity",
+        "Infinity"
+      ]
+    },
+    {
+      "feature": "SHORTEST_FLOW_PKT",
+      "kind": "numeric",
+      "effective_bins": 3,
+      "duplicate_edges_collapsed": 7,
+      "outer_edges": [
+        "-Infinity",
+        "Infinity"
+      ]
+    },
+    {
+      "feature": "MIN_IP_PKT_LEN",
+      "kind": "numeric",
+      "effective_bins": 3,
+      "duplicate_edges_collapsed": 7,
+      "outer_edges": [
+        "-Infinity",
+        "Infinity"
+      ]
+    },
+    {
+      "feature": "MAX_IP_PKT_LEN",
+      "kind": "numeric",
+      "effective_bins": 9,
+      "duplicate_edges_collapsed": 1,
+      "outer_edges": [
+        "-Infinity",
+        "Infinity"
+      ]
+    },
+    {
+      "feature": "SRC_TO_DST_SECOND_BYTES",
+      "kind": "numeric",
+      "effective_bins": 10,
+      "duplicate_edges_collapsed": 0,
+      "outer_edges": [
+        "-Infinity",
+        "Infinity"
+      ]
+    },
+    {
+      "feature": "DST_TO_SRC_SECOND_BYTES",
+      "kind": "numeric",
+      "effective_bins": 10,
+      "duplicate_edges_collapsed": 0,
+      "outer_edges": [
+        "-Infinity",
+        "Infinity"
+      ]
+    },
+    {
+      "feature": "SRC_TO_DST_AVG_THROUGHPUT",
+      "kind": "numeric",
+      "effective_bins": 10,
+      "duplicate_edges_collapsed": 0,
+      "outer_edges": [
+        "-Infinity",
+        "Infinity"
+      ]
+    },
+    {
+      "feature": "DST_TO_SRC_AVG_THROUGHPUT",
+      "kind": "numeric",
+      "effective_bins": 10,
+      "duplicate_edges_collapsed": 0,
+      "outer_edges": [
+        "-Infinity",
+        "Infinity"
+      ]
+    },
+    {
+      "feature": "NUM_PKTS_UP_TO_128_BYTES",
+      "kind": "numeric",
+      "effective_bins": 10,
+      "duplicate_edges_collapsed": 0,
+      "outer_edges": [
+        "-Infinity",
+        "Infinity"
+      ]
+    },
+    {
+      "feature": "NUM_PKTS_128_TO_256_BYTES",
+      "kind": "numeric",
+      "effective_bins": 4,
+      "duplicate_edges_collapsed": 6,
+      "outer_edges": [
+        "-Infinity",
+        "Infinity"
+      ]
+    },
+    {
+      "feature": "NUM_PKTS_256_TO_512_BYTES",
+      "kind": "numeric",
+      "effective_bins": 4,
+      "duplicate_edges_collapsed": 6,
+      "outer_edges": [
+        "-Infinity",
+        "Infinity"
+      ]
+    },
+    {
+      "feature": "NUM_PKTS_512_TO_1024_BYTES",
+      "kind": "numeric",
+      "effective_bins": 3,
+      "duplicate_edges_collapsed": 7,
+      "outer_edges": [
+        "-Infinity",
+        "Infinity"
+      ]
+    },
+    {
+      "feature": "NUM_PKTS_1024_TO_1514_BYTES",
+      "kind": "numeric",
+      "effective_bins": 6,
+      "duplicate_edges_collapsed": 4,
+      "outer_edges": [
+        "-Infinity",
+        "Infinity"
+      ]
+    },
+    {
+      "feature": "MIN_TTL",
+      "kind": "numeric",
+      "effective_bins": 2,
+      "duplicate_edges_collapsed": 8,
+      "outer_edges": [
+        "-Infinity",
+        "Infinity"
+      ]
+    },
+    {
+      "feature": "MAX_TTL",
+      "kind": "numeric",
+      "effective_bins": 3,
+      "duplicate_edges_collapsed": 7,
+      "outer_edges": [
+        "-Infinity",
+        "Infinity"
+      ]
+    },
+    {
+      "feature": "TCP_WIN_MAX_IN",
+      "kind": "numeric",
+      "effective_bins": 9,
+      "duplicate_edges_collapsed": 1,
+      "outer_edges": [
+        "-Infinity",
+        "Infinity"
+      ]
+    },
+    {
+      "feature": "TCP_WIN_MAX_OUT",
+      "kind": "numeric",
+      "effective_bins": 8,
+      "duplicate_edges_collapsed": 2,
+      "outer_edges": [
+        "-Infinity",
+        "Infinity"
+      ]
+    },
+    {
+      "feature": "DNS_TTL_ANSWER",
+      "kind": "numeric",
+      "effective_bins": 3,
+      "duplicate_edges_collapsed": 7,
+      "outer_edges": [
+        "-Infinity",
+        "Infinity"
+      ]
+    },
+    {
+      "feature": "FLOW_DURATION_MILLISECONDS",
+      "kind": "numeric",
+      "effective_bins": 10,
+      "duplicate_edges_collapsed": 0,
+      "outer_edges": [
+        "-Infinity",
+        "Infinity"
+      ]
+    },
+    {
+      "feature": "DURATION_IN",
+      "kind": "numeric",
+      "effective_bins": 10,
+      "duplicate_edges_collapsed": 0,
+      "outer_edges": [
+        "-Infinity",
+        "Infinity"
+      ]
+    },
+    {
+      "feature": "DURATION_OUT",
+      "kind": "numeric",
+      "effective_bins": 10,
+      "duplicate_edges_collapsed": 0,
+      "outer_edges": [
+        "-Infinity",
+        "Infinity"
+      ]
+    },
+    {
+      "feature": "RETRANSMITTED_IN_BYTES",
+      "kind": "numeric",
+      "effective_bins": 9,
+      "duplicate_edges_collapsed": 1,
+      "outer_edges": [
+        "-Infinity",
+        "Infinity"
+      ]
+    },
+    {
+      "feature": "RETRANSMITTED_IN_PKTS",
+      "kind": "numeric",
+      "effective_bins": 7,
+      "duplicate_edges_collapsed": 3,
+      "outer_edges": [
+        "-Infinity",
+        "Infinity"
+      ]
+    },
+    {
+      "feature": "RETRANSMITTED_OUT_BYTES",
+      "kind": "numeric",
+      "effective_bins": 9,
+      "duplicate_edges_collapsed": 1,
+      "outer_edges": [
+        "-Infinity",
+        "Infinity"
+      ]
+    },
+    {
+      "feature": "RETRANSMITTED_OUT_PKTS",
+      "kind": "numeric",
+      "effective_bins": 9,
+      "duplicate_edges_collapsed": 1,
+      "outer_edges": [
+        "-Infinity",
+        "Infinity"
+      ]
+    },
+    {
+      "feature": "SRC_TO_DST_IAT_MIN",
+      "kind": "numeric",
+      "effective_bins": 2,
+      "duplicate_edges_collapsed": 8,
+      "outer_edges": [
+        "-Infinity",
+        "Infinity"
+      ]
+    },
+    {
+      "feature": "SRC_TO_DST_IAT_MAX",
+      "kind": "numeric",
+      "effective_bins": 10,
+      "duplicate_edges_collapsed": 0,
+      "outer_edges": [
+        "-Infinity",
+        "Infinity"
+      ]
+    },
+    {
+      "feature": "SRC_TO_DST_IAT_AVG",
+      "kind": "numeric",
+      "effective_bins": 6,
+      "duplicate_edges_collapsed": 4,
+      "outer_edges": [
+        "-Infinity",
+        "Infinity"
+      ]
+    },
+    {
+      "feature": "SRC_TO_DST_IAT_STDDEV",
+      "kind": "numeric",
+      "effective_bins": 7,
+      "duplicate_edges_collapsed": 3,
+      "outer_edges": [
+        "-Infinity",
+        "Infinity"
+      ]
+    },
+    {
+      "feature": "DST_TO_SRC_IAT_MIN",
+      "kind": "numeric",
+      "effective_bins": 2,
+      "duplicate_edges_collapsed": 8,
+      "outer_edges": [
+        "-Infinity",
+        "Infinity"
+      ]
+    },
+    {
+      "feature": "DST_TO_SRC_IAT_MAX",
+      "kind": "numeric",
+      "effective_bins": 9,
+      "duplicate_edges_collapsed": 1,
+      "outer_edges": [
+        "-Infinity",
+        "Infinity"
+      ]
+    },
+    {
+      "feature": "DST_TO_SRC_IAT_AVG",
+      "kind": "numeric",
+      "effective_bins": 6,
+      "duplicate_edges_collapsed": 4,
+      "outer_edges": [
+        "-Infinity",
+        "Infinity"
+      ]
+    },
+    {
+      "feature": "DST_TO_SRC_IAT_STDDEV",
+      "kind": "numeric",
+      "effective_bins": 7,
+      "duplicate_edges_collapsed": 3,
+      "outer_edges": [
+        "-Infinity",
+        "Infinity"
+      ]
+    },
+    {
+      "feature": "L4_SRC_PORT",
+      "kind": "categorical",
+      "source_vocabulary_size": 64555,
+      "unseen_category": "OTHER"
+    },
+    {
+      "feature": "L4_DST_PORT",
+      "kind": "categorical",
+      "source_vocabulary_size": 64414,
+      "unseen_category": "OTHER"
+    },
+    {
+      "feature": "PROTOCOL",
+      "kind": "categorical",
+      "source_vocabulary_size": 255,
+      "unseen_category": "OTHER"
+    },
+    {
+      "feature": "L7_PROTO",
+      "kind": "categorical",
+      "source_vocabulary_size": 129,
+      "unseen_category": "OTHER"
+    },
+    {
+      "feature": "TCP_FLAGS",
+      "kind": "categorical",
+      "source_vocabulary_size": 12,
+      "unseen_category": "OTHER"
+    },
+    {
+      "feature": "CLIENT_TCP_FLAGS",
+      "kind": "categorical",
+      "source_vocabulary_size": 11,
+      "unseen_category": "OTHER"
+    },
+    {
+      "feature": "SERVER_TCP_FLAGS",
+      "kind": "categorical",
+      "source_vocabulary_size": 12,
+      "unseen_category": "OTHER"
+    },
+    {
+      "feature": "ICMP_TYPE",
+      "kind": "categorical",
+      "source_vocabulary_size": 804,
+      "unseen_category": "OTHER"
+    },
+    {
+      "feature": "ICMP_IPV4_TYPE",
+      "kind": "categorical",
+      "source_vocabulary_size": 256,
+      "unseen_category": "OTHER"
+    },
+    {
+      "feature": "DNS_QUERY_ID",
+      "kind": "categorical",
+      "source_vocabulary_size": 61984,
+      "unseen_category": "OTHER"
+    },
+    {
+      "feature": "DNS_QUERY_TYPE",
+      "kind": "categorical",
+      "source_vocabulary_size": 16,
+      "unseen_category": "OTHER"
+    },
+    {
+      "feature": "FTP_COMMAND_RET_CODE",
+      "kind": "categorical",
+      "source_vocabulary_size": 16,
+      "unseen_category": "OTHER"
+    }
+  ],
+  "numeric_reference_file": "jsd_numeric_reference.npz",
+  "categorical_reference_file": "jsd_categorical_reference.npz"
+}

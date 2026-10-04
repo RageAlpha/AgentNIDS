@@ -1,0 +1,40 @@
+{
+  "created_at_utc": "2026-09-17T01:48:13.898654+00:00",
+  "authority": "/home/karri/projects/NIDSProject/docs/Ton_variant/Reply_to_Siyuan_Week0_Analysis_and_Next_Step.md",
+  "authority_section": 5,
+  "preflight_scope": "/home/karri/projects/NIDSProject/outputs/post_p7_diagnostics/strict_k_reply4/run_20260914_Cpreflight_01/preflight/evaluation_scope.csv",
+  "preflight_protocol": "/home/karri/projects/NIDSProject/outputs/post_p7_diagnostics/strict_k_reply4/run_20260914_Cpreflight_01/preflight/protocol_draft.json",
+  "window_manifest": "/home/karri/projects/NIDSProject/outputs/round1_data_prep_v1/window_manifest.csv",
+  "inputs": {
+    "CIC": {
+      "labels": "/home/karri/projects/NIDSProject/outputs/feature_store_v2/CIC_label.npy",
+      "mapping": "/home/karri/projects/NIDSProject/outputs/round1_data_prep_v1/CIC_sorted_original_rows.npy",
+      "times": "/home/karri/projects/NIDSProject/outputs/round1_data_prep_v1/CIC_sorted_end_ms.npy",
+      "raw_csv": "/home/karri/projects/NIDSProject/datasets/NF-CICIDS2018-v3.csv",
+      "domain_manifest": "/home/karri/projects/NIDSProject/outputs/feature_store_v2/CIC_manifest.json"
+    },
+    "BoT": {
+      "labels": "/home/karri/projects/NIDSProject/outputs/feature_store_v2/BoT_label.npy",
+      "mapping": "/home/karri/projects/NIDSProject/outputs/round1_data_prep_v1/BoT_sorted_original_rows.npy",
+      "times": "/home/karri/projects/NIDSProject/outputs/round1_data_prep_v1/BoT_sorted_end_ms.npy",
+      "raw_csv": "/home/karri/projects/NIDSProject/datasets/NF-BoT-IoT-v3.csv",
+      "domain_manifest": "/home/karri/projects/NIDSProject/outputs/feature_store_v2/BoT_manifest.json"
+    }
+  },
+  "rank_range": [
+    0,
+    100000
+  ],
+  "windows": 10,
+  "window_size": 10000,
+  "label_mapping": {
+    "0": "Benign",
+    "1": "Attack"
+  },
+  "row_definition": "zero-based original CSV data row, header excluded; rank is existing availability order (FLOW_END_MILLISECONDS then original row)",
+  "cache_order": "availability rank already applied; labels sliced directly, never labels[original_rows]",
+  "raw_read_policy": "stream bytes past unrelated CSV rows without parsing labels; parse only startup original-row records; no evaluation labels accessed",
+  "purpose": "class support and 200th positions only; not a frozen calibration sample",
+  "ton_conclusion": "No-go unchanged",
+  "no_Week1": true
+}

@@ -1,0 +1,3 @@
+domain,class_label,class_name,numerator,denominator,value,rank_start,rank_end_exclusive
+UNSW,0,Benign,215384,215407,0.9998932253826477,2130000,2365424
+UNSW,1,Attack,20017,20017,1.0,2130000,2365424

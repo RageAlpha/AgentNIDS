@@ -1,0 +1,19 @@
+{
+  "model": "mlp_All49",
+  "domain": "ToN",
+  "frozen_at_utc": "2026-09-20T06:53:20.300825+00:00",
+  "q_Benign": 8.336214523296803e-05,
+  "q_Attack": 0.9999999993862371,
+  "threshold_sum": 1.0000833615314701,
+  "min_p_Attack": 6.137629293689884e-10,
+  "min_p_Benign": 0.999916637854767,
+  "gate": "Depreciation stops",
+  "epsilon": 0.1,
+  "n_Benign": 200,
+  "n_Attack": 200,
+  "order_statistic_one_based": 181,
+  "order_statistic_zero_based": 180,
+  "interpolation": false,
+  "dtype": "float64",
+  "evaluation_started": false
+}

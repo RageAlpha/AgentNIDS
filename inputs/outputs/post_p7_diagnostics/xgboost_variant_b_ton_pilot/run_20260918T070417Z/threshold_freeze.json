@@ -1,0 +1,20 @@
+{
+  "q_Benign": 0.009039638563990593,
+  "q_Attack": 0.9996102542208973,
+  "q_Benign_plus_q_Attack": 1.008649892784888,
+  "Attack_inclusion_lower_bound": 0.00038974577910266817,
+  "Benign_inclusion_lower_bound": 0.9909603614360094,
+  "frozen_at_utc": "2026-09-18T07:06:27.998451+00:00",
+  "precision": "float64",
+  "serialization": "Python float shortest round-trip decimal; no rounding",
+  "epsilon": 0.1,
+  "sample_count": 400,
+  "per_class": {
+    "Benign": 200,
+    "Attack": 200
+  },
+  "order_statistic_one_based": 181,
+  "order_statistic_zero_based": 180,
+  "gate_branch": "A / Outcome B",
+  "gate_status": "Full evaluation has not been carried out due to the suspension of the threshold; Outcome B by mail, without adding conformal experiments."
+}

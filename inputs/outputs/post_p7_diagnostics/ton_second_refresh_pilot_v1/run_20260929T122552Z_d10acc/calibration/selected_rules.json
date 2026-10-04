@@ -1,0 +1,531 @@
+{
+  "freeze_time": "2026-09-29T12:30:36.896276+00:00",
+  "methods": {
+    "T1_LOCAL": {
+      "B": {
+        "id": "T000",
+        "threshold": 0.5,
+        "accepted": 129,
+        "errors": 6,
+        "correct": 123,
+        "risk": 0.046511627906976744,
+        "feasible": true
+      },
+      "A": {
+        "id": "T000",
+        "threshold": 0.5,
+        "accepted": 71,
+        "errors": 0,
+        "correct": 71,
+        "risk": 0.0,
+        "feasible": true
+      },
+      "N_B": 123,
+      "N_A": 77,
+      "status": "TWO_ACTION_POLICY",
+      "feasible_enabled_candidates": {
+        "B": 11,
+        "A": 11
+      }
+    },
+    "T1_TARGET": {
+      "B": {
+        "id": "T007",
+        "threshold": 0.85,
+        "accepted": 128,
+        "errors": 5,
+        "correct": 123,
+        "risk": 0.0390625,
+        "feasible": true
+      },
+      "A": {
+        "id": "T000",
+        "threshold": 0.5,
+        "accepted": 71,
+        "errors": 0,
+        "correct": 71,
+        "risk": 0.0,
+        "feasible": true
+      },
+      "N_B": 123,
+      "N_A": 77,
+      "status": "TWO_ACTION_POLICY",
+      "feasible_enabled_candidates": {
+        "B": 10,
+        "A": 10
+      }
+    },
+    "T2_LOCAL": {
+      "B": {
+        "id": "T011",
+        "threshold": null,
+        "accepted": 0,
+        "errors": 0,
+        "correct": 0,
+        "risk": null,
+        "feasible": true
+      },
+      "A": {
+        "id": "T007",
+        "threshold": 0.85,
+        "accepted": 176,
+        "errors": 5,
+        "correct": 171,
+        "risk": 0.028409090909090908,
+        "feasible": true
+      },
+      "N_B": 15,
+      "N_A": 185,
+      "status": "PARTIAL_ACTION_POLICY",
+      "feasible_enabled_candidates": {
+        "B": 0,
+        "A": 4
+      }
+    },
+    "T2_TARGET": {
+      "B": {
+        "id": "T011",
+        "threshold": null,
+        "accepted": 0,
+        "errors": 0,
+        "correct": 0,
+        "risk": null,
+        "feasible": true
+      },
+      "A": {
+        "id": "T000",
+        "threshold": 0.5,
+        "accepted": 191,
+        "errors": 6,
+        "correct": 185,
+        "risk": 0.031413612565445025,
+        "feasible": true
+      },
+      "N_B": 15,
+      "N_A": 185,
+      "status": "PARTIAL_ACTION_POLICY",
+      "feasible_enabled_candidates": {
+        "B": 0,
+        "A": 11
+      }
+    },
+    "SOURCE_GATE_T1": {
+      "B": {
+        "id": "T011",
+        "threshold": null,
+        "accepted": 0,
+        "errors": 0,
+        "correct": 0,
+        "risk": null,
+        "feasible": true
+      },
+      "A": {
+        "id": "T000",
+        "threshold": 0.5,
+        "accepted": 70,
+        "errors": 0,
+        "correct": 70,
+        "risk": 0.0,
+        "feasible": true
+      },
+      "N_B": 123,
+      "N_A": 77,
+      "status": "PARTIAL_ACTION_POLICY",
+      "feasible_enabled_candidates": {
+        "B": 0,
+        "A": 5
+      }
+    },
+    "SOURCE_GATE_T2": {
+      "B": {
+        "id": "T011",
+        "threshold": null,
+        "accepted": 0,
+        "errors": 0,
+        "correct": 0,
+        "risk": null,
+        "feasible": true
+      },
+      "A": {
+        "id": "T001",
+        "threshold": 0.55,
+        "accepted": 183,
+        "errors": 9,
+        "correct": 174,
+        "risk": 0.04918032786885246,
+        "feasible": true
+      },
+      "N_B": 15,
+      "N_A": 185,
+      "status": "PARTIAL_ACTION_POLICY",
+      "feasible_enabled_candidates": {
+        "B": 0,
+        "A": 1
+      }
+    }
+  },
+  "protocol": {
+    "experiment": "ton_second_refresh_pilot_v1",
+    "created_at": "2026-09-29T12:30:36.509893+00:00",
+    "input_assets": {
+      "features": "/home/karri/projects/NIDSProject/outputs/feature_store_v2/ToN_X.npy",
+      "labels": "/home/karri/projects/NIDSProject/outputs/feature_store_v2/ToN_label.npy",
+      "probability": "/home/karri/projects/NIDSProject/outputs/prediction_cache_v2/ToN/rf_All49.npy",
+      "original_rows": "/home/karri/projects/NIDSProject/outputs/round1_data_prep_v1/ToN_sorted_original_rows.npy",
+      "statistics": "/home/karri/projects/NIDSProject/outputs/source_v2/preprocessing/preprocessing_stats.npz",
+      "rows": 27520260,
+      "feature_order": [
+        "IN_BYTES",
+        "OUT_BYTES",
+        "IN_PKTS",
+        "OUT_PKTS",
+        "LONGEST_FLOW_PKT",
+        "SHORTEST_FLOW_PKT",
+        "MIN_IP_PKT_LEN",
+        "MAX_IP_PKT_LEN",
+        "SRC_TO_DST_SECOND_BYTES",
+        "DST_TO_SRC_SECOND_BYTES",
+        "SRC_TO_DST_AVG_THROUGHPUT",
+        "DST_TO_SRC_AVG_THROUGHPUT",
+        "NUM_PKTS_UP_TO_128_BYTES",
+        "NUM_PKTS_128_TO_256_BYTES",
+        "NUM_PKTS_256_TO_512_BYTES",
+        "NUM_PKTS_512_TO_1024_BYTES",
+        "NUM_PKTS_1024_TO_1514_BYTES",
+        "L4_SRC_PORT",
+        "L4_DST_PORT",
+        "PROTOCOL",
+        "L7_PROTO",
+        "TCP_FLAGS",
+        "CLIENT_TCP_FLAGS",
+        "SERVER_TCP_FLAGS",
+        "MIN_TTL",
+        "MAX_TTL",
+        "TCP_WIN_MAX_IN",
+        "TCP_WIN_MAX_OUT",
+        "ICMP_TYPE",
+        "ICMP_IPV4_TYPE",
+        "DNS_QUERY_ID",
+        "DNS_QUERY_TYPE",
+        "DNS_TTL_ANSWER",
+        "FTP_COMMAND_RET_CODE",
+        "FLOW_DURATION_MILLISECONDS",
+        "DURATION_IN",
+        "DURATION_OUT",
+        "RETRANSMITTED_IN_BYTES",
+        "RETRANSMITTED_IN_PKTS",
+        "RETRANSMITTED_OUT_BYTES",
+        "RETRANSMITTED_OUT_PKTS",
+        "SRC_TO_DST_IAT_MIN",
+        "SRC_TO_DST_IAT_MAX",
+        "SRC_TO_DST_IAT_AVG",
+        "SRC_TO_DST_IAT_STDDEV",
+        "DST_TO_SRC_IAT_MIN",
+        "DST_TO_SRC_IAT_MAX",
+        "DST_TO_SRC_IAT_AVG",
+        "DST_TO_SRC_IAT_STDDEV"
+      ],
+      "categorical_indices": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        28,
+        29,
+        31,
+        33
+      ],
+      "numeric_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        24,
+        25,
+        26,
+        27,
+        32,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48
+      ],
+      "feature_representation": "rank-aligned raw float32 promoted to float64, source fill once, no standardization",
+      "raw_semantics": "RF predict_proba[:,1]; recompute raw_pred; cached predicted_class ignored",
+      "loader_evidence": [
+        "src/nids/data/feature_store.py:104-116",
+        "src/nids/replay/predictions.py:33-37,70-113"
+      ]
+    },
+    "T1_run": "/home/karri/projects/NIDSProject/outputs/post_p7_diagnostics/ton_recency_learner_pilot_v1/run_20260929T120812Z_zIglWd",
+    "original_run": "/home/karri/projects/NIDSProject/outputs/post_p7_diagnostics/reliability_local_evidence_v1/run_20260929T074336Z_8Aw2gr",
+    "source_model_manifest": "/home/karri/projects/NIDSProject/outputs/source_v2/models/rf_All49/training_manifest.json",
+    "T1_model": "/home/karri/projects/NIDSProject/outputs/post_p7_diagnostics/ton_recency_learner_pilot_v1/run_20260929T120812Z_zIglWd/models/RECENT_TARGET.joblib",
+    "update_rank": 20680000,
+    "recent_candidate_range": [
+      20570000,
+      20670000
+    ],
+    "arrival_gap": [
+      20670000,
+      20680000
+    ],
+    "evaluation_range": [
+      20680000,
+      27520000
+    ],
+    "segment_boundaries": [
+      20680000,
+      22390000,
+      24100000,
+      25810000,
+      27520000
+    ],
+    "expected_rows": 68400,
+    "segment_rows": [
+      17100,
+      17100,
+      17100,
+      17100
+    ],
+    "segment_windows": [
+      171,
+      171,
+      171,
+      171
+    ],
+    "sampling_seed": 20261003,
+    "split_seed": 20261004,
+    "generator": "PCG64",
+    "candidate_count": 99000,
+    "exclusions": "startup400,T1_400,original_pilot274200",
+    "distance": {
+      "k": 15,
+      "weights": "uniform",
+      "distance_dtype": "float64",
+      "feature_count": 48,
+      "excluded_features": [
+        "DNS_QUERY_ID"
+      ],
+      "categorical_features": [
+        "L4_SRC_PORT",
+        "L4_DST_PORT",
+        "PROTOCOL",
+        "L7_PROTO",
+        "TCP_FLAGS",
+        "CLIENT_TCP_FLAGS",
+        "SERVER_TCP_FLAGS",
+        "ICMP_TYPE",
+        "ICMP_IPV4_TYPE",
+        "DNS_QUERY_TYPE",
+        "FTP_COMMAND_RET_CODE"
+      ],
+      "numeric_feature_count": 37,
+      "numeric_distance": "min(abs(x-r)/frozen_source_scale,10)/10",
+      "categorical_distance": "1[x!=r]",
+      "aggregation": "mean_over_48_features",
+      "tie_break": "reference_availability_rank_ascending",
+      "reference_only": "R",
+      "feature_imputation": "frozen_source_fill",
+      "fit_new_feature_transform": false
+    },
+    "feature_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48
+    ],
+    "model_parameters": {
+      "n_estimators": 200,
+      "criterion": "gini",
+      "max_depth": 5,
+      "min_samples_split": 2,
+      "min_samples_leaf": 5,
+      "max_features": "sqrt",
+      "bootstrap": true,
+      "class_weight": null,
+      "random_state": 20260929,
+      "n_jobs": 8
+    },
+    "gate_grid": [
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      1.0
+    ],
+    "gate": "HIGH support for candidate label; fixed threshold or OFF; integer 20*errors<=accepted and accepted>=10",
+    "tie_order": [
+      "maximum U_bal",
+      "maximum min(UB,UA)",
+      "minimum FN+FP",
+      "ascending B threshold ID",
+      "ascending A threshold ID; OFF after1.00"
+    ],
+    "methods": [
+      "T1_LOCAL",
+      "T1_TARGET",
+      "T2_LOCAL",
+      "T2_TARGET"
+    ],
+    "controls": [
+      "SOURCE_RF_ALL",
+      "SOURCE_GATE_T1",
+      "SOURCE_GATE_T2",
+      "ALWAYS_A",
+      "ALWAYS_B"
+    ],
+    "source_gate_T1": "retrospectively constructed in this run, C1 only",
+    "pairs": [
+      [
+        "T2_LOCAL_ALL",
+        "T1_LOCAL_ALL"
+      ],
+      [
+        "T2_LOCAL_GATED",
+        "T1_LOCAL_GATED"
+      ],
+      [
+        "T2_TARGET_ALL",
+        "T1_TARGET_ALL"
+      ],
+      [
+        "T2_TARGET_GATED",
+        "T1_TARGET_GATED"
+      ],
+      [
+        "SOURCE_GATE_T2",
+        "SOURCE_GATE_T1"
+      ],
+      [
+        "T2_LOCAL_ALL",
+        "SOURCE_RF_ALL"
+      ],
+      [
+        "T2_TARGET_ALL",
+        "SOURCE_RF_ALL"
+      ],
+      [
+        "T2_LOCAL_GATED",
+        "SOURCE_GATE_T2"
+      ],
+      [
+        "T2_TARGET_GATED",
+        "SOURCE_GATE_T2"
+      ]
+    ],
+    "budget": {
+      "new_adaptation": 400,
+      "previous_adaptation": 800,
+      "cumulative_acquired_adaptation": 1200,
+      "per_local_target": 400,
+      "per_source_gate": 200,
+      "evaluation_existing_labels": 68400,
+      "evaluation_labels_used_for_update": false
+    },
+    "bootstrap": {
+      "seed": 20261005,
+      "replicates": 1000,
+      "block_windows": 10,
+      "keep_short_final": true,
+      "shared_replicates": true,
+      "percentiles": [
+        2.5,
+        97.5
+      ],
+      "minimum_valid_fraction": 0.9
+    },
+    "workpoint": {
+      "max_R_B": 0.05,
+      "max_R_A": 0.05,
+      "min_U_B": 0.1,
+      "min_U_A": 0.1,
+      "min_action_count": 100,
+      "min_action_windows": 10,
+      "stable": "overall and at least 3/4 segments"
+    },
+    "interpretation": "targeted development at observed failing T2; no independent blind test, optimal frequency claim, drift identification or risk guarantee",
+    "stop": "one 68400-row evaluation; no extra labels, refresh, representation learning or full evaluation"
+  },
+  "training_classes": [
+    0,
+    1
+  ]
+}

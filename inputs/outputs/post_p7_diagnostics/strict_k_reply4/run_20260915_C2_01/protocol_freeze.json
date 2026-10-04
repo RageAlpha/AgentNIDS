@@ -1,0 +1,9 @@
+{
+  "frozen_at_utc": "2026-09-15T01:37:56.498377+00:00",
+  "files": {
+    "/home/karri/projects/NIDSProject/outputs/post_p7_diagnostics/strict_k_reply4/run_20260915_C2_01/protocol.json": "e7bf28677e1b7e62151409eb680ec18944ca72395057e505af9548deed9c632b",
+    "/home/karri/projects/NIDSProject/outputs/post_p7_diagnostics/strict_k_reply4/run_20260915_C2_01/score_definition_and_assets.json": "4f9fb77310a4a9f862590ce60fd805c962e31cb3274d29d58b1b93a83379d326"
+  },
+  "request_sha256": "4201bcf9ce193a6e64257608b40ed55d4e8f40d29b44646dff4694ff129b9f5c",
+  "target_evaluation_labels_read": false
+}

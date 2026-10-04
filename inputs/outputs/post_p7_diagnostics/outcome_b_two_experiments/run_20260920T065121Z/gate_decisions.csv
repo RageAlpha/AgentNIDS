@@ -1,0 +1,5 @@
+domain,model,q_Attack,gate,evaluation,reason,threshold_report_displayed,professor_sent,professor_reviewed
+ToN,mlp_All49,0.9999999993862371,Depreciation stops,Not working,"q_Attack >= 0.90, stop the threshold",True,False,False
+BoT,rf_All49,0.8865555301308632,The Professor’s Judgment,Not working,0.80 <= q_Attack < 0.90 to be decided by the professor,True,False,False
+BoT,xgb_All49,0.999585736222798,Depreciation stops,Not working,"q_Attack >= 0.90, stop the threshold",True,False,False
+BoT,mlp_All49,0.999999998218104,Depreciation stops,Not working,"q_Attack >= 0.90, stop the threshold",True,False,False

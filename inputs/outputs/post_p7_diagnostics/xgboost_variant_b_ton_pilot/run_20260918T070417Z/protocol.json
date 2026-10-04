@@ -1,0 +1,62 @@
+{
+  "authority": "/home/karri/projects/NIDSProject/docs/XGBOOST_TON/Reply_to_Siyuan_VariantB_Analysis_and_Next_Step.md",
+  "authority_sections": "3 Steps 1–3 plus current user constraints",
+  "inputs": {
+    "config": "/home/karri/projects/NIDSProject/configs/execution_v2.json",
+    "model_record": "/home/karri/projects/NIDSProject/outputs/source_v2/models/xgb_All49/training_manifest.json",
+    "model_artifact": "/home/karri/projects/NIDSProject/outputs/source_v2/models/xgb_All49/model.ubj",
+    "cache": "/home/karri/projects/NIDSProject/outputs/prediction_cache_v2/ToN/xgb_All49.npy",
+    "cache_manifest": "/home/karri/projects/NIDSProject/outputs/prediction_cache_v2/ToN/xgb_All49_manifest.json",
+    "domain_cache_manifest": "/home/karri/projects/NIDSProject/outputs/prediction_cache_v2/ToN/manifest.json",
+    "labels": "/home/karri/projects/NIDSProject/outputs/feature_store_v2/ToN_label.npy",
+    "original_rows": "/home/karri/projects/NIDSProject/outputs/round1_data_prep_v1/ToN_sorted_original_rows.npy",
+    "window_manifest": "/home/karri/projects/NIDSProject/outputs/round1_data_prep_v1/window_manifest.csv",
+    "original_calibration_manifest": "/home/karri/projects/NIDSProject/outputs/post_p7_diagnostics/variant_b_ton_pilot/run_20260916T085242Z/calibration_sample_manifest.csv",
+    "original_rf_run": "/home/karri/projects/NIDSProject/outputs/post_p7_diagnostics/variant_b_ton_pilot/run_20260916T085242Z"
+  },
+  "model_identity": {
+    "version": "base-model-v2.0",
+    "model_id": "xgb_All49",
+    "family": "xgb",
+    "view": "All49",
+    "feature_count": 49,
+    "completed_at_utc": "2026-09-05T16:22:54.058810+00:00",
+    "training_domain": "UNSW",
+    "training_partition": "S_train",
+    "preprocessing": "S_train_imputed_original_numeric_representation"
+  },
+  "probability_field": "raw_probability",
+  "probability_meaning": "P(Attack)",
+  "labels": {
+    "0": "Benign",
+    "1": "Attack"
+  },
+  "reuse_rule": "Exact saved 400 identities in original manifest order; no recollection or replacement",
+  "epsilon": 0.1,
+  "per_class": 200,
+  "order_statistic_one_based": 181,
+  "order_statistic_zero_based": 180,
+  "precision": "float64 after cache read; no clipping, rounding, interpolation or probability transform",
+  "scores": {
+    "Benign": "p",
+    "Attack": "1-p"
+  },
+  "startup_rank_range": [
+    0,
+    100000
+  ],
+  "historical_collection": {
+    "scanned_rows": 4020,
+    "stop_rank_inclusive": 4019
+  },
+  "scope": "Calibration and threshold report only; zero evaluation windows; no Phase 2; no professor message",
+  "evidence": [
+    "predictions.py gpu_raw_probability: xgb binary logistic inplace_predict; raw stored separately from transformed probability",
+    "predictions.py predict_domain: model from configured source; cache slices retain feature-store rank",
+    "feature_store.py: sorted_y = raw_y[order]; feature-store metadata identifies prepared rank source"
+  ],
+  "environment": {
+    "python": "3.11.16",
+    "numpy": "2.4.6"
+  }
+}

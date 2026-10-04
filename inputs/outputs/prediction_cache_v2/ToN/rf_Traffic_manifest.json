@@ -1,0 +1,77 @@
+{
+  "model_id": "rf_Traffic",
+  "domain": "ToN",
+  "rows": 27520260,
+  "feature_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+  ],
+  "feature_names": [
+    "IN_BYTES",
+    "OUT_BYTES",
+    "IN_PKTS",
+    "OUT_PKTS",
+    "LONGEST_FLOW_PKT",
+    "SHORTEST_FLOW_PKT",
+    "MIN_IP_PKT_LEN",
+    "MAX_IP_PKT_LEN",
+    "SRC_TO_DST_SECOND_BYTES",
+    "DST_TO_SRC_SECOND_BYTES",
+    "SRC_TO_DST_AVG_THROUGHPUT",
+    "DST_TO_SRC_AVG_THROUGHPUT",
+    "NUM_PKTS_UP_TO_128_BYTES",
+    "NUM_PKTS_128_TO_256_BYTES",
+    "NUM_PKTS_256_TO_512_BYTES",
+    "NUM_PKTS_512_TO_1024_BYTES",
+    "NUM_PKTS_1024_TO_1514_BYTES"
+  ],
+  "device": "cuda:0",
+  "gpu_input_and_output_verified": true,
+  "prediction_cuda_event_ms": 966.8211171627045,
+  "range": {
+    "raw_probability": [
+      0.0,
+      1.0
+    ],
+    "probability": [
+      5.988515985917179e-07,
+      0.9999999503659112
+    ],
+    "predicted_class": [
+      0.0,
+      1.0
+    ],
+    "u": [
+      1.2759330219863275e-06,
+      0.9999999998806003
+    ],
+    "h": [
+      0.996460349418718,
+      0.9999091507158298
+    ]
+  },
+  "seconds": 10.749873343011132,
+  "gpu_memory": {
+    "baseline_used_mib": 1359.5,
+    "peak_used_mib": 1493.5,
+    "peak_increment_mib": 134.0,
+    "measurement": "CUDA_memGetInfo_total_minus_free_sampled_at_100ms"
+  },
+  "file": "outputs/prediction_cache_v2/ToN/rf_Traffic.npy",
+  "bytes": 908168772
+}

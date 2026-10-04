@@ -1,0 +1,14 @@
+scope,metric,numerator,denominator,value,unit
+overall,benign_singleton_rate,2218519,27420000,0.08090878920495988,fraction
+overall,attack_singleton_rate,10913123,27420000,0.3979986506199854,fraction
+overall,empty_set_rate,0,27420000,0.0,fraction
+overall,double_set_rate,14288358,27420000,0.5210925601750547,fraction
+overall,benign_singleton_error_rate,392555,2218519,0.17694461936093403,fraction
+overall,attack_singleton_error_rate,2526008,10913123,0.23146518187323648,fraction
+overall,tp,8387115,1,8387115.0,count
+overall,tp_fraction_of_true_attacks,8387115,10712072,0.7829591698039371,fraction
+overall,acceptance_rate,13131642,27420000,0.47890743982494527,fraction
+overall,singleton_error_rate,2918563,13131642,0.22225423142056416,fraction
+overall,raw_error_rate,4361537,27420000,0.15906407731582786,fraction
+overall,tp_share_of_overall,8387115,8387115,1.0,fraction
+overall,raw_minus_singleton_pp,-2275285500624600,360069623640000,-6.31901541047363,percentage_points

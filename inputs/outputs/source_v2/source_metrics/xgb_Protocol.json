@@ -1,0 +1,54 @@
+{
+  "version": "source-metrics-v2.0",
+  "status": "COMPLETE",
+  "completed_at_utc": "2026-09-05T16:22:35.936627+00:00",
+  "model_id": "xgb_Protocol",
+  "domain": "UNSW",
+  "partition": "S_source_test",
+  "rank_start": 2130000,
+  "rank_end_exclusive": 2365424,
+  "raw": {
+    "rows": 235424,
+    "prevalence": 0.0850253160255539,
+    "threshold": 0.5,
+    "confusion": {
+      "tn": 215404,
+      "fp": 3,
+      "fn": 0,
+      "tp": 20017
+    },
+    "accuracy": 0.9999872570341172,
+    "balanced_accuracy": 0.9999930364379988,
+    "precision_attack": 0.9998501498501499,
+    "recall_attack": 1.0,
+    "f1_attack": 0.9999250693108874,
+    "auroc": 0.9999999955934895,
+    "average_precision": 0.9999999525759078,
+    "nll": 5.008252584947975e-05,
+    "brier": 1.136931426894662e-05,
+    "ece": 1.7684121009269298e-05,
+    "ece_bins": 15
+  },
+  "calibrated": {
+    "rows": 235424,
+    "prevalence": 0.0850253160255539,
+    "threshold": 0.5,
+    "confusion": {
+      "tn": 215404,
+      "fp": 3,
+      "fn": 0,
+      "tp": 20017
+    },
+    "accuracy": 0.9999872570341172,
+    "balanced_accuracy": 0.9999930364379988,
+    "precision_attack": 0.9998501498501499,
+    "recall_attack": 1.0,
+    "f1_attack": 0.9999250693108874,
+    "auroc": 0.9999999955934895,
+    "average_precision": 0.9999999525759078,
+    "nll": 5.237316598150154e-05,
+    "brier": 1.1375243536271004e-05,
+    "ece": 1.66456353882666e-05,
+    "ece_bins": 15
+  }
+}

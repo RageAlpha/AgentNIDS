@@ -1,0 +1,104 @@
+{
+  "version": "base-model-v2.0",
+  "status": "COMPLETE",
+  "completed_at_utc": "2026-09-05T16:20:30.825700+00:00",
+  "model_id": "rf_Traffic",
+  "family": "rf",
+  "backend": "cuml.ensemble.RandomForestClassifier",
+  "view": "Traffic",
+  "feature_count": 17,
+  "feature_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+  ],
+  "feature_names": [
+    "IN_BYTES",
+    "OUT_BYTES",
+    "IN_PKTS",
+    "OUT_PKTS",
+    "LONGEST_FLOW_PKT",
+    "SHORTEST_FLOW_PKT",
+    "MIN_IP_PKT_LEN",
+    "MAX_IP_PKT_LEN",
+    "SRC_TO_DST_SECOND_BYTES",
+    "DST_TO_SRC_SECOND_BYTES",
+    "SRC_TO_DST_AVG_THROUGHPUT",
+    "DST_TO_SRC_AVG_THROUGHPUT",
+    "NUM_PKTS_UP_TO_128_BYTES",
+    "NUM_PKTS_128_TO_256_BYTES",
+    "NUM_PKTS_256_TO_512_BYTES",
+    "NUM_PKTS_512_TO_1024_BYTES",
+    "NUM_PKTS_1024_TO_1514_BYTES"
+  ],
+  "preprocessing": "S_train_imputed_original_numeric_representation",
+  "seed": 20260905,
+  "parameters": {
+    "backend": "cuml.ensemble.RandomForestClassifier",
+    "views": [
+      "Traffic",
+      "All49"
+    ],
+    "n_estimators": 300,
+    "max_depth": 16,
+    "min_samples_leaf": 2,
+    "min_samples_split": 2,
+    "max_features": "sqrt",
+    "n_bins": 128,
+    "bootstrap": true,
+    "max_samples": 1,
+    "n_streams": 1,
+    "split_criterion": "gini"
+  },
+  "training_domain": "UNSW",
+  "training_partition": "S_train",
+  "training_rank_start": 0,
+  "training_rank_end_exclusive": 1420000,
+  "training_rows": 1420000,
+  "training_label_counts": {
+    "Benign": 1377436,
+    "Attack": 42564
+  },
+  "natural_training_prevalence": 0.029974647887323944,
+  "device": {
+    "type": "cuda",
+    "index": 0,
+    "name": "NVIDIA RTX A5000"
+  },
+  "gpu_memory": {
+    "baseline_used_mib": 1283.5,
+    "peak_used_mib": 1683.5,
+    "peak_increment_mib": 400.0,
+    "measurement": "CUDA_memGetInfo_total_minus_free_sampled_at_100ms"
+  },
+  "fit": {
+    "training_seconds": 21.686621330009075,
+    "epochs": null,
+    "final_training_bce": null
+  },
+  "inference_seconds": {
+    "S_prob_cal": 0.12042758701136336,
+    "S_competence": 0.04569813399575651,
+    "S_source_test": 0.03171738900709897
+  },
+  "total_seconds": 23.635495258000446,
+  "artifact": "model.pkl",
+  "artifact_size_bytes": 18313128,
+  "calibrator": "outputs/source_v2/calibrators/rf_Traffic.json",
+  "competence": "outputs/source_v2/competence/rf_Traffic.json",
+  "source_metrics": "outputs/source_v2/source_metrics/rf_Traffic.json"
+}

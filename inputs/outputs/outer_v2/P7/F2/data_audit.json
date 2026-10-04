@@ -1,0 +1,10 @@
+{
+  "domain": "BoT",
+  "partition": "T_heldout",
+  "rows": 16930000,
+  "windows": 1693,
+  "rank_start": 0,
+  "rank_end_exclusive": 16930000,
+  "excluded_tail": 3808,
+  "initialization_rows": 10000
+}

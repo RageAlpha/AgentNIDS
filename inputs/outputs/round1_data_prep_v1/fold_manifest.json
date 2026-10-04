@@ -1,0 +1,41 @@
+{
+  "F1": {
+    "development": [
+      "CIC",
+      "BoT"
+    ],
+    "heldout": "ToN",
+    "source_domain": "UNSW",
+    "source_scheme": "source",
+    "development_scheme": "development",
+    "heldout_scheme": "heldout",
+    "heldout_fit_records": 0,
+    "outer_results_inspected": false
+  },
+  "F2": {
+    "development": [
+      "CIC",
+      "ToN"
+    ],
+    "heldout": "BoT",
+    "source_domain": "UNSW",
+    "source_scheme": "source",
+    "development_scheme": "development",
+    "heldout_scheme": "heldout",
+    "heldout_fit_records": 0,
+    "outer_results_inspected": false
+  },
+  "F3": {
+    "development": [
+      "BoT",
+      "ToN"
+    ],
+    "heldout": "CIC",
+    "source_domain": "UNSW",
+    "source_scheme": "source",
+    "development_scheme": "development",
+    "heldout_scheme": "heldout",
+    "heldout_fit_records": 0,
+    "outer_results_inspected": false
+  }
+}

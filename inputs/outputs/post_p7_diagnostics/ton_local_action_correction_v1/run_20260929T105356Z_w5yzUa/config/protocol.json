@@ -1,0 +1,119 @@
+{
+  "experiment": "ton_local_action_correction_v1",
+  "registered_at": "2026-09-29T10:53:56.998925+00:00",
+  "source_run": "/home/karri/projects/NIDSProject/outputs/post_p7_diagnostics/reliability_local_evidence_v1/run_20260929T074336Z_8Aw2gr",
+  "domain": "ToN",
+  "stage": "calibration_only",
+  "R": 200,
+  "C": 200,
+  "total_existing_labels": 400,
+  "k": 15,
+  "distance": {
+    "k": 15,
+    "weights": "uniform",
+    "distance_dtype": "float64",
+    "feature_count": 48,
+    "excluded_features": [
+      "DNS_QUERY_ID"
+    ],
+    "categorical_features": [
+      "L4_SRC_PORT",
+      "L4_DST_PORT",
+      "PROTOCOL",
+      "L7_PROTO",
+      "TCP_FLAGS",
+      "CLIENT_TCP_FLAGS",
+      "SERVER_TCP_FLAGS",
+      "ICMP_TYPE",
+      "ICMP_IPV4_TYPE",
+      "DNS_QUERY_TYPE",
+      "FTP_COMMAND_RET_CODE"
+    ],
+    "numeric_feature_count": 37,
+    "numeric_distance": "min(abs(x-r)/frozen_source_scale,10)/10",
+    "categorical_distance": "1[x!=r]",
+    "aggregation": "mean_over_48_features",
+    "tie_break": "reference_availability_rank_ascending",
+    "reference_only": "R",
+    "feature_imputation": "frozen_source_fill",
+    "fit_new_feature_transform": false
+  },
+  "RF": "frozen rf_All49 raw_probability",
+  "grid": [
+    0.5,
+    0.5202673673629761,
+    0.6165555715560913,
+    0.6741976737976074,
+    0.6888619661331177,
+    0.780666708946228,
+    0.838333323597908,
+    0.8476666659116745,
+    0.8482757806777954,
+    0.8577222228050232,
+    0.9872222086414695,
+    1.0
+  ],
+  "grid_source": "original ToN G2 grid; never recomputed",
+  "families": {
+    "E0": "raw RF label",
+    "E1": "q_A>=0.5",
+    "E2": "use local label only on disagreement and max(q_A,1-q_A)>=0.75",
+    "E3": "E2 with q_prior from R"
+  },
+  "gates": {
+    "E0-local": "E0 with true local support",
+    "E1-local": "E1 with true local support",
+    "E2-local": "E2 with true local support",
+    "E3-local": "E3 with true local support",
+    "E3-prior": "E3 with constant prior support"
+  },
+  "selection": {
+    "methods": [
+      "RAW",
+      "G0",
+      "G1H",
+      "G1F",
+      "G2",
+      "Q400",
+      "CONST_A",
+      "CONST_B",
+      "ABSTAIN"
+    ],
+    "quantile_levels": [
+      0,
+      0.25,
+      0.5,
+      0.75,
+      1
+    ],
+    "quantile_method": "linear",
+    "fixed_confidence_thresholds": [
+      0.5,
+      1
+    ],
+    "C_grid": "union_of_predicted_class_quantiles_on_C",
+    "Q400_grid": "same_rule_on_all_400",
+    "local_support_thresholds": [
+      0,
+      0.5,
+      0.75,
+      1
+    ],
+    "risk_target_B": 0.05,
+    "risk_target_A": 0.05,
+    "minimum_accepted_per_enabled_action": 10,
+    "allow_off_per_action": true,
+    "objective": "maximize_0.5*(TN/N_B+TP/N_A)",
+    "tie_break": [
+      "maximize_min_UB_UA",
+      "minimize_FN_plus_FP",
+      "prefer_smaller_u_B_then_u_A",
+      "prefer_HIGH_B_then_HIGH_A",
+      "stable_candidate_id"
+    ],
+    "statistical_certification": false
+  },
+  "candidate_support": "support for final candidate label; s remains original RF max(p,1-p)",
+  "reads": "original ToN calibration artifacts only; no evaluation records",
+  "statistical_status": "further development on reused C, not independent validation"
+}

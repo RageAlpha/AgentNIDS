@@ -1,0 +1,140 @@
+{
+  "registered_at_utc": "2026-09-18T13:38:10.312997+00:00",
+  "purpose": "Post-hoc descriptive error-confidence and true-class score distribution diagnosis; original Outcome B unchanged",
+  "models": [
+    "rf_All49",
+    "xgb_All49"
+  ],
+  "domain": "ToN",
+  "historical_runs": {
+    "rf_early": "/home/karri/projects/NIDSProject/outputs/post_p7_diagnostics/variant_b_ton_pilot/run_20260916T085242Z",
+    "xgb_early": "/home/karri/projects/NIDSProject/outputs/post_p7_diagnostics/xgboost_variant_b_ton_pilot/run_20260918T070417Z",
+    "xgb_exploratory": "/home/karri/projects/NIDSProject/outputs/post_p7_diagnostics/xgboost_variant_b_ton_exploratory_eval/run_20260918T071352Z",
+    "temporal_comparison": "/home/karri/projects/NIDSProject/outputs/post_p7_diagnostics/temporal_stratified_400_ton/run_20260918T131742Z"
+  },
+  "evaluation_periods": {
+    "overall": [
+      100000,
+      27520000
+    ],
+    "E1": [
+      100000,
+      6960000
+    ],
+    "E2": [
+      6960000,
+      13820000
+    ],
+    "E3": [
+      13820000,
+      20670000
+    ],
+    "E4": [
+      20670000,
+      27520000
+    ]
+  },
+  "excluded_startup": [
+    0,
+    100000
+  ],
+  "excluded_tail": 260,
+  "probability": "raw_probability=P(Attack); read float64 unchanged",
+  "labels": {
+    "0": "Benign",
+    "1": "Attack"
+  },
+  "definitions": {
+    "prediction": "p>=0.5",
+    "confidence": "max(p,1-p); label-free",
+    "error": "prediction != y",
+    "alpha_true": "p if y=0 else 1-p; requires true label"
+  },
+  "confidence_bins": [
+    "[0.5,0.6)",
+    "[0.6,0.7)",
+    "[0.7,0.8)",
+    "[0.8,0.9)",
+    "[0.9,0.95)",
+    "[0.95,0.99)",
+    "[0.99,0.999)",
+    "[0.999,1]"
+  ],
+  "bin_subsets": [
+    "all",
+    "predicted_Benign",
+    "predicted_Attack"
+  ],
+  "empty_bin": "retain; proportion, rate and mean NA",
+  "bin_proportion_denominator": "same period and prediction subset",
+  "descriptive_quantiles": {
+    "probabilities": [
+      0.1,
+      0.25,
+      0.5,
+      0.75,
+      0.9,
+      0.95,
+      0.99
+    ],
+    "method": "linear: h=(n-1)*q; interpolate adjacent order statistics; computed exactly from weighted unique-value groups; never refit threshold"
+  },
+  "frozen_threshold_rule": "historical class-specific order statistic 181/200, unchanged",
+  "bootstrap": {
+    "matrix": "/home/karri/projects/NIDSProject/outputs/post_p7_diagnostics/temporal_stratified_400_ton/run_20260918T131742Z/bootstrap_indices.npy",
+    "blocks": 275,
+    "block_windows": 10,
+    "last_block_windows": 2,
+    "replicates": 2000,
+    "seed": 20260915,
+    "generator": "PCG64",
+    "percentiles": [
+      2.5,
+      97.5
+    ],
+    "method": "linear",
+    "invalid": "exclude zero-denominator replicate per metric; report valid count",
+    "scope": "overall per confidence bin and predicted subset; time segments descriptive; conditional on fixed frozen model"
+  },
+  "raw_risk_coverage": {
+    "order": "descending confidence, entire exact float64 ties included; Raw labels unchanged",
+    "targets": [
+      0.01,
+      0.05,
+      0.1,
+      0.2,
+      0.4,
+      0.6,
+      0.8,
+      1.0
+    ],
+    "selection": "first whole tie-group boundary reaching/exceeding target",
+    "recall_denominators": "all true Benign/Attack in same period (end-to-end correct acceptance); additional recall within accepted true class reported",
+    "purpose": "post-hoc diagnostic, not deployment thresholds; no best point, AURC or significance test"
+  },
+  "score_plots": {
+    "full": [
+      0,
+      1
+    ],
+    "attack_zoom": [
+      [
+        0.9,
+        1
+      ],
+      [
+        0.99,
+        1
+      ]
+    ],
+    "normalization": "empirical CDF per group",
+    "rendering": "ECDF on fixed 2001-point x grid per displayed range plus observed calibration values and frozen thresholds; exact counts at each displayed x, steps are display compression; raw risk curves compressed to <=3000 whole-group boundaries plus requested target points, all numeric target results exact"
+  },
+  "processing": "cache mmap; 10000-row window aggregation; bounded one-period probability workspace <=6,860,000 float64 entries filled in 100000-row chunks; retain unique-value grouped counts, never copy full cache; no per-flow output",
+  "restrictions": "no sampling, fitting, threshold changes, probability transforms, new rules, other domains/models/methods, hashes, messages or subsequent experiments",
+  "environment": {
+    "python": "3.11.16",
+    "numpy": "2.4.6",
+    "matplotlib": "3.11.2"
+  }
+}

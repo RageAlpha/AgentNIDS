@@ -1,0 +1,19 @@
+{
+  "model": "xgb_All49",
+  "domain": "BoT",
+  "frozen_at_utc": "2026-09-20T06:53:47.444975+00:00",
+  "q_Benign": 0.3362247943878174,
+  "q_Attack": 0.999585736222798,
+  "threshold_sum": 1.3358105306106154,
+  "min_p_Attack": 0.00041426377720199525,
+  "min_p_Benign": 0.6637752056121826,
+  "gate": "Depreciation stops",
+  "epsilon": 0.1,
+  "n_Benign": 200,
+  "n_Attack": 200,
+  "order_statistic_one_based": 181,
+  "order_statistic_zero_based": 180,
+  "interpolation": false,
+  "dtype": "float64",
+  "evaluation_started": false
+}

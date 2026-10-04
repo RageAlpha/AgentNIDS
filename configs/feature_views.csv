@@ -1,0 +1,50 @@
+feature,view,detector,rationale,status
+IN_BYTES,Traffic,RF,Incoming traffic byte magnitude,REGISTERED_EXECUTION_V2
+OUT_BYTES,Traffic,RF,Outgoing traffic byte magnitude,REGISTERED_EXECUTION_V2
+IN_PKTS,Traffic,RF,Incoming packet volume,REGISTERED_EXECUTION_V2
+OUT_PKTS,Traffic,RF,Outgoing packet volume,REGISTERED_EXECUTION_V2
+LONGEST_FLOW_PKT,Traffic,RF,Upper observed packet size,REGISTERED_EXECUTION_V2
+SHORTEST_FLOW_PKT,Traffic,RF,Lower observed packet size,REGISTERED_EXECUTION_V2
+MIN_IP_PKT_LEN,Traffic,RF,Lower observed IP packet length,REGISTERED_EXECUTION_V2
+MAX_IP_PKT_LEN,Traffic,RF,Upper observed IP packet length,REGISTERED_EXECUTION_V2
+SRC_TO_DST_SECOND_BYTES,Traffic,RF,Forward byte rate,REGISTERED_EXECUTION_V2
+DST_TO_SRC_SECOND_BYTES,Traffic,RF,Reverse byte rate,REGISTERED_EXECUTION_V2
+SRC_TO_DST_AVG_THROUGHPUT,Traffic,RF,Forward average throughput,REGISTERED_EXECUTION_V2
+DST_TO_SRC_AVG_THROUGHPUT,Traffic,RF,Reverse average throughput,REGISTERED_EXECUTION_V2
+NUM_PKTS_UP_TO_128_BYTES,Traffic,RF,Small-packet size-bin count,REGISTERED_EXECUTION_V2
+NUM_PKTS_128_TO_256_BYTES,Traffic,RF,Packet size-bin count,REGISTERED_EXECUTION_V2
+NUM_PKTS_256_TO_512_BYTES,Traffic,RF,Packet size-bin count,REGISTERED_EXECUTION_V2
+NUM_PKTS_512_TO_1024_BYTES,Traffic,RF,Packet size-bin count,REGISTERED_EXECUTION_V2
+NUM_PKTS_1024_TO_1514_BYTES,Traffic,RF,Large-packet size-bin count,REGISTERED_EXECUTION_V2
+L4_SRC_PORT,Protocol,XGBoost,Source transport port and service context,REGISTERED_EXECUTION_V2
+L4_DST_PORT,Protocol,XGBoost,Destination transport port and service context,REGISTERED_EXECUTION_V2
+PROTOCOL,Protocol,XGBoost,IP protocol identity,REGISTERED_EXECUTION_V2
+L7_PROTO,Protocol,XGBoost,Application protocol identity,REGISTERED_EXECUTION_V2
+TCP_FLAGS,Protocol,XGBoost,Aggregate TCP control flags,REGISTERED_EXECUTION_V2
+CLIENT_TCP_FLAGS,Protocol,XGBoost,Client-side TCP control flags,REGISTERED_EXECUTION_V2
+SERVER_TCP_FLAGS,Protocol,XGBoost,Server-side TCP control flags,REGISTERED_EXECUTION_V2
+MIN_TTL,Protocol,XGBoost,IP header time-to-live field rather than elapsed timing,REGISTERED_EXECUTION_V2
+MAX_TTL,Protocol,XGBoost,IP header time-to-live field rather than elapsed timing,REGISTERED_EXECUTION_V2
+TCP_WIN_MAX_IN,Protocol,XGBoost,Forward TCP flow-control window field,REGISTERED_EXECUTION_V2
+TCP_WIN_MAX_OUT,Protocol,XGBoost,Reverse TCP flow-control window field,REGISTERED_EXECUTION_V2
+ICMP_TYPE,Protocol,XGBoost,ICMP message type and code context,REGISTERED_EXECUTION_V2
+ICMP_IPV4_TYPE,Protocol,XGBoost,ICMP protocol message type,REGISTERED_EXECUTION_V2
+DNS_QUERY_ID,Protocol,XGBoost,DNS transaction identifier retained under the existing 49-feature boundary,REGISTERED_EXECUTION_V2
+DNS_QUERY_TYPE,Protocol,XGBoost,DNS query service semantics,REGISTERED_EXECUTION_V2
+DNS_TTL_ANSWER,Protocol,XGBoost,DNS response cache-lifetime field rather than flow timing,REGISTERED_EXECUTION_V2
+FTP_COMMAND_RET_CODE,Protocol,XGBoost,FTP response and service control state,REGISTERED_EXECUTION_V2
+FLOW_DURATION_MILLISECONDS,Behavior,MLP,Elapsed flow duration,REGISTERED_EXECUTION_V2
+DURATION_IN,Behavior,MLP,Directional stream duration,REGISTERED_EXECUTION_V2
+DURATION_OUT,Behavior,MLP,Directional stream duration,REGISTERED_EXECUTION_V2
+RETRANSMITTED_IN_BYTES,Behavior,MLP,Forward transport retransmission behavior,REGISTERED_EXECUTION_V2
+RETRANSMITTED_IN_PKTS,Behavior,MLP,Forward transport retransmission behavior,REGISTERED_EXECUTION_V2
+RETRANSMITTED_OUT_BYTES,Behavior,MLP,Reverse transport retransmission behavior,REGISTERED_EXECUTION_V2
+RETRANSMITTED_OUT_PKTS,Behavior,MLP,Reverse transport retransmission behavior,REGISTERED_EXECUTION_V2
+SRC_TO_DST_IAT_MIN,Behavior,MLP,Forward minimum inter-packet arrival time,REGISTERED_EXECUTION_V2
+SRC_TO_DST_IAT_MAX,Behavior,MLP,Forward maximum inter-packet arrival time,REGISTERED_EXECUTION_V2
+SRC_TO_DST_IAT_AVG,Behavior,MLP,Forward mean inter-packet arrival time,REGISTERED_EXECUTION_V2
+SRC_TO_DST_IAT_STDDEV,Behavior,MLP,Forward inter-packet arrival variability,REGISTERED_EXECUTION_V2
+DST_TO_SRC_IAT_MIN,Behavior,MLP,Reverse minimum inter-packet arrival time,REGISTERED_EXECUTION_V2
+DST_TO_SRC_IAT_MAX,Behavior,MLP,Reverse maximum inter-packet arrival time,REGISTERED_EXECUTION_V2
+DST_TO_SRC_IAT_AVG,Behavior,MLP,Reverse mean inter-packet arrival time,REGISTERED_EXECUTION_V2
+DST_TO_SRC_IAT_STDDEV,Behavior,MLP,Reverse inter-packet arrival variability,REGISTERED_EXECUTION_V2

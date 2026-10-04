@@ -1,0 +1,259 @@
+{
+  "version": "week0-feasibility-preflight-draft-v1.0",
+  "run_id": "run_20260915T070731Z",
+  "created_at_utc": "2026-09-15T07:13:28.496769+00:00",
+  "status": "DRAFT_REVIEW_REQUIRED_NOT_AUTHORIZED_TO_RUN_PILOT",
+  "provenance": {
+    "roadmap_explicit": {
+      "path": "/home/karri/projects/NIDSProject/docs/Research_Roadmap_Phase2_Conformal_Coordination.md",
+      "sections": [
+        "3.1",
+        "3.2",
+        "4.2",
+        "4.5",
+        "7 pre-registration",
+        "9 Week 0"
+      ],
+      "rules": [
+        "existing RF-All49",
+        "ToN",
+        "Variant A Strict-0 source calibration",
+        "primary epsilon 0.10",
+        "prediction sets with <=",
+        "pilot before Week 1; professor informed and pilot confirmation required"
+      ]
+    },
+    "existing_project": [
+      "frozen exact partitions and availability-rank identities",
+      "P1 float32 features and S_train-only fill",
+      "P2 cuML RF with classes [0,1]",
+      "P3 raw_probability attack column, float64 cache",
+      "P7 original complete ToN windows and excluded tail",
+      "A/B1 full source test including 5424 tail; raw_pred >=0.5",
+      "2000 bootstrap replicates, 10 windows/block and final short block"
+    ],
+    "current_user_required_clarifications": [
+      "RF predict_proba directly; roadmap softmax wording not applied to RF",
+      "finite order statistic, rational epsilon, no interpolation",
+      "full P7 ToN scope without C1/C2 startup exclusion",
+      "synthetic only algorithm tests; q reserved for pilot",
+      "no new target probability analysis",
+      "separate set coverage and acceptance",
+      "all requested metrics and four gate states"
+    ],
+    "new_proposed_execution_choices": [
+      "CPU NumPy float64 conformal arithmetic on exact P3 float64 cache",
+      "main pilot descriptive statistics; no confidence intervals proposed in this draft",
+      "human evidence review, no invented minimum effect size",
+      "no C1/C2 auxiliary subrange in initial pilot",
+      "Explicit float32-origin input validation to bound binary64 complement arithmetic; review required"
+    ]
+  },
+  "model_id": "rf_All49",
+  "model_path": "/home/karri/projects/NIDSProject/outputs/source_v2/models/rf_All49/model.pkl",
+  "target": "ToN",
+  "variant": "A",
+  "strict_k": 0,
+  "epsilon": {
+    "numerator": 1,
+    "denominator": 10
+  },
+  "calibration": {
+    "domain": "UNSW",
+    "partition": "S_prob_cal",
+    "rank_start": 1420000,
+    "rank_end_exclusive": 1780000,
+    "rows": 360000,
+    "benign": 325600,
+    "attack": 34400,
+    "all_records": true,
+    "balance_or_resample": false,
+    "probability_field": "raw_probability",
+    "k_one_based": 324001,
+    "k_zero_based": 324000,
+    "q": null,
+    "q_status": "NOT_COMPUTED"
+  },
+  "evaluation": {
+    "source": {
+      "rank_start": 2130000,
+      "rank_end_exclusive": 2365424,
+      "rows": 235424,
+      "retained_tail": 5424
+    },
+    "ToN": {
+      "rank_start": 0,
+      "rank_end_exclusive": 27520000,
+      "rows": 27520000,
+      "windows": 2752,
+      "excluded_tail": 260,
+      "startup_exclusion": 0,
+      "window_reference": "evaluation_window_references.csv"
+    },
+    "comparison_subrange": null
+  },
+  "algorithm": {
+    "p": "raw_probability; p_Benign=1-p, p_Attack=p",
+    "score": "where(y==0,p,1-p)",
+    "k": "ceil((n+1)*9/10), implemented as ((n+1)*9+9)//10; one-based",
+    "q": "sort(scores)[k-1] if k<=n else +infinity",
+    "prediction_set": "Benign iff p<=q; Attack iff 1-p<=q",
+    "ties": "inclusive <=; entire equal-score group, deterministic",
+    "quantile_interpolation": null,
+    "extra_softmax": false,
+    "extra_clipping": false,
+    "rounding": false,
+    "dtype": "float64; preserve existing float32 inference rounded values stored exactly as float64",
+    "serialization": "float64.hex/fromhex; +infinity as {kind:positive_infinity}; no JSON nonfinite numeric literals",
+    "label_boundary": "test set generation function accepts only p and q, never y",
+    "input_contract": "Only RF-native float32 probabilities losslessly stored in float64 are admitted; validate exact float32 roundtrip without modifying probabilities. Nonconforming values stop execution. Entire source calibration verified. Future pilot validates target chunks before scores/sets."
+  },
+  "metrics": {
+    "prediction_set_coverage": "sum(1[y in C])/N; overall and separately true Benign/Attack",
+    "acceptance_rate": "sum(1[|C|=1])/N",
+    "singleton_rate": "acceptance_rate (same quantity, explicit alias)",
+    "multi_label_rate": "sum(1[|C|=2])/N",
+    "empty_set_rate": "sum(1[|C|=0])/N",
+    "mean_set_size": "sum(|C|)/N",
+    "raw_pred": "1[p>=0.5]",
+    "raw_error": "raw_pred != y",
+    "four_set_counts": "For {}, {Benign}, {Attack}, {Benign,Attack}: N, Raw correct count, Raw error count, Raw error/N_set",
+    "rejection_rate": "P(R)=N_R/N, R={|C|!=1}",
+    "raw_error_given_rejected": "E_R/N_R",
+    "raw_error_given_accepted": "E_A/N_A",
+    "rejected_given_raw_error": "E_R/E_all",
+    "rejected_given_raw_correct": "(N_R-E_R)/(N-E_all)",
+    "accepted_confusion": "TN/FP/FN/TP using unique label of singleton as accepted prediction",
+    "selective_risk": "(FP+FN)/(TN+FP+FN+TP)",
+    "accepted_benign_FPR": "FP/(TN+FP)",
+    "accepted_attack_miss_rate": "FN/(TP+FN)",
+    "effective_attack_detection": "TP/N_all_Attack",
+    "wrong_accepted_attack_fraction": "FN/N_all_Attack",
+    "attack_abstention_rate": "(N_all_Attack-TP-FN)/N_all_Attack",
+    "benign_acceptance_rate": "(TN+FP)/N_all_Benign",
+    "attack_acceptance_rate": "(TP+FN)/N_all_Attack",
+    "correct_record_loss": "N(rejected AND raw_correct)/N(raw_correct)",
+    "stratification": "overall, true Benign/Attack, frozen original attack_code taxonomy (including ToN scanning), and four chronological segments",
+    "zero_denominators": "JSON null + NA reason; CSV NA; counts 0 when appropriate, rates never zero merely because denominator is zero"
+  },
+  "time": {
+    "window_counts": [
+      688,
+      688,
+      688,
+      688
+    ],
+    "rank_intervals": [
+      [
+        0,
+        6880000
+      ],
+      [
+        6880000,
+        13760000
+      ],
+      [
+        13760000,
+        20640000
+      ],
+      [
+        20640000,
+        27520000
+      ]
+    ],
+    "threshold": "same frozen source q in all segments",
+    "retune": false
+  },
+  "statistics": {
+    "selected_draft": "DESCRIPTIVE_ONLY",
+    "confidence_intervals": false,
+    "seed_for_selected_draft": null,
+    "no_bootstrap_matrix_generated": true,
+    "optional_amendment_before_pilot": {
+      "replicates": 2000,
+      "block_windows": 10,
+      "keep_final_short_block": true,
+      "min_blocks": 20,
+      "target_blocks": 276,
+      "target_final_block_windows": 2,
+      "source_blocks_if_required": 3,
+      "source_reason": "23 complete windows plus existing 5424-row tail; consecutive groups: 10 windows,10 windows,3 windows+tail; below minimum 20, therefore no source CI",
+      "target_rng": "numpy.random.Generator(PCG64(20260915))",
+      "sampling": "draw B block indices with replacement B times per replicate, keep whole blocks; pool counts and recompute denominators",
+      "CI": "95% percentile, NumPy quantile(method=linear) for bootstrap estimates ONLY, never for conformal q; exclude undefined replicates and report valid count",
+      "sharing": "same ToN matrix for all metrics/methods at identical scope; no C1 shrunken-scope matrix",
+      "target_minus_source": "descriptive difference; no source/target independent or paired CI claimed",
+      "per_segment_and_category": "descriptive only in this draft"
+    }
+  },
+  "gate": "gate_definition.md",
+  "open_protocol_choices": [
+    "approve complete scope and P3 raw float64 convention",
+    "approve descriptive-only pilot or amend ToN-only bootstrap before execution",
+    "approve qualitative evidence review; minimum effect remains unspecified",
+    "missing separate A-C2 synthesis: confirm existing reports suffice or provide synced location",
+    "approve explicit RF float32-origin validation; incompatible probabilities halt without rounding"
+  ],
+  "pilot_sequence_after_approval": [
+    "create a new pilot run directory and freeze reviewed protocol and source hashes",
+    "revalidate required input hashes, schema, identity and original environment",
+    "compute real calibration scores and q once using all S_prob_cal; freeze q hex, k, epsilon and calibration hashes before evaluation",
+    "evaluate same frozen q on complete source test and ToN; produce aggregate metrics, original-window summaries and four segments only",
+    "apply evidence review categories; report to user; professor report/confirmation before any Week 1"
+  ],
+  "forbidden": [
+    "retrain or replace model",
+    "fit Platt",
+    "use Platt probability/predicted_class/f(u)/C1/C2 thresholds",
+    "target calibration or Mondrian",
+    "epsilon/model/scope selection after target results",
+    "Week 1",
+    "message professor automatically"
+  ],
+  "boundary": "Previously unblinded P7/A/B1/B2/C1/C2 domains; exploratory follow-up, not first target contact or independent outer validation.",
+  "inputs": {
+    "UNSW": {
+      "probability_cache": "/home/karri/projects/NIDSProject/outputs/prediction_cache_v2/UNSW/rf_All49.npy",
+      "probability_manifest": "/home/karri/projects/NIDSProject/outputs/prediction_cache_v2/UNSW/rf_All49_manifest.json",
+      "labels": "/home/karri/projects/NIDSProject/outputs/feature_store_v2/UNSW_label.npy",
+      "attack_codes": "/home/karri/projects/NIDSProject/outputs/feature_store_v2/UNSW_attack_code.npy",
+      "feature_manifest": "/home/karri/projects/NIDSProject/outputs/feature_store_v2/UNSW_manifest.json",
+      "original_rows": "/home/karri/projects/NIDSProject/outputs/round1_data_prep_v1/UNSW_sorted_original_rows.npy",
+      "availability_times": "/home/karri/projects/NIDSProject/outputs/round1_data_prep_v1/UNSW_sorted_end_ms.npy",
+      "attack_codebook": {
+        "0": "Benign",
+        "1": "Fuzzers",
+        "2": "Exploits",
+        "3": "Backdoor",
+        "4": "Reconnaissance",
+        "5": "Generic",
+        "6": "DoS",
+        "7": "Shellcode",
+        "8": "Analysis",
+        "9": "Worms"
+      }
+    },
+    "ToN": {
+      "probability_cache": "/home/karri/projects/NIDSProject/outputs/prediction_cache_v2/ToN/rf_All49.npy",
+      "probability_manifest": "/home/karri/projects/NIDSProject/outputs/prediction_cache_v2/ToN/rf_All49_manifest.json",
+      "labels": "/home/karri/projects/NIDSProject/outputs/feature_store_v2/ToN_label.npy",
+      "attack_codes": "/home/karri/projects/NIDSProject/outputs/feature_store_v2/ToN_attack_code.npy",
+      "feature_manifest": "/home/karri/projects/NIDSProject/outputs/feature_store_v2/ToN_manifest.json",
+      "original_rows": "/home/karri/projects/NIDSProject/outputs/round1_data_prep_v1/ToN_sorted_original_rows.npy",
+      "availability_times": "/home/karri/projects/NIDSProject/outputs/round1_data_prep_v1/ToN_sorted_end_ms.npy",
+      "attack_codebook": {
+        "0": "Benign",
+        "1": "scanning",
+        "2": "dos",
+        "3": "injection",
+        "4": "ddos",
+        "5": "password",
+        "6": "xss",
+        "7": "ransomware",
+        "8": "Backdoor",
+        "9": "mitm"
+      }
+    },
+    "hash_inventory": "/home/karri/projects/NIDSProject/outputs/post_p7_diagnostics/week0_preflight/run_20260915T070731Z/source_hashes.csv"
+  }
+}

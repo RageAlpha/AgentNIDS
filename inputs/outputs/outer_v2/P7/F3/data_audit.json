@@ -1,0 +1,10 @@
+{
+  "domain": "CIC",
+  "partition": "T_heldout",
+  "rows": 20110000,
+  "windows": 2011,
+  "rank_start": 0,
+  "rank_end_exclusive": 20110000,
+  "excluded_tail": 5529,
+  "initialization_rows": 10000
+}

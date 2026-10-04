@@ -1,0 +1,485 @@
+{
+  "freeze_time": "2026-09-29T12:08:14.524771+00:00",
+  "protocol": {
+    "experiment": "ton_recency_learner_pilot_v1",
+    "version": 1,
+    "created_at": "2026-09-29T12:08:13.764739+00:00",
+    "root": "/home/karri/projects/NIDSProject",
+    "old_run": "/home/karri/projects/NIDSProject/outputs/post_p7_diagnostics/reliability_local_evidence_v1/run_20260929T074336Z_8Aw2gr",
+    "correction_run": "/home/karri/projects/NIDSProject/outputs/post_p7_diagnostics/ton_local_action_correction_v1/run_20260929T105356Z_w5yzUa",
+    "input_assets": {
+      "features": "/home/karri/projects/NIDSProject/outputs/feature_store_v2/ToN_X.npy",
+      "labels": "/home/karri/projects/NIDSProject/outputs/feature_store_v2/ToN_label.npy",
+      "probability": "/home/karri/projects/NIDSProject/outputs/prediction_cache_v2/ToN/rf_All49.npy",
+      "original_rows": "/home/karri/projects/NIDSProject/outputs/round1_data_prep_v1/ToN_sorted_original_rows.npy",
+      "statistics": "/home/karri/projects/NIDSProject/outputs/source_v2/preprocessing/preprocessing_stats.npz",
+      "rows": 27520260,
+      "feature_order": [
+        "IN_BYTES",
+        "OUT_BYTES",
+        "IN_PKTS",
+        "OUT_PKTS",
+        "LONGEST_FLOW_PKT",
+        "SHORTEST_FLOW_PKT",
+        "MIN_IP_PKT_LEN",
+        "MAX_IP_PKT_LEN",
+        "SRC_TO_DST_SECOND_BYTES",
+        "DST_TO_SRC_SECOND_BYTES",
+        "SRC_TO_DST_AVG_THROUGHPUT",
+        "DST_TO_SRC_AVG_THROUGHPUT",
+        "NUM_PKTS_UP_TO_128_BYTES",
+        "NUM_PKTS_128_TO_256_BYTES",
+        "NUM_PKTS_256_TO_512_BYTES",
+        "NUM_PKTS_512_TO_1024_BYTES",
+        "NUM_PKTS_1024_TO_1514_BYTES",
+        "L4_SRC_PORT",
+        "L4_DST_PORT",
+        "PROTOCOL",
+        "L7_PROTO",
+        "TCP_FLAGS",
+        "CLIENT_TCP_FLAGS",
+        "SERVER_TCP_FLAGS",
+        "MIN_TTL",
+        "MAX_TTL",
+        "TCP_WIN_MAX_IN",
+        "TCP_WIN_MAX_OUT",
+        "ICMP_TYPE",
+        "ICMP_IPV4_TYPE",
+        "DNS_QUERY_ID",
+        "DNS_QUERY_TYPE",
+        "DNS_TTL_ANSWER",
+        "FTP_COMMAND_RET_CODE",
+        "FLOW_DURATION_MILLISECONDS",
+        "DURATION_IN",
+        "DURATION_OUT",
+        "RETRANSMITTED_IN_BYTES",
+        "RETRANSMITTED_IN_PKTS",
+        "RETRANSMITTED_OUT_BYTES",
+        "RETRANSMITTED_OUT_PKTS",
+        "SRC_TO_DST_IAT_MIN",
+        "SRC_TO_DST_IAT_MAX",
+        "SRC_TO_DST_IAT_AVG",
+        "SRC_TO_DST_IAT_STDDEV",
+        "DST_TO_SRC_IAT_MIN",
+        "DST_TO_SRC_IAT_MAX",
+        "DST_TO_SRC_IAT_AVG",
+        "DST_TO_SRC_IAT_STDDEV"
+      ],
+      "categorical_indices": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        28,
+        29,
+        31,
+        33
+      ],
+      "numeric_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        24,
+        25,
+        26,
+        27,
+        32,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48
+      ],
+      "feature_representation": "rank-aligned raw float32 promoted to float64, source fill once, no standardization",
+      "raw_semantics": "RF predict_proba[:,1]; recompute raw_pred; cached predicted_class ignored",
+      "loader_evidence": [
+        "src/nids/data/feature_store.py:104-116",
+        "src/nids/replay/predictions.py:33-37,70-113"
+      ]
+    },
+    "original_protocol": "/home/karri/projects/NIDSProject/outputs/post_p7_diagnostics/reliability_local_evidence_v1/run_20260929T074336Z_8Aw2gr/config/protocol_v1.json",
+    "distance": {
+      "k": 15,
+      "weights": "uniform",
+      "distance_dtype": "float64",
+      "feature_count": 48,
+      "excluded_features": [
+        "DNS_QUERY_ID"
+      ],
+      "categorical_features": [
+        "L4_SRC_PORT",
+        "L4_DST_PORT",
+        "PROTOCOL",
+        "L7_PROTO",
+        "TCP_FLAGS",
+        "CLIENT_TCP_FLAGS",
+        "SERVER_TCP_FLAGS",
+        "ICMP_TYPE",
+        "ICMP_IPV4_TYPE",
+        "DNS_QUERY_TYPE",
+        "FTP_COMMAND_RET_CODE"
+      ],
+      "numeric_feature_count": 37,
+      "numeric_distance": "min(abs(x-r)/frozen_source_scale,10)/10",
+      "categorical_distance": "1[x!=r]",
+      "aggregation": "mean_over_48_features",
+      "tie_break": "reference_availability_rank_ascending",
+      "reference_only": "R",
+      "feature_imputation": "frozen_source_fill",
+      "fit_new_feature_transform": false
+    },
+    "feature_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48
+    ],
+    "representation": "frozen source fill, existing numeric representation, no target fit or standardization; scale used only in mixed distance",
+    "update_rank": 13820000,
+    "recent_candidate_range": [
+      13710000,
+      13810000
+    ],
+    "arrival_gap": [
+      13810000,
+      13820000
+    ],
+    "evaluation_range": [
+      13820000,
+      27520000
+    ],
+    "segment_boundaries": [
+      13820000,
+      17250000,
+      20680000,
+      24100000,
+      27520000
+    ],
+    "segment_windows": [
+      343,
+      343,
+      342,
+      342
+    ],
+    "expected_rows": 137000,
+    "recent_sampling": {
+      "seed": 20260930,
+      "generator": "PCG64",
+      "size": 400,
+      "exclude": "all original400 and full original pilot274200",
+      "sort_candidate": true,
+      "sort_draw_before_split": true
+    },
+    "recent_split": {
+      "seed": 20261001,
+      "generator": "PCG64",
+      "R": 200,
+      "C": 200,
+      "assignment": "permutation of sorted400; first200 R"
+    },
+    "gate_grid": [
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      1.0
+    ],
+    "gate": "HIGH support for candidate label; fixed threshold or OFF; integer 20*errors<=accepted and accepted>=10",
+    "tie_order": [
+      "maximum U_bal",
+      "maximum min(UB,UA)",
+      "minimum FN+FP",
+      "ascending B threshold ID",
+      "ascending A threshold ID; OFF after1.00"
+    ],
+    "model_parameters": {
+      "n_estimators": 200,
+      "criterion": "gini",
+      "max_depth": 5,
+      "min_samples_split": 2,
+      "min_samples_leaf": 5,
+      "max_features": "sqrt",
+      "bootstrap": true,
+      "class_weight": null,
+      "random_state": 20260929,
+      "n_jobs": 8
+    },
+    "methods": [
+      "OLD_LOCAL",
+      "RECENT_LOCAL",
+      "OLD_TARGET",
+      "RECENT_TARGET"
+    ],
+    "reference_methods": [
+      "SOURCE_RF_ALL",
+      "E1_FROZEN",
+      "ALWAYS_A",
+      "ALWAYS_B"
+    ],
+    "budget": {
+      "original_adaptation": 400,
+      "new_adaptation": 400,
+      "per_main_method": 400,
+      "cumulative_acquired_adaptation": 800,
+      "evaluation_existing_labels": 137000,
+      "evaluation_labels_used_for_training": false
+    },
+    "bootstrap": {
+      "seed": 20261002,
+      "replicates": 1000,
+      "block_windows": 10,
+      "stratify": "four predetermined subsegments",
+      "keep_short_final": true,
+      "shared_indices": true,
+      "percentiles": [
+        2.5,
+        97.5
+      ],
+      "minimum_valid_fraction": 0.9
+    },
+    "interpretation": "development comparison on common future range after one update; neither independent blind test nor equal cumulative-budget online deployment"
+  },
+  "methods": {
+    "OLD_LOCAL": {
+      "B": {
+        "id": "T011",
+        "threshold": null,
+        "accepted": 0,
+        "errors": 0,
+        "correct": 0,
+        "risk": null,
+        "feasible": true
+      },
+      "A": {
+        "id": "T000",
+        "threshold": 0.5,
+        "accepted": 13,
+        "errors": 0,
+        "correct": 13,
+        "risk": 0.0,
+        "feasible": true
+      },
+      "N_B": 166,
+      "N_A": 34,
+      "status": "PARTIAL_ACTION_POLICY",
+      "feasible_enabled_candidates": {
+        "B": 0,
+        "A": 5
+      }
+    },
+    "OLD_TARGET": {
+      "B": {
+        "id": "T008",
+        "threshold": 0.9,
+        "accepted": 121,
+        "errors": 4,
+        "correct": 117,
+        "risk": 0.03305785123966942,
+        "feasible": true
+      },
+      "A": {
+        "id": "T000",
+        "threshold": 0.5,
+        "accepted": 12,
+        "errors": 0,
+        "correct": 12,
+        "risk": 0.0,
+        "feasible": true
+      },
+      "N_B": 166,
+      "N_A": 34,
+      "status": "TWO_ACTION_POLICY",
+      "feasible_enabled_candidates": {
+        "B": 2,
+        "A": 1
+      }
+    },
+    "RECENT_LOCAL": {
+      "B": {
+        "id": "T000",
+        "threshold": 0.5,
+        "accepted": 129,
+        "errors": 6,
+        "correct": 123,
+        "risk": 0.046511627906976744,
+        "feasible": true
+      },
+      "A": {
+        "id": "T000",
+        "threshold": 0.5,
+        "accepted": 71,
+        "errors": 0,
+        "correct": 71,
+        "risk": 0.0,
+        "feasible": true
+      },
+      "N_B": 123,
+      "N_A": 77,
+      "status": "TWO_ACTION_POLICY",
+      "feasible_enabled_candidates": {
+        "B": 11,
+        "A": 11
+      }
+    },
+    "RECENT_TARGET": {
+      "B": {
+        "id": "T007",
+        "threshold": 0.85,
+        "accepted": 128,
+        "errors": 5,
+        "correct": 123,
+        "risk": 0.0390625,
+        "feasible": true
+      },
+      "A": {
+        "id": "T000",
+        "threshold": 0.5,
+        "accepted": 71,
+        "errors": 0,
+        "correct": 71,
+        "risk": 0.0,
+        "feasible": true
+      },
+      "N_B": 123,
+      "N_A": 77,
+      "status": "TWO_ACTION_POLICY",
+      "feasible_enabled_candidates": {
+        "B": 10,
+        "A": 10
+      }
+    }
+  },
+  "E1_FROZEN": {
+    "id": "B_LOW_T009_U003__A_HIGH_T000_U000",
+    "B": {
+      "id": "LOW_T009_U003",
+      "direction": "LOW",
+      "threshold": 0.8577222228050232,
+      "threshold_index": 9,
+      "u": 1.0,
+      "u_index": 3,
+      "accepted": 52,
+      "errors": 2,
+      "correct": 50,
+      "risk": 0.038461538461538464,
+      "feasible": true,
+      "infeasible_reasons": ""
+    },
+    "A": {
+      "id": "HIGH_T000_U000",
+      "direction": "HIGH",
+      "threshold": 0.5,
+      "threshold_index": 0,
+      "u": 0.0,
+      "u_index": 0,
+      "accepted": 13,
+      "errors": 0,
+      "correct": 13,
+      "risk": 0.0,
+      "feasible": true,
+      "infeasible_reasons": ""
+    },
+    "status": "TWO_ACTION_POLICY",
+    "candidate_label_counts": {
+      "B": 187,
+      "A": 13
+    },
+    "feasible_enabled_candidates": {
+      "B": 5,
+      "A": 24
+    },
+    "metrics": {
+      "N": 200,
+      "N_B": 166,
+      "N_A": 34,
+      "TN": 50,
+      "FN": 2,
+      "FP": 0,
+      "TP": 13,
+      "accepted_B": 52,
+      "accepted_A": 13,
+      "R_B": 0.038461538461538464,
+      "R_A": 0.0,
+      "U_B": 0.30120481927710846,
+      "U_A": 0.38235294117647056,
+      "U_bal": 0.3417788802267895
+    }
+  }
+}

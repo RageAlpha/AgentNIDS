@@ -1,0 +1,32 @@
+{
+  "version": "week0-independent-audit-v1.0",
+  "created_at_utc": "2026-09-15T07:58:38.622631+00:00",
+  "pilot": "/home/karri/projects/NIDSProject/outputs/post_p7_diagnostics/week0_pilot/run_20260915T073452Z",
+  "preflight": "/home/karri/projects/NIDSProject/outputs/post_p7_diagnostics/week0_preflight/run_20260915T070731Z",
+  "model": "rf_All49",
+  "q_hex": "0x1.51bb5a0000000p-22",
+  "epsilon": "1/10",
+  "source_cal": [
+    1420000,
+    1780000
+  ],
+  "source_test": [
+    2130000,
+    2365424
+  ],
+  "ToN": [
+    0,
+    27520000
+  ],
+  "gate_frozen": "NO_GO_EVIDENCE",
+  "seed": 20260915,
+  "uniform_calibration_samples": 3601,
+  "per_complete_window_samples": 17,
+  "source_tail_samples": 17,
+  "targeted_sampling": "all 731 accepted ToN; nearest 64 records on each side of both singleton boundaries in each partition; 256 source true Attack in covered/rejected groups; original inference batch boundaries",
+  "numerical_input": "float32 values losslessly stored float64; compare only, no rounding/clipping/softmax",
+  "independence": "No calls/imports to old scores/threshold/prediction_sets/summarize; reference order statistic and masked integer counting",
+  "upstream": "Full raw CSV Label/Attack and end-time mapping; sampled exact features/inference",
+  "inference_claim": "Sampled only unless explicitly expanded; bit equality first, no invented tolerance",
+  "no_week1": true
+}

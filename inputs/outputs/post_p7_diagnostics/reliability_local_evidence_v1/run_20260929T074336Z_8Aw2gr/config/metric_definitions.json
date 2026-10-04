@@ -1,0 +1,39 @@
+{
+  "count_columns": [
+    "N",
+    "N_B",
+    "N_A",
+    "TN",
+    "FN",
+    "FP",
+    "TP",
+    "abstain_B",
+    "abstain_A",
+    "pred_B",
+    "pred_A",
+    "accepted_pred_B",
+    "accepted_pred_A",
+    "windows_B",
+    "windows_A"
+  ],
+  "actions": {
+    "-1": "ABSTAIN",
+    "0": "B",
+    "1": "A"
+  },
+  "R_B": "FN/(TN+FN)",
+  "R_A": "FP/(TP+FP)",
+  "U_B": "TN/N_B",
+  "U_A": "TP/N_A",
+  "U_bal": "0.5*(U_B+U_A)",
+  "absolute_errors": "sampled; never scaled by 100",
+  "zero_denominator": null,
+  "candidate_id": "B_<direction>_T<ascending grid index:03>_U<u index:03>__A_...; OFF_T999_U000; lexicographic final tie; G0 both enabled must share T",
+  "tie_order": [
+    "maximize_min_UB_UA",
+    "minimize_FN_plus_FP",
+    "prefer_smaller_u_B_then_u_A",
+    "prefer_HIGH_B_then_HIGH_A",
+    "stable_candidate_id"
+  ]
+}

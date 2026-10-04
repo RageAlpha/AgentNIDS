@@ -1,0 +1,24 @@
+# Generated workspaces and outputs
+/runs/
+/outputs/
+
+# Original datasets are supplied separately; keep the feature dictionary
+/datasets/NF-*-v3.csv
+
+# Python environments and bytecode
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Local environment settings
+.env
+.env.*
+!.env.example
+
+# Operating-system metadata
+.DS_Store
+Thumbs.db
+desktop.ini

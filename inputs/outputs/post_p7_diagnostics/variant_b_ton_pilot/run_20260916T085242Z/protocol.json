@@ -1,0 +1,126 @@
+{
+  "registered_at_utc": "2026-09-16T09:04:40.217328+00:00",
+  "model_path": "/home/karri/projects/NIDSProject/outputs/source_v2/models/rf_All49/model.pkl",
+  "model_bytes": 5684186,
+  "authority": [
+    "/home/karri/projects/NIDSProject/docs/Ton_variant/Reply_to_Siyuan_Week0_Analysis_and_Next_Step.md",
+    "/home/karri/projects/NIDSProject/docs/Ton_variant/ToN_VariantB_MiniPilot_Plan_ReplyLed_ZH.md"
+  ],
+  "variant": "B Mondrian Strict-K",
+  "K": 400,
+  "per_class": 200,
+  "epsilon": 0.1,
+  "probability": "raw_probability = P(Attack); P(Benign)=1-p; float64; unchanged",
+  "labels": {
+    "0": "Benign",
+    "1": "Attack"
+  },
+  "collection": "chronological rank scan [0,100000); first 200 of each class; stop when both full; no sampling",
+  "threshold": "ascending class-specific scores; one-based 181st of 200; Benign score=p; Attack score=1-p",
+  "prediction": {
+    "benign": "p <= q_Benign",
+    "attack": "1-p <= q_Attack",
+    "singleton": "accept unique label",
+    "empty": "reject",
+    "double": "abstain",
+    "raw": "p >= 0.5"
+  },
+  "ton_evaluation": [
+    100000,
+    27520000
+  ],
+  "ton_rows": 27420000,
+  "ton_windows": 2742,
+  "ton_tail_excluded": 260,
+  "segments": [
+    {
+      "segment": 1,
+      "rank_start": 100000,
+      "rank_end_exclusive": 6960000,
+      "windows": 686
+    },
+    {
+      "segment": 2,
+      "rank_start": 6960000,
+      "rank_end_exclusive": 13820000,
+      "windows": 686
+    },
+    {
+      "segment": 3,
+      "rank_start": 13820000,
+      "rank_end_exclusive": 20670000,
+      "windows": 685
+    },
+    {
+      "segment": 4,
+      "rank_start": 20670000,
+      "rank_end_exclusive": 27520000,
+      "windows": 685
+    }
+  ],
+  "source_evaluation": [
+    2130000,
+    2365424
+  ],
+  "source_rows": 235424,
+  "source_tail_included": 5424,
+  "bootstrap": {
+    "block_windows": 10,
+    "blocks": 275,
+    "last_block_windows": 2,
+    "replicates": 2000,
+    "generator": "PCG64",
+    "seed": 20260915,
+    "paired": true,
+    "percentiles": [
+      2.5,
+      97.5
+    ],
+    "quantile_method": "linear",
+    "undefined": "NA; exclude per-metric invalid replicates and report valid count",
+    "inference": "conditional on fixed calibration sample, thresholds and frozen model; four segments descriptive"
+  },
+  "gate": "Professor reply section 4; no numerical materiality threshold; unresolved materiality or segment consistency requires professor judgment",
+  "stop_after": "mini-pilot; no Week 1; no professor message",
+  "input_validation": [
+    {
+      "domain": "ToN",
+      "rows": 27520260,
+      "cache_dtype": "[('raw_probability', '<f8'), ('probability', '<f8'), ('predicted_class', 'u1'), ('u', '<f8'), ('h', '<f8')]",
+      "paths": {
+        "cache": "/home/karri/projects/NIDSProject/outputs/prediction_cache_v2/ToN/rf_All49.npy",
+        "labels": "/home/karri/projects/NIDSProject/outputs/feature_store_v2/ToN_label.npy",
+        "original_rows": "/home/karri/projects/NIDSProject/outputs/round1_data_prep_v1/ToN_sorted_original_rows.npy"
+      },
+      "original_rows_unique_and_in_range": true,
+      "rank_mapping": "cache and feature-store metadata agree; feature_store.py gathers labels by prepared order; predictions.py preserves rank and raw class-1 probability",
+      "original_window_boundary_rows_match": true,
+      "complete_windows": 2752,
+      "tail_rows": 260
+    },
+    {
+      "domain": "UNSW",
+      "rows": 2365424,
+      "cache_dtype": "[('raw_probability', '<f8'), ('probability', '<f8'), ('predicted_class', 'u1'), ('u', '<f8'), ('h', '<f8')]",
+      "paths": {
+        "cache": "/home/karri/projects/NIDSProject/outputs/prediction_cache_v2/UNSW/rf_All49.npy",
+        "labels": "/home/karri/projects/NIDSProject/outputs/feature_store_v2/UNSW_label.npy",
+        "original_rows": "/home/karri/projects/NIDSProject/outputs/round1_data_prep_v1/UNSW_sorted_original_rows.npy"
+      },
+      "original_rows_unique_and_in_range": true,
+      "rank_mapping": "cache and feature-store metadata agree; feature_store.py gathers labels by prepared order; predictions.py preserves rank and raw class-1 probability",
+      "original_window_boundary_rows_match": true,
+      "complete_windows": 236,
+      "tail_rows": 5424
+    }
+  ],
+  "environment": {
+    "python": "3.11.16",
+    "numpy": "2.4.6"
+  },
+  "code_evidence": [
+    "src/nids/data/feature_store.py: sorted_y[start:stop] = raw_y[order[start:stop]]",
+    "src/nids/replay/predictions.py: RF predict_proba result[:, 1]; cache written in rank order",
+    "src/nids/evaluation/outer_data.py: C1 uses heldout T_heldout 10000-row windows"
+  ]
+}

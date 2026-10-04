@@ -1,0 +1,443 @@
+F1: initial={'selected': 0, 'order': [0, 1, 2], 'equal_domain_errors': [0.43996680323622767, 0.5036154394243357, 0.5407756025543218], 'partition': 'R_cal'}
+rf_Traffic query median=1.551742ms
+xgb_Protocol query median=2.270533ms
+mlp_Behavior query median=1.615161ms
+GPU progress: elapsed=32.2s, used=1357.5 MiB, peak=1357.5 MiB
+GPU progress: elapsed=62.3s, used=1357.5 MiB, peak=1357.5 MiB
+GPU progress: elapsed=92.3s, used=1357.5 MiB, peak=1357.5 MiB
+GPU progress: elapsed=122.4s, used=1357.5 MiB, peak=1357.5 MiB
+GPU progress: elapsed=152.5s, used=1365.5 MiB, peak=1365.5 MiB
+GPU progress: elapsed=182.6s, used=1515.5 MiB, peak=1575.5 MiB
+GPU progress: elapsed=212.6s, used=1899.5 MiB, peak=1973.5 MiB
+GPU progress: elapsed=242.6s, used=2355.5 MiB, peak=2423.5 MiB
+F1/coordinator: frozen [(1, None, 0.27), (2, 0.27, 0.77), (3, 0.71, 0.94)]
+GPU progress: elapsed=272.7s, used=1595.5 MiB, peak=2423.5 MiB
+GPU progress: elapsed=302.7s, used=1859.5 MiB, peak=2423.5 MiB
+F1/learned_cascade: frozen [(1, None, 0.27), (2, 0.27, 0.96), (3, 0.75, None)]
+GPU progress: elapsed=332.8s, used=1591.5 MiB, peak=2429.5 MiB
+GPU progress: elapsed=362.8s, used=2137.5 MiB, peak=2429.5 MiB
+F1/random: frozen [(1, None, 0.27), (2, 0.27, 0.96), (3, 0.74, 0.94)]
+GPU progress: elapsed=392.9s, used=1601.5 MiB, peak=2447.5 MiB
+GPU progress: elapsed=423.0s, used=2079.5 MiB, peak=2447.5 MiB
+F1/cheapest: frozen [(1, None, 0.27), (2, 0.27, None), (3, 0.74, 0.94)]
+GPU progress: elapsed=453.0s, used=1577.5 MiB, peak=2447.5 MiB
+GPU progress: elapsed=483.0s, used=1907.5 MiB, peak=2447.5 MiB
+GPU progress: elapsed=513.1s, used=1449.5 MiB, peak=2475.5 MiB
+F1/uncertainty: frozen [(1, None, 0.27), (2, 0.27, 0.96), (3, 0.76, 0.96)]
+GPU progress: elapsed=543.1s, used=1449.5 MiB, peak=2475.5 MiB
+F1/best_single: frozen [(1, None, 0.34)]
+GPU progress: elapsed=573.2s, used=1585.5 MiB, peak=2475.5 MiB
+GPU progress: elapsed=603.2s, used=2085.5 MiB, peak=2475.5 MiB
+F1/uniform: frozen [(1, None, None), (2, None, None), (3, None, None)]
+GPU progress: elapsed=633.3s, used=1611.5 MiB, peak=2475.5 MiB
+GPU progress: elapsed=663.3s, used=2097.5 MiB, peak=2475.5 MiB
+F1/static: frozen [(1, None, None), (2, None, None), (3, None, None)]
+GPU progress: elapsed=693.4s, used=1597.5 MiB, peak=2475.5 MiB
+GPU progress: elapsed=723.5s, used=1449.5 MiB, peak=2475.5 MiB
+F1/confidence: frozen [(1, None, None), (2, None, None), (3, None, None)]
+GPU progress: elapsed=753.6s, used=1609.5 MiB, peak=2475.5 MiB
+GPU progress: elapsed=783.7s, used=1913.5 MiB, peak=2475.5 MiB
+GPU progress: elapsed=813.8s, used=1449.5 MiB, peak=2475.5 MiB
+F1/soft_moe: frozen [(1, None, None), (2, None, 0.04), (3, None, 0.04)]
+GPU progress: elapsed=843.8s, used=1449.5 MiB, peak=2475.5 MiB
+F1/hard_moe: frozen [(1, None, 0.34), (2, None, 0.62)]
+GPU progress: elapsed=873.9s, used=1577.5 MiB, peak=2475.5 MiB
+GPU progress: elapsed=903.9s, used=2137.5 MiB, peak=2475.5 MiB
+F1/fixed_012: frozen [(1, None, 0.27), (2, 0.27, 0.96), (3, 0.75, None)]
+GPU progress: elapsed=934.1s, used=1481.5 MiB, peak=2475.5 MiB
+GPU progress: elapsed=964.2s, used=2137.5 MiB, peak=2475.5 MiB
+F1/fixed_021: frozen [(1, None, 0.27), (2, 0.27, None), (3, 0.74, 0.94)]
+GPU progress: elapsed=994.2s, used=1607.5 MiB, peak=2475.5 MiB
+GPU progress: elapsed=1024.2s, used=2073.5 MiB, peak=2475.5 MiB
+F1/fixed_102: frozen [(1, None, 0.9), (2, 0.9, 0.79), (3, 0.1, None)]
+GPU progress: elapsed=1054.3s, used=1587.5 MiB, peak=2475.5 MiB
+GPU progress: elapsed=1084.4s, used=2079.5 MiB, peak=2475.5 MiB
+F1/fixed_120: frozen [(1, None, 0.9), (2, 0.9, 0.89), (3, 0.9, 0.94)]
+GPU progress: elapsed=1114.4s, used=1573.5 MiB, peak=2475.5 MiB
+GPU progress: elapsed=1144.5s, used=2097.5 MiB, peak=2475.5 MiB
+F1/fixed_201: frozen [(1, None, None), (2, None, 0.73), (3, 0.77, 0.94)]
+GPU progress: elapsed=1174.6s, used=1585.5 MiB, peak=2475.5 MiB
+GPU progress: elapsed=1204.6s, used=2085.5 MiB, peak=2475.5 MiB
+F1/fixed_210: frozen [(1, None, None), (2, None, 0.89), (3, 0.89, 0.94)]
+F2: initial={'selected': 1, 'order': [1, 2, 0], 'equal_domain_errors': [0.6543401614472344, 0.23881500509589548, 0.36050831325859356], 'partition': 'R_cal'}
+rf_Traffic query median=2.903308ms
+xgb_Protocol query median=2.744175ms
+mlp_Behavior query median=1.536033ms
+corrective_0_1: CONVERGED, rows=23,820,000, iter=14, grad=2.36e-05, 16.90s
+GPU progress: elapsed=30.1s, used=4617.5 MiB, peak=4783.5 MiB
+corrective_0_2: CONVERGED, rows=23,820,000, iter=8, grad=1.74e-05, 9.99s
+corrective_1_0: CONVERGED, rows=23,820,000, iter=8, grad=3.73e-05, 9.74s
+GPU progress: elapsed=60.2s, used=4617.5 MiB, peak=4783.5 MiB
+corrective_1_2: CONVERGED, rows=23,820,000, iter=14, grad=1.15e-05, 15.55s
+corrective_2_0: CONVERGED, rows=23,820,000, iter=8, grad=5.8e-05, 9.93s
+corrective_2_1: CONVERGED, rows=23,820,000, iter=14, grad=6.83e-05, 15.53s
+GPU progress: elapsed=90.3s, used=4607.5 MiB, peak=4783.5 MiB
+uncertainty_0_1: CONVERGED, rows=23,820,000, iter=4, grad=7.15e-05, 9.26s
+uncertainty_0_2: CONVERGED, rows=23,820,000, iter=4, grad=3.41e-07, 7.77s
+uncertainty_1_0: CONVERGED, rows=23,820,000, iter=6, grad=6.83e-05, 10.80s
+GPU progress: elapsed=120.3s, used=4611.5 MiB, peak=4783.5 MiB
+uncertainty_1_2: CONVERGED, rows=23,820,000, iter=10, grad=1.26e-05, 19.03s
+uncertainty_2_0: CONVERGED, rows=23,820,000, iter=6, grad=2.82e-05, 11.77s
+GPU progress: elapsed=150.4s, used=4617.5 MiB, peak=4783.5 MiB
+uncertainty_2_1: CONVERGED, rows=23,820,000, iter=7, grad=5.91e-05, 13.20s
+hard_0_1: CONVERGED, rows=23,820,000, iter=7, grad=4.88e-05, 8.61s
+hard_0_2: CONVERGED, rows=23,820,000, iter=5, grad=8.48e-05, 6.57s
+GPU progress: elapsed=180.5s, used=4617.5 MiB, peak=4783.5 MiB
+hard_1_0: CONVERGED, rows=23,820,000, iter=7, grad=5.13e-06, 8.22s
+hard_1_2: CONVERGED, rows=23,820,000, iter=6, grad=1.45e-05, 7.36s
+hard_2_0: CONVERGED, rows=23,820,000, iter=6, grad=9.1e-05, 7.43s
+hard_2_1: CONVERGED, rows=23,820,000, iter=6, grad=7.17e-05, 7.68s
+GPU progress: elapsed=210.6s, used=4645.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=240.6s, used=4679.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=270.7s, used=4667.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=300.8s, used=4703.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=330.8s, used=4683.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=360.9s, used=4659.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=391.0s, used=4657.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=421.1s, used=4703.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=451.1s, used=4683.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=481.2s, used=4681.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=511.3s, used=4685.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=541.3s, used=4703.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=571.4s, used=4677.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=601.5s, used=4703.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=631.5s, used=4703.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=661.6s, used=4659.5 MiB, peak=4783.5 MiB
+post: CONVERGED, rows=166,740,000, iter=32, grad=7.94e-05, 475.59s
+GPU progress: elapsed=691.7s, used=4649.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=721.8s, used=4691.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=751.8s, used=4699.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=781.9s, used=4707.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=812.0s, used=4725.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=842.0s, used=4703.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=872.1s, used=4685.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=902.2s, used=4701.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=932.2s, used=4747.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=962.3s, used=4699.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=992.4s, used=4699.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=1022.5s, used=4703.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=1052.5s, used=4725.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=1082.6s, used=4701.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=1112.7s, used=4723.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=1142.7s, used=4747.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=1172.8s, used=4723.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=1202.9s, used=4709.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=1233.0s, used=4725.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=1263.0s, used=4683.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=1293.1s, used=4725.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=1323.2s, used=4685.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=1353.2s, used=4705.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=1383.3s, used=4685.5 MiB, peak=4783.5 MiB
+soft_moe: CONVERGED, rows=166,740,000, iter=63, grad=8.73e-05, 717.70s
+GPU progress: elapsed=1413.4s, used=1535.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=1443.4s, used=1535.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=1473.5s, used=1535.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=1503.6s, used=1535.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=1533.7s, used=1535.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=1563.8s, used=1535.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=1593.8s, used=1689.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=1623.9s, used=2163.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=1653.9s, used=2701.5 MiB, peak=4783.5 MiB
+F2/coordinator: frozen [(1, None, None), (2, None, None), (3, None, None)]
+GPU progress: elapsed=1683.9s, used=1727.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=1714.0s, used=2371.5 MiB, peak=4783.5 MiB
+F2/learned_cascade: frozen [(1, None, None), (2, None, None), (3, None, None)]
+GPU progress: elapsed=1744.0s, used=1707.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=1774.1s, used=2179.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=1804.1s, used=2701.5 MiB, peak=4783.5 MiB
+F2/random: frozen [(1, None, None), (2, None, None), (3, None, None)]
+GPU progress: elapsed=1834.2s, used=1705.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=1864.3s, used=2405.5 MiB, peak=4783.5 MiB
+F2/cheapest: frozen [(1, None, None), (2, None, None), (3, None, None)]
+GPU progress: elapsed=1894.3s, used=1729.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=1924.4s, used=2125.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=1954.4s, used=1581.5 MiB, peak=4783.5 MiB
+F2/uncertainty: frozen [(1, None, None), (2, None, None), (3, None, None)]
+GPU progress: elapsed=1984.5s, used=1753.5 MiB, peak=4783.5 MiB
+F2/best_single: frozen [(1, None, None)]
+GPU progress: elapsed=2014.6s, used=1715.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=2044.6s, used=1715.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=2074.6s, used=2463.5 MiB, peak=4783.5 MiB
+F2/uniform: frozen [(1, None, None), (2, None, None), (3, None, None)]
+GPU progress: elapsed=2104.7s, used=1747.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=2134.8s, used=2089.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=2164.8s, used=2389.5 MiB, peak=4783.5 MiB
+F2/static: frozen [(1, None, None), (2, None, None), (3, None, None)]
+GPU progress: elapsed=2194.9s, used=1687.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=2225.0s, used=2163.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=2255.0s, used=2745.5 MiB, peak=4783.5 MiB
+F2/confidence: frozen [(1, None, None), (2, None, None), (3, None, None)]
+GPU progress: elapsed=2285.1s, used=1707.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=2315.1s, used=2405.5 MiB, peak=4783.5 MiB
+F2/soft_moe: frozen [(1, None, None), (2, None, None), (3, None, None)]
+GPU progress: elapsed=2345.3s, used=1599.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=2375.4s, used=2163.5 MiB, peak=4783.5 MiB
+F2/hard_moe: frozen [(1, None, None), (2, None, None)]
+GPU progress: elapsed=2405.6s, used=1601.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=2435.6s, used=2171.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=2465.7s, used=2687.5 MiB, peak=4783.5 MiB
+F2/fixed_012: frozen [(1, None, None), (2, None, None), (3, None, None)]
+GPU progress: elapsed=2495.7s, used=1741.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=2525.8s, used=2467.5 MiB, peak=4783.5 MiB
+F2/fixed_021: frozen [(1, None, None), (2, None, None), (3, None, None)]
+GPU progress: elapsed=2555.8s, used=1691.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=2585.9s, used=2163.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=2616.0s, used=2693.5 MiB, peak=4783.5 MiB
+F2/fixed_102: frozen [(1, None, None), (2, None, None), (3, None, None)]
+GPU progress: elapsed=2646.0s, used=1721.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=2676.1s, used=2397.5 MiB, peak=4783.5 MiB
+F2/fixed_120: frozen [(1, None, None), (2, None, None), (3, None, None)]
+GPU progress: elapsed=2706.2s, used=1721.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=2736.2s, used=2089.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=2766.2s, used=2649.5 MiB, peak=4783.5 MiB
+F2/fixed_201: frozen [(1, None, None), (2, None, None), (3, None, None)]
+GPU progress: elapsed=2796.2s, used=1697.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=2826.3s, used=1581.5 MiB, peak=4783.5 MiB
+GPU progress: elapsed=2856.4s, used=2113.5 MiB, peak=4783.5 MiB
+F2/fixed_210: frozen [(1, None, None), (2, None, None), (3, None, None)]
+F1/coordinator/cap1/CIC: actual conditional queries PASS
+F1/coordinator/cap1/BoT: actual conditional queries PASS
+F1/coordinator/cap2/CIC: actual conditional queries PASS
+F1/coordinator/cap2/BoT: actual conditional queries PASS
+GPU progress: elapsed=30.1s, used=1755.5 MiB, peak=3955.5 MiB
+F1/coordinator/cap3/CIC: actual conditional queries PASS
+F1/coordinator/cap3/BoT: actual conditional queries PASS
+F1/learned_cascade/cap1/CIC: actual conditional queries PASS
+F1/learned_cascade/cap1/BoT: actual conditional queries PASS
+F1/learned_cascade/cap2/CIC: actual conditional queries PASS
+F1/learned_cascade/cap2/BoT: actual conditional queries PASS
+GPU progress: elapsed=60.1s, used=1699.5 MiB, peak=3955.5 MiB
+F1/learned_cascade/cap3/CIC: actual conditional queries PASS
+F1/learned_cascade/cap3/BoT: actual conditional queries PASS
+F1/random/cap1/CIC: actual conditional queries PASS
+F1/random/cap1/BoT: actual conditional queries PASS
+F1/random/cap2/CIC: actual conditional queries PASS
+GPU progress: elapsed=90.2s, used=1717.5 MiB, peak=3955.5 MiB
+F1/random/cap2/BoT: actual conditional queries PASS
+F1/random/cap3/CIC: actual conditional queries PASS
+F1/random/cap3/BoT: actual conditional queries PASS
+F1/cheapest/cap1/CIC: actual conditional queries PASS
+F1/cheapest/cap1/BoT: actual conditional queries PASS
+GPU progress: elapsed=120.2s, used=1727.5 MiB, peak=3955.5 MiB
+F1/cheapest/cap2/CIC: actual conditional queries PASS
+F1/cheapest/cap2/BoT: actual conditional queries PASS
+F1/cheapest/cap3/CIC: actual conditional queries PASS
+F1/cheapest/cap3/BoT: actual conditional queries PASS
+F1/uncertainty/cap1/CIC: actual conditional queries PASS
+F1/uncertainty/cap1/BoT: actual conditional queries PASS
+GPU progress: elapsed=150.3s, used=1729.5 MiB, peak=3955.5 MiB
+F1/uncertainty/cap2/CIC: actual conditional queries PASS
+F1/uncertainty/cap2/BoT: actual conditional queries PASS
+F1/uncertainty/cap3/CIC: actual conditional queries PASS
+F1/uncertainty/cap3/BoT: actual conditional queries PASS
+F1/best_single/cap1/CIC: actual conditional queries PASS
+GPU progress: elapsed=180.4s, used=1597.5 MiB, peak=3955.5 MiB
+F1/best_single/cap1/BoT: actual conditional queries PASS
+F1/uniform/cap1/CIC: actual conditional queries PASS
+F1/uniform/cap1/BoT: actual conditional queries PASS
+F1/uniform/cap2/CIC: actual conditional queries PASS
+F1/uniform/cap2/BoT: actual conditional queries PASS
+GPU progress: elapsed=210.4s, used=1741.5 MiB, peak=3955.5 MiB
+F1/uniform/cap3/CIC: actual conditional queries PASS
+F1/uniform/cap3/BoT: actual conditional queries PASS
+F1/static/cap1/CIC: actual conditional queries PASS
+GPU progress: elapsed=240.4s, used=1729.5 MiB, peak=3955.5 MiB
+F1/static/cap1/BoT: actual conditional queries PASS
+F1/static/cap2/CIC: actual conditional queries PASS
+F1/static/cap2/BoT: actual conditional queries PASS
+F1/static/cap3/CIC: actual conditional queries PASS
+GPU progress: elapsed=270.5s, used=1581.5 MiB, peak=3955.5 MiB
+F1/static/cap3/BoT: actual conditional queries PASS
+F1/confidence/cap1/CIC: actual conditional queries PASS
+F1/confidence/cap1/BoT: actual conditional queries PASS
+GPU progress: elapsed=300.5s, used=1753.5 MiB, peak=3955.5 MiB
+F1/confidence/cap2/CIC: actual conditional queries PASS
+F1/confidence/cap2/BoT: actual conditional queries PASS
+F1/confidence/cap3/CIC: actual conditional queries PASS
+GPU progress: elapsed=330.6s, used=1729.5 MiB, peak=3955.5 MiB
+F1/confidence/cap3/BoT: actual conditional queries PASS
+F1/soft_moe/cap1/CIC: actual conditional queries PASS
+F1/soft_moe/cap1/BoT: actual conditional queries PASS
+F1/soft_moe/cap2/CIC: actual conditional queries PASS
+F1/soft_moe/cap2/BoT: actual conditional queries PASS
+GPU progress: elapsed=360.7s, used=1725.5 MiB, peak=3955.5 MiB
+F1/soft_moe/cap3/CIC: actual conditional queries PASS
+F1/soft_moe/cap3/BoT: actual conditional queries PASS
+F1/hard_moe/cap1/CIC: actual conditional queries PASS
+F1/hard_moe/cap1/BoT: actual conditional queries PASS
+F1/hard_moe/cap2/CIC: actual conditional queries PASS
+GPU progress: elapsed=390.8s, used=1581.5 MiB, peak=3955.5 MiB
+F1/hard_moe/cap2/BoT: actual conditional queries PASS
+F1/fixed_012/cap1/CIC: actual conditional queries PASS
+F1/fixed_012/cap1/BoT: actual conditional queries PASS
+F1/fixed_012/cap2/CIC: actual conditional queries PASS
+GPU progress: elapsed=420.8s, used=1757.5 MiB, peak=3955.5 MiB
+F1/fixed_012/cap2/BoT: actual conditional queries PASS
+F1/fixed_012/cap3/CIC: actual conditional queries PASS
+F1/fixed_012/cap3/BoT: actual conditional queries PASS
+F1/fixed_021/cap1/CIC: actual conditional queries PASS
+F1/fixed_021/cap1/BoT: actual conditional queries PASS
+GPU progress: elapsed=450.9s, used=1745.5 MiB, peak=3955.5 MiB
+F1/fixed_021/cap2/CIC: actual conditional queries PASS
+F1/fixed_021/cap2/BoT: actual conditional queries PASS
+F1/fixed_021/cap3/CIC: actual conditional queries PASS
+F1/fixed_021/cap3/BoT: actual conditional queries PASS
+GPU progress: elapsed=481.0s, used=1613.5 MiB, peak=3955.5 MiB
+F1/fixed_102/cap1/CIC: actual conditional queries PASS
+F1/fixed_102/cap1/BoT: actual conditional queries PASS
+F1/fixed_102/cap2/CIC: actual conditional queries PASS
+F1/fixed_102/cap2/BoT: actual conditional queries PASS
+F1/fixed_102/cap3/CIC: actual conditional queries PASS
+F1/fixed_102/cap3/BoT: actual conditional queries PASS
+GPU progress: elapsed=511.1s, used=1717.5 MiB, peak=3955.5 MiB
+F1/fixed_120/cap1/CIC: actual conditional queries PASS
+F1/fixed_120/cap1/BoT: actual conditional queries PASS
+F1/fixed_120/cap2/CIC: actual conditional queries PASS
+F1/fixed_120/cap2/BoT: actual conditional queries PASS
+GPU progress: elapsed=541.2s, used=1719.5 MiB, peak=3955.5 MiB
+F1/fixed_120/cap3/CIC: actual conditional queries PASS
+F1/fixed_120/cap3/BoT: actual conditional queries PASS
+F1/fixed_201/cap1/CIC: actual conditional queries PASS
+F1/fixed_201/cap1/BoT: actual conditional queries PASS
+F1/fixed_201/cap2/CIC: actual conditional queries PASS
+GPU progress: elapsed=571.2s, used=1705.5 MiB, peak=3955.5 MiB
+F1/fixed_201/cap2/BoT: actual conditional queries PASS
+F1/fixed_201/cap3/CIC: actual conditional queries PASS
+F1/fixed_201/cap3/BoT: actual conditional queries PASS
+F1/fixed_210/cap1/CIC: actual conditional queries PASS
+F1/fixed_210/cap1/BoT: actual conditional queries PASS
+GPU progress: elapsed=601.2s, used=1727.5 MiB, peak=3955.5 MiB
+F1/fixed_210/cap2/CIC: actual conditional queries PASS
+F1/fixed_210/cap2/BoT: actual conditional queries PASS
+F1/fixed_210/cap3/CIC: actual conditional queries PASS
+F1/fixed_210/cap3/BoT: actual conditional queries PASS
+GPU progress: elapsed=631.3s, used=1909.5 MiB, peak=3955.5 MiB
+GPU progress: elapsed=661.3s, used=1825.5 MiB, peak=3955.5 MiB
+GPU progress: elapsed=691.4s, used=1685.5 MiB, peak=3955.5 MiB
+GPU progress: elapsed=721.4s, used=1731.5 MiB, peak=3955.5 MiB
+GPU progress: elapsed=751.5s, used=1679.5 MiB, peak=3955.5 MiB
+GPU progress: elapsed=781.6s, used=1725.5 MiB, peak=3955.5 MiB
+F2/coordinator/cap1/CIC: actual conditional queries PASS
+F2/coordinator/cap1/ToN: actual conditional queries PASS
+F2/coordinator/cap2/CIC: actual conditional queries PASS
+GPU progress: elapsed=30.1s, used=1715.5 MiB, peak=4941.5 MiB
+F2/coordinator/cap2/ToN: actual conditional queries PASS
+F2/coordinator/cap3/CIC: actual conditional queries PASS
+F2/coordinator/cap3/ToN: actual conditional queries PASS
+GPU progress: elapsed=60.1s, used=1737.5 MiB, peak=4941.5 MiB
+F2/learned_cascade/cap1/CIC: actual conditional queries PASS
+F2/learned_cascade/cap1/ToN: actual conditional queries PASS
+F2/learned_cascade/cap2/CIC: actual conditional queries PASS
+F2/learned_cascade/cap2/ToN: actual conditional queries PASS
+GPU progress: elapsed=90.3s, used=1617.5 MiB, peak=4941.5 MiB
+F2/learned_cascade/cap3/CIC: actual conditional queries PASS
+F2/learned_cascade/cap3/ToN: actual conditional queries PASS
+F2/random/cap1/CIC: actual conditional queries PASS
+F2/random/cap1/ToN: actual conditional queries PASS
+F2/random/cap2/CIC: actual conditional queries PASS
+GPU progress: elapsed=120.4s, used=1753.5 MiB, peak=4941.5 MiB
+F2/random/cap2/ToN: actual conditional queries PASS
+F2/random/cap3/CIC: actual conditional queries PASS
+F2/random/cap3/ToN: actual conditional queries PASS
+GPU progress: elapsed=150.5s, used=1699.5 MiB, peak=4941.5 MiB
+F2/cheapest/cap1/CIC: actual conditional queries PASS
+F2/cheapest/cap1/ToN: actual conditional queries PASS
+F2/cheapest/cap2/CIC: actual conditional queries PASS
+F2/cheapest/cap2/ToN: actual conditional queries PASS
+GPU progress: elapsed=180.5s, used=1581.5 MiB, peak=4941.5 MiB
+F2/cheapest/cap3/CIC: actual conditional queries PASS
+F2/cheapest/cap3/ToN: actual conditional queries PASS
+F2/uncertainty/cap1/CIC: actual conditional queries PASS
+F2/uncertainty/cap1/ToN: actual conditional queries PASS
+GPU progress: elapsed=210.5s, used=1765.5 MiB, peak=4941.5 MiB
+F2/uncertainty/cap2/CIC: actual conditional queries PASS
+F2/uncertainty/cap2/ToN: actual conditional queries PASS
+F2/uncertainty/cap3/CIC: actual conditional queries PASS
+F2/uncertainty/cap3/ToN: actual conditional queries PASS
+GPU progress: elapsed=240.5s, used=1701.5 MiB, peak=4941.5 MiB
+F2/best_single/cap1/CIC: actual conditional queries PASS
+F2/best_single/cap1/ToN: actual conditional queries PASS
+F2/uniform/cap1/CIC: actual conditional queries PASS
+F2/uniform/cap1/ToN: actual conditional queries PASS
+GPU progress: elapsed=270.6s, used=1735.5 MiB, peak=4941.5 MiB
+F2/uniform/cap2/CIC: actual conditional queries PASS
+F2/uniform/cap2/ToN: actual conditional queries PASS
+GPU progress: elapsed=300.6s, used=1731.5 MiB, peak=4941.5 MiB
+F2/uniform/cap3/CIC: actual conditional queries PASS
+F2/uniform/cap3/ToN: actual conditional queries PASS
+F2/static/cap1/CIC: actual conditional queries PASS
+GPU progress: elapsed=330.6s, used=1723.5 MiB, peak=4941.5 MiB
+F2/static/cap1/ToN: actual conditional queries PASS
+F2/static/cap2/CIC: actual conditional queries PASS
+GPU progress: elapsed=360.6s, used=1715.5 MiB, peak=4941.5 MiB
+F2/static/cap2/ToN: actual conditional queries PASS
+F2/static/cap3/CIC: actual conditional queries PASS
+GPU progress: elapsed=390.7s, used=1753.5 MiB, peak=4941.5 MiB
+F2/static/cap3/ToN: actual conditional queries PASS
+F2/confidence/cap1/CIC: actual conditional queries PASS
+F2/confidence/cap1/ToN: actual conditional queries PASS
+GPU progress: elapsed=420.7s, used=1733.5 MiB, peak=4941.5 MiB
+F2/confidence/cap2/CIC: actual conditional queries PASS
+F2/confidence/cap2/ToN: actual conditional queries PASS
+F2/confidence/cap3/CIC: actual conditional queries PASS
+GPU progress: elapsed=450.7s, used=1737.5 MiB, peak=4941.5 MiB
+F2/confidence/cap3/ToN: actual conditional queries PASS
+F2/soft_moe/cap1/CIC: actual conditional queries PASS
+F2/soft_moe/cap1/ToN: actual conditional queries PASS
+GPU progress: elapsed=480.8s, used=1763.5 MiB, peak=4941.5 MiB
+F2/soft_moe/cap2/CIC: actual conditional queries PASS
+F2/soft_moe/cap2/ToN: actual conditional queries PASS
+F2/soft_moe/cap3/CIC: actual conditional queries PASS
+GPU progress: elapsed=510.9s, used=1729.5 MiB, peak=4941.5 MiB
+F2/soft_moe/cap3/ToN: actual conditional queries PASS
+F2/hard_moe/cap1/CIC: actual conditional queries PASS
+F2/hard_moe/cap1/ToN: actual conditional queries PASS
+GPU progress: elapsed=540.9s, used=1725.5 MiB, peak=4941.5 MiB
+F2/hard_moe/cap2/CIC: actual conditional queries PASS
+F2/hard_moe/cap2/ToN: actual conditional queries PASS
+F2/fixed_012/cap1/CIC: actual conditional queries PASS
+GPU progress: elapsed=570.9s, used=1581.5 MiB, peak=4941.5 MiB
+F2/fixed_012/cap1/ToN: actual conditional queries PASS
+F2/fixed_012/cap2/CIC: actual conditional queries PASS
+F2/fixed_012/cap2/ToN: actual conditional queries PASS
+F2/fixed_012/cap3/CIC: actual conditional queries PASS
+GPU progress: elapsed=601.0s, used=1743.5 MiB, peak=4941.5 MiB
+F2/fixed_012/cap3/ToN: actual conditional queries PASS
+F2/fixed_021/cap1/CIC: actual conditional queries PASS
+F2/fixed_021/cap1/ToN: actual conditional queries PASS
+F2/fixed_021/cap2/CIC: actual conditional queries PASS
+GPU progress: elapsed=631.1s, used=1705.5 MiB, peak=4941.5 MiB
+F2/fixed_021/cap2/ToN: actual conditional queries PASS
+F2/fixed_021/cap3/CIC: actual conditional queries PASS
+F2/fixed_021/cap3/ToN: actual conditional queries PASS
+GPU progress: elapsed=661.1s, used=1699.5 MiB, peak=4941.5 MiB
+F2/fixed_102/cap1/CIC: actual conditional queries PASS
+F2/fixed_102/cap1/ToN: actual conditional queries PASS
+F2/fixed_102/cap2/CIC: actual conditional queries PASS
+GPU progress: elapsed=691.1s, used=1721.5 MiB, peak=4941.5 MiB
+F2/fixed_102/cap2/ToN: actual conditional queries PASS
+F2/fixed_102/cap3/CIC: actual conditional queries PASS
+GPU progress: elapsed=721.2s, used=1723.5 MiB, peak=4941.5 MiB
+F2/fixed_102/cap3/ToN: actual conditional queries PASS
+F2/fixed_120/cap1/CIC: actual conditional queries PASS
+F2/fixed_120/cap1/ToN: actual conditional queries PASS
+F2/fixed_120/cap2/CIC: actual conditional queries PASS
+GPU progress: elapsed=751.2s, used=1785.5 MiB, peak=4941.5 MiB
+F2/fixed_120/cap2/ToN: actual conditional queries PASS
+F2/fixed_120/cap3/CIC: actual conditional queries PASS
+GPU progress: elapsed=781.3s, used=1743.5 MiB, peak=4941.5 MiB
+F2/fixed_120/cap3/ToN: actual conditional queries PASS
+F2/fixed_201/cap1/CIC: actual conditional queries PASS
+F2/fixed_201/cap1/ToN: actual conditional queries PASS
+GPU progress: elapsed=811.3s, used=1729.5 MiB, peak=4941.5 MiB
+F2/fixed_201/cap2/CIC: actual conditional queries PASS
+F2/fixed_201/cap2/ToN: actual conditional queries PASS
+GPU progress: elapsed=841.3s, used=1707.5 MiB, peak=4941.5 MiB
+F2/fixed_201/cap3/CIC: actual conditional queries PASS
+F2/fixed_201/cap3/ToN: actual conditional queries PASS
+GPU progress: elapsed=871.4s, used=1717.5 MiB, peak=4941.5 MiB
+F2/fixed_210/cap1/CIC: actual conditional queries PASS
+F2/fixed_210/cap1/ToN: actual conditional queries PASS
+F2/fixed_210/cap2/CIC: actual conditional queries PASS
+GPU progress: elapsed=901.8s, used=1615.5 MiB, peak=4941.5 MiB
+F2/fixed_210/cap2/ToN: actual conditional queries PASS

@@ -1,0 +1,302 @@
+{
+  "completed_at": "2026-09-29T10:53:57.437925+00:00",
+  "protocol": "config/protocol.json",
+  "E0_reproduces_original_actions_and_counts": true,
+  "q_prior": 0.115,
+  "grid": [
+    0.5,
+    0.5202673673629761,
+    0.6165555715560913,
+    0.6741976737976074,
+    0.6888619661331177,
+    0.780666708946228,
+    0.838333323597908,
+    0.8476666659116745,
+    0.8482757806777954,
+    0.8577222228050232,
+    0.9872222086414695,
+    1.0
+  ],
+  "methods": {
+    "E0-local": {
+      "id": "B_LOW_T009_U003__A_OFF_T999_U000",
+      "B": {
+        "id": "LOW_T009_U003",
+        "direction": "LOW",
+        "threshold": 0.8577222228050232,
+        "threshold_index": 9,
+        "u": 1.0,
+        "u_index": 3,
+        "accepted": 40,
+        "errors": 2,
+        "correct": 38,
+        "risk": 0.05,
+        "feasible": true,
+        "infeasible_reasons": ""
+      },
+      "A": {
+        "id": "OFF_T999_U000",
+        "direction": "OFF",
+        "threshold": null,
+        "threshold_index": null,
+        "u": 0.0,
+        "u_index": 0,
+        "accepted": 0,
+        "errors": 0,
+        "correct": 0,
+        "risk": null,
+        "feasible": true,
+        "infeasible_reasons": ""
+      },
+      "status": "PARTIAL_ACTION_POLICY",
+      "candidate_label_counts": {
+        "B": 187,
+        "A": 13
+      },
+      "feasible_enabled_candidates": {
+        "B": 1,
+        "A": 0
+      },
+      "metrics": {
+        "N": 200,
+        "N_B": 166,
+        "N_A": 34,
+        "TN": 38,
+        "FN": 2,
+        "FP": 0,
+        "TP": 0,
+        "accepted_B": 40,
+        "accepted_A": 0,
+        "R_B": 0.05,
+        "R_A": null,
+        "U_B": 0.2289156626506024,
+        "U_A": 0.0,
+        "U_bal": 0.1144578313253012
+      }
+    },
+    "E1-local": {
+      "id": "B_LOW_T009_U003__A_HIGH_T000_U000",
+      "B": {
+        "id": "LOW_T009_U003",
+        "direction": "LOW",
+        "threshold": 0.8577222228050232,
+        "threshold_index": 9,
+        "u": 1.0,
+        "u_index": 3,
+        "accepted": 52,
+        "errors": 2,
+        "correct": 50,
+        "risk": 0.038461538461538464,
+        "feasible": true,
+        "infeasible_reasons": ""
+      },
+      "A": {
+        "id": "HIGH_T000_U000",
+        "direction": "HIGH",
+        "threshold": 0.5,
+        "threshold_index": 0,
+        "u": 0.0,
+        "u_index": 0,
+        "accepted": 13,
+        "errors": 0,
+        "correct": 13,
+        "risk": 0.0,
+        "feasible": true,
+        "infeasible_reasons": ""
+      },
+      "status": "TWO_ACTION_POLICY",
+      "candidate_label_counts": {
+        "B": 187,
+        "A": 13
+      },
+      "feasible_enabled_candidates": {
+        "B": 5,
+        "A": 24
+      },
+      "metrics": {
+        "N": 200,
+        "N_B": 166,
+        "N_A": 34,
+        "TN": 50,
+        "FN": 2,
+        "FP": 0,
+        "TP": 13,
+        "accepted_B": 52,
+        "accepted_A": 13,
+        "R_B": 0.038461538461538464,
+        "R_A": 0.0,
+        "U_B": 0.30120481927710846,
+        "U_A": 0.38235294117647056,
+        "U_bal": 0.3417788802267895
+      }
+    },
+    "E2-local": {
+      "id": "B_LOW_T009_U003__A_OFF_T999_U000",
+      "B": {
+        "id": "LOW_T009_U003",
+        "direction": "LOW",
+        "threshold": 0.8577222228050232,
+        "threshold_index": 9,
+        "u": 1.0,
+        "u_index": 3,
+        "accepted": 52,
+        "errors": 2,
+        "correct": 50,
+        "risk": 0.038461538461538464,
+        "feasible": true,
+        "infeasible_reasons": ""
+      },
+      "A": {
+        "id": "OFF_T999_U000",
+        "direction": "OFF",
+        "threshold": null,
+        "threshold_index": null,
+        "u": 0.0,
+        "u_index": 0,
+        "accepted": 0,
+        "errors": 0,
+        "correct": 0,
+        "risk": null,
+        "feasible": true,
+        "infeasible_reasons": ""
+      },
+      "status": "PARTIAL_ACTION_POLICY",
+      "candidate_label_counts": {
+        "B": 200,
+        "A": 0
+      },
+      "feasible_enabled_candidates": {
+        "B": 5,
+        "A": 0
+      },
+      "metrics": {
+        "N": 200,
+        "N_B": 166,
+        "N_A": 34,
+        "TN": 50,
+        "FN": 2,
+        "FP": 0,
+        "TP": 0,
+        "accepted_B": 52,
+        "accepted_A": 0,
+        "R_B": 0.038461538461538464,
+        "R_A": null,
+        "U_B": 0.30120481927710846,
+        "U_A": 0.0,
+        "U_bal": 0.15060240963855423
+      }
+    },
+    "E3-local": {
+      "id": "B_LOW_T009_U003__A_OFF_T999_U000",
+      "B": {
+        "id": "LOW_T009_U003",
+        "direction": "LOW",
+        "threshold": 0.8577222228050232,
+        "threshold_index": 9,
+        "u": 1.0,
+        "u_index": 3,
+        "accepted": 52,
+        "errors": 2,
+        "correct": 50,
+        "risk": 0.038461538461538464,
+        "feasible": true,
+        "infeasible_reasons": ""
+      },
+      "A": {
+        "id": "OFF_T999_U000",
+        "direction": "OFF",
+        "threshold": null,
+        "threshold_index": null,
+        "u": 0.0,
+        "u_index": 0,
+        "accepted": 0,
+        "errors": 0,
+        "correct": 0,
+        "risk": null,
+        "feasible": true,
+        "infeasible_reasons": ""
+      },
+      "status": "PARTIAL_ACTION_POLICY",
+      "candidate_label_counts": {
+        "B": 200,
+        "A": 0
+      },
+      "feasible_enabled_candidates": {
+        "B": 5,
+        "A": 0
+      },
+      "metrics": {
+        "N": 200,
+        "N_B": 166,
+        "N_A": 34,
+        "TN": 50,
+        "FN": 2,
+        "FP": 0,
+        "TP": 0,
+        "accepted_B": 52,
+        "accepted_A": 0,
+        "R_B": 0.038461538461538464,
+        "R_A": null,
+        "U_B": 0.30120481927710846,
+        "U_A": 0.0,
+        "U_bal": 0.15060240963855423
+      }
+    },
+    "E3-prior": {
+      "id": "B_OFF_T999_U000__A_OFF_T999_U000",
+      "B": {
+        "id": "OFF_T999_U000",
+        "direction": "OFF",
+        "threshold": null,
+        "threshold_index": null,
+        "u": 0.0,
+        "u_index": 0,
+        "accepted": 0,
+        "errors": 0,
+        "correct": 0,
+        "risk": null,
+        "feasible": true,
+        "infeasible_reasons": ""
+      },
+      "A": {
+        "id": "OFF_T999_U000",
+        "direction": "OFF",
+        "threshold": null,
+        "threshold_index": null,
+        "u": 0.0,
+        "u_index": 0,
+        "accepted": 0,
+        "errors": 0,
+        "correct": 0,
+        "risk": null,
+        "feasible": true,
+        "infeasible_reasons": ""
+      },
+      "status": "NO_FEASIBLE_POLICY",
+      "candidate_label_counts": {
+        "B": 200,
+        "A": 0
+      },
+      "feasible_enabled_candidates": {
+        "B": 0,
+        "A": 0
+      },
+      "metrics": {
+        "N": 200,
+        "N_B": 166,
+        "N_A": 34,
+        "TN": 0,
+        "FN": 0,
+        "FP": 0,
+        "TP": 0,
+        "accepted_B": 0,
+        "accepted_A": 0,
+        "R_B": null,
+        "R_A": null,
+        "U_B": 0.0,
+        "U_A": 0.0,
+        "U_bal": 0.0
+      }
+    }
+  }
+}

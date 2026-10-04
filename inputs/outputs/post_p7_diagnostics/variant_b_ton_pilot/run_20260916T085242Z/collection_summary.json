@@ -1,0 +1,17 @@
+{
+  "completed_at_utc": "2026-09-16T09:04:40.306348+00:00",
+  "collected_benign": 200,
+  "collected_attack": 200,
+  "total_collected": 400,
+  "scanned_rows": 4020,
+  "stop_rank_inclusive": 4019,
+  "stop_rank_exclusive": 4020,
+  "stop_original_row": 4042,
+  "stop_window_id": "ToN:heldout:10000:T_heldout:0",
+  "scanned_prefix_support": {
+    "Benign": 3820,
+    "Attack": 200
+  },
+  "startup_limit": 100000,
+  "status": "COMPLETE"
+}

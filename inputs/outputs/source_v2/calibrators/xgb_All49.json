@@ -1,0 +1,88 @@
+{
+  "method": "Platt",
+  "input": "logit_raw_attack_probability",
+  "input_probability_epsilon": 1e-07,
+  "penalty": "none",
+  "fit_rows": 360000,
+  "label_counts": {
+    "Benign": 325600,
+    "Attack": 34400
+  },
+  "coefficient": 0.9476488833839615,
+  "intercept": -0.0523511166160385,
+  "solver": {
+    "coefficients": [
+      0.9476488833839615
+    ],
+    "intercept": -0.0523511166160385,
+    "final_objective": 0.00010153565788366522,
+    "gradient_l2_norm": 3.298280184735204e-05,
+    "iterations": 1,
+    "function_evaluations": 2,
+    "closure_calls": 2
+  },
+  "solver_config": {
+    "backend": "torch.optim.LBFGS",
+    "device": "cuda:0",
+    "dtype": "float64",
+    "max_iter": 2000,
+    "tolerance_grad": 0.0001,
+    "tolerance_change": 1e-12,
+    "line_search_fn": "strong_wolfe",
+    "history_size": 20,
+    "initial_parameters": 0,
+    "closure": "full_dataset_weighted_loss_and_gradient_accumulated_in_chunks"
+  },
+  "closure_rows": 262144,
+  "fit_seconds": 0.7963726000161842,
+  "model_id": "xgb_All49",
+  "fit_domain": "UNSW",
+  "fit_partition": "S_prob_cal",
+  "device": "cuda:0",
+  "raw_metrics": {
+    "rows": 360000,
+    "prevalence": 0.09555555555555556,
+    "threshold": 0.5,
+    "confusion": {
+      "tn": 325587,
+      "fp": 13,
+      "fn": 0,
+      "tp": 34400
+    },
+    "accuracy": 0.9999638888888889,
+    "balanced_accuracy": 0.9999800368550369,
+    "precision_attack": 0.999622235782989,
+    "recall_attack": 1.0,
+    "f1_attack": 0.9998110822083036,
+    "auroc": 0.9999999956252499,
+    "average_precision": 0.9999999585969268,
+    "nll": 0.00010297288133918627,
+    "brier": 3.0406249226069053e-05,
+    "ece": 3.1529991783911984e-05,
+    "ece_bins": 15
+  },
+  "calibrated_metrics": {
+    "rows": 360000,
+    "prevalence": 0.09555555555555556,
+    "threshold": 0.5,
+    "confusion": {
+      "tn": 325587,
+      "fp": 13,
+      "fn": 0,
+      "tp": 34400
+    },
+    "accuracy": 0.9999638888888889,
+    "balanced_accuracy": 0.9999800368550369,
+    "precision_attack": 0.999622235782989,
+    "recall_attack": 1.0,
+    "f1_attack": 0.9998110822083036,
+    "auroc": 0.99999999562525,
+    "average_precision": 0.9999999585969269,
+    "nll": 0.00010153565788354516,
+    "brier": 2.958276742925153e-05,
+    "ece": 3.0557561390755835e-05,
+    "ece_bins": 15
+  },
+  "status": "COMPLETE",
+  "completed_at_utc": "2026-09-05T16:22:53.855137+00:00"
+}

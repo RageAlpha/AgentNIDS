@@ -1,0 +1,107 @@
+{
+  "started_at_utc": "2026-09-18T07:16:20.125437+00:00",
+  "classification": "Exploratory evaluation after threshold gate stop",
+  "deviation": "User explicitly authorized evaluation despite q_Attack >= 0.90. This deviates from the latest professor letter threshold stop rule; it is not evaluation following protocol passage.",
+  "original_gate": "Outcome B; unchanged",
+  "authority_letter": "/home/karri/projects/NIDSProject/docs/XGBOOST_TON/Reply_to_Siyuan_VariantB_Analysis_and_Next_Step.md",
+  "calibration_directory": "/home/karri/projects/NIDSProject/outputs/post_p7_diagnostics/xgboost_variant_b_ton_pilot/run_20260918T070417Z",
+  "threshold_source": "/home/karri/projects/NIDSProject/outputs/post_p7_diagnostics/xgboost_variant_b_ton_pilot/run_20260918T070417Z/threshold_freeze.json",
+  "q_Benign": 0.009039638563990593,
+  "q_Attack": 0.9996102542208973,
+  "model_record": "/home/karri/projects/NIDSProject/outputs/source_v2/models/xgb_All49/training_manifest.json",
+  "model_artifact": "/home/karri/projects/NIDSProject/outputs/source_v2/models/xgb_All49/model.ubj",
+  "inputs": {
+    "ToN": {
+      "cache": "/home/karri/projects/NIDSProject/outputs/prediction_cache_v2/ToN/xgb_All49.npy",
+      "labels": "/home/karri/projects/NIDSProject/outputs/feature_store_v2/ToN_label.npy",
+      "original_rows": "/home/karri/projects/NIDSProject/outputs/round1_data_prep_v1/ToN_sorted_original_rows.npy",
+      "cache_manifest": "/home/karri/projects/NIDSProject/outputs/prediction_cache_v2/ToN/xgb_All49_manifest.json"
+    },
+    "UNSW": {
+      "cache": "/home/karri/projects/NIDSProject/outputs/prediction_cache_v2/UNSW/xgb_All49.npy",
+      "labels": "/home/karri/projects/NIDSProject/outputs/feature_store_v2/UNSW_label.npy",
+      "original_rows": "/home/karri/projects/NIDSProject/outputs/round1_data_prep_v1/UNSW_sorted_original_rows.npy",
+      "cache_manifest": "/home/karri/projects/NIDSProject/outputs/prediction_cache_v2/UNSW/xgb_All49_manifest.json"
+    }
+  },
+  "probability": "raw_probability=P(Attack); float64; unchanged",
+  "labels": {
+    "0": "Benign",
+    "1": "Attack"
+  },
+  "epsilon": 0.1,
+  "startup": [
+    0,
+    100000
+  ],
+  "ton_evaluation": [
+    100000,
+    27520000
+  ],
+  "ton_rows": 27420000,
+  "ton_windows": 2742,
+  "ton_tail_excluded": 260,
+  "segments": [
+    {
+      "segment": 1,
+      "rank_start": 100000,
+      "rank_end_exclusive": 6960000,
+      "windows": 686
+    },
+    {
+      "segment": 2,
+      "rank_start": 6960000,
+      "rank_end_exclusive": 13820000,
+      "windows": 686
+    },
+    {
+      "segment": 3,
+      "rank_start": 13820000,
+      "rank_end_exclusive": 20670000,
+      "windows": 685
+    },
+    {
+      "segment": 4,
+      "rank_start": 20670000,
+      "rank_end_exclusive": 27520000,
+      "windows": 685
+    }
+  ],
+  "source_evaluation": [
+    2130000,
+    2365424
+  ],
+  "source_rows": 235424,
+  "source_tail_included": 5424,
+  "prediction": {
+    "Benign": "p <= q_Benign",
+    "Attack": "1-p <= q_Attack",
+    "singleton": "accept unique label, regardless of Raw label",
+    "empty": "reject",
+    "double": "abstain",
+    "raw": "p>=0.5"
+  },
+  "bootstrap": {
+    "block_windows": 10,
+    "blocks": 275,
+    "last_block_windows": 2,
+    "replicates": 2000,
+    "generator": "PCG64",
+    "seed": 20260915,
+    "paired": true,
+    "risk": "sum(errors)/sum(records)",
+    "percentiles": [
+      2.5,
+      97.5
+    ],
+    "method": "linear",
+    "undefined": "NA; report valid replicates",
+    "inference": "conditional on fixed calibration samples, thresholds, and frozen model"
+  },
+  "interpretation": "Original gate unchanged; no automatic Outcome A or Phase 2; no numerical materially-lower threshold; segments descriptive",
+  "lineage_evidence": [
+    "predictions.py loads configured source model and stores binary logistic output in raw_probability before probability transformation",
+    "cache and feature-store manifests specify availability rank; feature_store.py gathers labels and features by the same original-row order"
+  ],
+  "stop_after": "Requested exploratory evaluation only; no further experiment; no professor message"
+}

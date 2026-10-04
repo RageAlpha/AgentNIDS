@@ -1,0 +1,36 @@
+{
+  "created_at_utc": "2026-09-16T14:44:17.421422+00:00",
+  "threshold_source": "/home/karri/projects/NIDSProject/outputs/post_p7_diagnostics/variant_b_ton_pilot/run_20260916T085242Z/threshold_freeze.json",
+  "q_Benign": 0.16166667640209198,
+  "q_Attack": 0.9805555418133736,
+  "evaluation": [
+    100000,
+    27520000
+  ],
+  "segments": [
+    [
+      100000,
+      6960000
+    ],
+    [
+      6960000,
+      13820000
+    ],
+    [
+      13820000,
+      20670000
+    ],
+    [
+      20670000,
+      27520000
+    ]
+  ],
+  "bootstrap_indices_source": "/home/karri/projects/NIDSProject/outputs/post_p7_diagnostics/variant_b_ton_pilot/run_20260916T085242Z/bootstrap_indices.npy",
+  "bootstrap_block_source": "/home/karri/projects/NIDSProject/outputs/post_p7_diagnostics/variant_b_ton_pilot/run_20260916T085242Z/bootstrap_block_counts.csv",
+  "new_sampling_plan": false,
+  "acceptance": "original singleton set only",
+  "rejected_B_prediction": "undefined; never imputed",
+  "sign": "positive = risk increase; negative = risk decrease",
+  "interpretation": "descriptive arithmetic; no causal identification",
+  "class_denominators": "within same true class and scope for all/accepted/rejected; singleton prediction strata only used for transition counts"
+}

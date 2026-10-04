@@ -1,0 +1,14 @@
+{
+  "frozen_at_utc": "2026-09-15T01:18:38.165865+00:00",
+  "evaluation_labels_read": false,
+  "files": {
+    "/home/karri/projects/NIDSProject/outputs/post_p7_diagnostics/strict_k_reply4/run_20260915_C1_01/protocol.json": "d26fa716675df9cad98cd7fbff370c1e21ff1901920534a24c0afef9d12d197c",
+    "/home/karri/projects/NIDSProject/docs/StrictK_Reply4_Experiment_Plan.md": "0df7315ea8120376489311bc064cb1da3657291bfaf9d015a3da5afa3f3992ff"
+  },
+  "source_draft_sha256": "415211bc4b82dd53484c15c4c8aea8c28dcbf97e7bc2631e7b282a6848bf1148",
+  "script_sha256": {
+    "evaluate_c1.py": "9ed85f59c7e4fd5a418f55e999e28ddba5847658bd7da8e1633ff20f7a1dc3f0",
+    "select_c1.py": "aea2a258e56053f26450f34d43748ec1f172332756a9316a7c9098ebb4c403d7",
+    "common.py": "b43f5a49a5adfdaec2cc2a05e90bd25a56561f2d1c5d5d3b68e92b819b5dc2bd"
+  }
+}

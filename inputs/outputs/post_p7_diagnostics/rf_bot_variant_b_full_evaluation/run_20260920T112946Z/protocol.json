@@ -1,0 +1,84 @@
+{
+  "created_at_utc": "2026-09-20T11:31:45.722580+00:00",
+  "authorization": "Complementary full user authorized evaluation",
+  "authorization_record": "/home/karri/projects/NIDSProject/outputs/post_p7_diagnostics/rf_bot_variant_b_full_evaluation/run_20260920T112946Z/authorization.json",
+  "original_gate": "Undefined [0.80,0.90) range, not original gate control automatic release",
+  "professor_approved": false,
+  "authority": [
+    "/home/karri/projects/NIDSProject/docs/OutcomeB_2Expirements/Reply_to_Siyuan_OutcomeB_BeginWriting.md",
+    "/home/karri/projects/NIDSProject/docs/OutcomeB_2Expirements/OutcomeB_Two_Experiments_Plan_ZH.md"
+  ],
+  "original_protocol": "/home/karri/projects/NIDSProject/outputs/post_p7_diagnostics/outcome_b_two_experiments/run_20260920T065121Z/protocol.json",
+  "original_gate_file": "/home/karri/projects/NIDSProject/outputs/post_p7_diagnostics/outcome_b_two_experiments/run_20260920T065121Z/gate_decisions.csv",
+  "threshold_source": "/home/karri/projects/NIDSProject/outputs/post_p7_diagnostics/outcome_b_two_experiments/run_20260920T065121Z/bot/rf_All49/threshold_freeze.json",
+  "sample_source": "/home/karri/projects/NIDSProject/outputs/post_p7_diagnostics/outcome_b_two_experiments/run_20260920T065121Z/bot/calibration_sample_manifest.csv",
+  "scores_source": "/home/karri/projects/NIDSProject/outputs/post_p7_diagnostics/outcome_b_two_experiments/run_20260920T065121Z/bot/rf_All49/calibration_scores.csv",
+  "q_Benign": 0.6932222247123718,
+  "q_Attack": 0.8865555301308632,
+  "epsilon": 0.1,
+  "K": 400,
+  "preprocessing_manifest": "/home/karri/projects/NIDSProject/outputs/source_v2/preprocessing/preprocessing_manifest.json",
+  "preprocessing_stats": "/home/karri/projects/NIDSProject/outputs/source_v2/preprocessing/preprocessing_stats.npz",
+  "input_validation": {
+    "domain": "BoT",
+    "rows": 16933808,
+    "labels": "/home/karri/projects/NIDSProject/outputs/feature_store_v2/BoT_label.npy",
+    "original_rows": "/home/karri/projects/NIDSProject/outputs/round1_data_prep_v1/BoT_sorted_original_rows.npy",
+    "models": [
+      {
+        "model": "rf_All49",
+        "model_path": "/home/karri/projects/NIDSProject/outputs/source_v2/models/rf_All49/model.pkl",
+        "cache_path": "/home/karri/projects/NIDSProject/outputs/prediction_cache_v2/BoT/rf_All49.npy",
+        "training_manifest": "/home/karri/projects/NIDSProject/outputs/source_v2/models/rf_All49/training_manifest.json",
+        "cache_manifest": "/home/karri/projects/NIDSProject/outputs/prediction_cache_v2/BoT/rf_All49_manifest.json",
+        "preprocessing": "S_train_imputed_original_numeric_representation"
+      }
+    ],
+    "original_rows_permutation": true,
+    "window_boundaries_match": true,
+    "already_rank_sorted": true,
+    "no_second_sort": true,
+    "complete_windows": 1693,
+    "excluded_tail": 3808
+  },
+  "rank_convention": "zero-based half-open; original row is zero-based data-row index",
+  "evaluation": [
+    100000,
+    16930000
+  ],
+  "evaluation_rows": 16830000,
+  "evaluation_windows": 1683,
+  "segments": [
+    100000,
+    4310000,
+    8520000,
+    12730000,
+    16930000
+  ],
+  "excluded_startup": [
+    0,
+    100000
+  ],
+  "excluded_tail": [
+    16930000,
+    16933808
+  ],
+  "probability": "raw_probability=P(Attack); P(Benign)=1-p; unchanged float64",
+  "labels": {
+    "0": "Benign",
+    "1": "Attack"
+  },
+  "prediction": {
+    "Benign": "p<=q_Benign",
+    "Attack": "1-p<=q_Attack",
+    "singleton": "accept unique label independently of Raw",
+    "double": "abstain",
+    "empty": "reject",
+    "Raw": "p>=0.5"
+  },
+  "metrics": "counts; acceptance, accepted error, Raw full-accept error, Raw-minus-accepted percentage points; four sets; each singleton error; TP, TP/true Attack, segment TP/overall TP; exact numerators and denominators, zero denominator NA",
+  "no_bootstrap": true,
+  "no_source_evaluation": true,
+  "no_recalibration": true,
+  "no_file_digests": true
+}

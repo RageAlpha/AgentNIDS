@@ -1,0 +1,73 @@
+{
+  "model_id": "mlp_Behavior",
+  "domain": "ToN",
+  "rows": 27520260,
+  "feature_indices": [
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48
+  ],
+  "feature_names": [
+    "FLOW_DURATION_MILLISECONDS",
+    "DURATION_IN",
+    "DURATION_OUT",
+    "RETRANSMITTED_IN_BYTES",
+    "RETRANSMITTED_IN_PKTS",
+    "RETRANSMITTED_OUT_BYTES",
+    "RETRANSMITTED_OUT_PKTS",
+    "SRC_TO_DST_IAT_MIN",
+    "SRC_TO_DST_IAT_MAX",
+    "SRC_TO_DST_IAT_AVG",
+    "SRC_TO_DST_IAT_STDDEV",
+    "DST_TO_SRC_IAT_MIN",
+    "DST_TO_SRC_IAT_MAX",
+    "DST_TO_SRC_IAT_AVG",
+    "DST_TO_SRC_IAT_STDDEV"
+  ],
+  "device": "cuda:0",
+  "gpu_input_and_output_verified": true,
+  "prediction_cuda_event_ms": 355.3151032924652,
+  "range": {
+    "raw_probability": [
+      0.0,
+      1.0
+    ],
+    "probability": [
+      5.005843658599638e-08,
+      0.9999999987816379
+    ],
+    "predicted_class": [
+      0.0,
+      1.0
+    ],
+    "u": [
+      3.783636219720212e-08,
+      0.9999999999998253
+    ],
+    "h": [
+      0.9704645074881286,
+      0.9779836157140197
+    ]
+  },
+  "seconds": 8.839637527999002,
+  "gpu_memory": {
+    "baseline_used_mib": 1361.5,
+    "peak_used_mib": 1653.5,
+    "peak_increment_mib": 292.0,
+    "measurement": "CUDA_memGetInfo_total_minus_free_sampled_at_100ms"
+  },
+  "file": "outputs/prediction_cache_v2/ToN/mlp_Behavior.npy",
+  "bytes": 908168772
+}

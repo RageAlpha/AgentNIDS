@@ -1,0 +1,43 @@
+{
+  "version": "week0-q-freeze-v1.0",
+  "frozen_at_utc": "2026-09-15T07:41:14.010090+00:00",
+  "n": 360000,
+  "epsilon": {
+    "numerator": 1,
+    "denominator": 10
+  },
+  "k_one_based": 324001,
+  "k_zero_based": 324000,
+  "q_decimal": "3.145372886592668e-07",
+  "q_serialized": {
+    "kind": "float64_hex",
+    "value": "0x1.51bb5a0000000p-22"
+  },
+  "score_min": 0.0,
+  "score_max": 0.7933333516120911,
+  "score_mean": 0.0002123484331980362,
+  "score_unique_count": 1389,
+  "scores_less_than_q": 287840,
+  "scores_equal_q": 38470,
+  "scores_greater_than_q": 33690,
+  "benign": 325600,
+  "attack": 34400,
+  "rank_start": 1420000,
+  "rank_end_exclusive": 1780000,
+  "probability_sha256": "88dcdc70888f96349c8ab7c11ce7f1a5f3fd871fb35d92546073ae9f556cb550",
+  "label_sha256": "329f1a4fe2f3c4a32cb4a523d5b044d7f22af7503794537188868b98064adb67",
+  "identity_slice_sha256": "c3a69de77012ceb682a918b2afdb985a738ef607ce1fcca5d91b3fff1f2ceb73",
+  "score_sha256": "bef0a1b858718265459a6cc06775f8360ab38ea319f6a0e23ca35d57068dc444",
+  "score_array_saved": false,
+  "computation_started_at_utc": "2026-09-15T07:41:13.974715+00:00",
+  "calibration_summary_sha256": "d12a6dcfb2132aa619fae2f36a6223600a830f4d355ed43d69a6a1e47d804627",
+  "protocol_sha256": "6ff336d907bf23a84efcbe2edcad3c360c1a234665439092581eefb5cfa3a696",
+  "input_sources_sha256": "6692fc7d5f69d7f25ef48f6acc04fe89275866c0789b17c408507da2364871c1",
+  "code_sha256": {
+    "calibrate.py": "e0b3bcc89632a77cac190f47cfe80745b9962d099de744b5593ccb679aa1ef80",
+    "implementation.py": "d99f1728abe382c7e13800ba999c6b14b3199254e3175771b4cd317f04982cae",
+    "common.py": "ca8ec4e0bb4498e0e89f5c63bb9b1f72f5b3578404b41e874e02994fd49b8d41"
+  },
+  "selection_calls_on_real_calibration": 1,
+  "source_calibration_only": true
+}

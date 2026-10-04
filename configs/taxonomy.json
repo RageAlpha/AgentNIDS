@@ -1,0 +1,38 @@
+{
+  "version": "taxonomy-v2.0",
+  "status": "REGISTERED_BEFORE_MODEL_RESULTS",
+  "canonical_families": {
+    "Availability_Flooding": {
+      "UNSW": ["DoS"],
+      "BoT": ["DoS", "DDoS"],
+      "ToN": ["dos", "ddos"],
+      "CIC": [
+        "DDOS_attack-HOIC",
+        "DDoS_attacks-LOIC-HTTP",
+        "DDOS_attack-LOIC-UDP",
+        "DoS_attacks-SlowHTTPTest",
+        "DoS_attacks-Hulk",
+        "DoS_attacks-GoldenEye",
+        "DoS_attacks-Slowloris"
+      ]
+    },
+    "Reconnaissance_Probing": {
+      "UNSW": ["Reconnaissance"],
+      "BoT": ["Reconnaissance"],
+      "ToN": ["scanning"],
+      "CIC": []
+    }
+  },
+  "scenarios": {
+    "O1": {"target": "BoT", "known": "Reconnaissance_Probing", "unknown": "Availability_Flooding"},
+    "O2": {"target": "BoT", "known": "Availability_Flooding", "unknown": "Reconnaissance_Probing"},
+    "O3": {"target": "ToN", "known": "Reconnaissance_Probing", "unknown": "Availability_Flooding"},
+    "O4": {"target": "ToN", "known": "Availability_Flooding", "unknown": "Reconnaissance_Probing"}
+  },
+  "excluded_mapping_decisions": {
+    "CIC_Infilteration": "not_reconnaissance",
+    "Backdoor": "exploratory",
+    "Web_Application_Exploitation": "sensitivity_only"
+  }
+}
+

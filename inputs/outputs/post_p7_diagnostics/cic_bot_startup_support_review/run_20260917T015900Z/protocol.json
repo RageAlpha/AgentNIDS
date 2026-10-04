@@ -1,0 +1,29 @@
+{
+  "review_scope": "latest CIC/BoT startup support task",
+  "original_run": "/home/karri/projects/NIDSProject/outputs/post_p7_diagnostics/cic_bot_startup_support/run_20260917T014551Z",
+  "inputs": {
+    "CIC": {
+      "labels": "/home/karri/projects/NIDSProject/outputs/feature_store_v2/CIC_label.npy",
+      "mapping": "/home/karri/projects/NIDSProject/outputs/round1_data_prep_v1/CIC_sorted_original_rows.npy",
+      "times": "/home/karri/projects/NIDSProject/outputs/round1_data_prep_v1/CIC_sorted_end_ms.npy",
+      "raw_csv": "/home/karri/projects/NIDSProject/datasets/NF-CICIDS2018-v3.csv",
+      "domain_manifest": "/home/karri/projects/NIDSProject/outputs/feature_store_v2/CIC_manifest.json"
+    },
+    "BoT": {
+      "labels": "/home/karri/projects/NIDSProject/outputs/feature_store_v2/BoT_label.npy",
+      "mapping": "/home/karri/projects/NIDSProject/outputs/round1_data_prep_v1/BoT_sorted_original_rows.npy",
+      "times": "/home/karri/projects/NIDSProject/outputs/round1_data_prep_v1/BoT_sorted_end_ms.npy",
+      "raw_csv": "/home/karri/projects/NIDSProject/datasets/NF-BoT-IoT-v3.csv",
+      "domain_manifest": "/home/karri/projects/NIDSProject/outputs/feature_store_v2/BoT_manifest.json"
+    }
+  },
+  "rank_range": [
+    0,
+    100000
+  ],
+  "window_manifest": "/home/karri/projects/NIDSProject/outputs/round1_data_prep_v1/window_manifest.csv",
+  "preflight_scope": "/home/karri/projects/NIDSProject/outputs/post_p7_diagnostics/strict_k_reply4/run_20260914_Cpreflight_01/preflight/evaluation_scope.csv",
+  "row_definition": "zero-based original CSV data row, header excluded; rank is existing availability order (FLOW_END_MILLISECONDS then original row)",
+  "label_order": "existing availability rank; no reordering",
+  "read_scope": "decode labels only at startup original rows; skip unrelated physical CSV records"
+}

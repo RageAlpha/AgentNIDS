@@ -1,0 +1,10 @@
+{
+  "domain": "ToN",
+  "partition": "T_heldout",
+  "rows": 27520000,
+  "windows": 2752,
+  "rank_start": 0,
+  "rank_end_exclusive": 27520000,
+  "excluded_tail": 260,
+  "initialization_rows": 10000
+}

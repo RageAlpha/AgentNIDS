@@ -1,0 +1,236 @@
+{
+  "protocol_id": "reliability_local_evidence_v1",
+  "version": 1,
+  "date": "2026-09-29",
+  "status": "exploratory_design_not_executed",
+  "project_root": "/home/karri/projects/NIDSProject",
+  "allowed_first_run_stages": [
+    "prepare",
+    "pilot",
+    "report"
+  ],
+  "output_base": "outputs/post_p7_diagnostics/reliability_local_evidence_v1",
+  "model": "rf_All49",
+  "probability_field": "raw_probability",
+  "attack_label": 1,
+  "benign_label": 0,
+  "classification_threshold": 0.5,
+  "attack_when": "p>=0.5",
+  "calibration": {
+    "manifest": "outputs/post_p7_diagnostics/strict_k_reply4/run_20260914_Cpreflight_01/preflight/calibration_sample_manifest.csv",
+    "k_total": 400,
+    "startup": [
+      0,
+      100000
+    ],
+    "original_sampling_seed": 20260914,
+    "split_generator": "numpy.Generator(PCG64)",
+    "split_seed": 20260929,
+    "sort_before_split": "availability_rank_ascending",
+    "reference_size": 200,
+    "selection_size": 200,
+    "minimum_reference_true_class_count": 5,
+    "minimum_selection_true_class_count": 10,
+    "resampling": false
+  },
+  "domains": {
+    "ToN": {
+      "evaluation": [
+        100000,
+        27520000
+      ],
+      "segments": [
+        100000,
+        6960000,
+        13820000,
+        20670000,
+        27520000
+      ],
+      "expected_full_rows": 27420000,
+      "pilot_seed": 20260930,
+      "expected_pilot_rows": 274200,
+      "expected_R_counts": {
+        "B": 177,
+        "A": 23
+      },
+      "expected_C_counts": {
+        "B": 166,
+        "A": 34
+      }
+    },
+    "BoT": {
+      "evaluation": [
+        100000,
+        16930000
+      ],
+      "segments": [
+        100000,
+        4310000,
+        8520000,
+        12730000,
+        16930000
+      ],
+      "expected_full_rows": 16830000,
+      "pilot_seed": 20260931,
+      "expected_pilot_rows": 168300,
+      "expected_R_counts": {
+        "B": 25,
+        "A": 175
+      },
+      "expected_C_counts": {
+        "B": 16,
+        "A": 184
+      }
+    }
+  },
+  "pilot": {
+    "window_size": 10000,
+    "rows_per_window": 100,
+    "replace": false,
+    "expected_total_rows": 442500,
+    "expected_full_total_rows": 44250000,
+    "index_selection_uses_labels": false,
+    "index_selection_uses_predictions": false
+  },
+  "evidence": {
+    "k": 15,
+    "weights": "uniform",
+    "distance_dtype": "float64",
+    "feature_count": 48,
+    "excluded_features": [
+      "DNS_QUERY_ID"
+    ],
+    "categorical_features": [
+      "L4_SRC_PORT",
+      "L4_DST_PORT",
+      "PROTOCOL",
+      "L7_PROTO",
+      "TCP_FLAGS",
+      "CLIENT_TCP_FLAGS",
+      "SERVER_TCP_FLAGS",
+      "ICMP_TYPE",
+      "ICMP_IPV4_TYPE",
+      "DNS_QUERY_TYPE",
+      "FTP_COMMAND_RET_CODE"
+    ],
+    "numeric_feature_count": 37,
+    "numeric_distance": "min(abs(x-r)/frozen_source_scale,10)/10",
+    "categorical_distance": "1[x!=r]",
+    "aggregation": "mean_over_48_features",
+    "tie_break": "reference_availability_rank_ascending",
+    "reference_only": "R",
+    "feature_imputation": "frozen_source_fill",
+    "fit_new_feature_transform": false
+  },
+  "gates": {
+    "methods": [
+      "RAW",
+      "G0",
+      "G1H",
+      "G1F",
+      "G2",
+      "Q400",
+      "CONST_A",
+      "CONST_B",
+      "ABSTAIN"
+    ],
+    "quantile_levels": [
+      0,
+      0.25,
+      0.5,
+      0.75,
+      1
+    ],
+    "quantile_method": "linear",
+    "fixed_confidence_thresholds": [
+      0.5,
+      1
+    ],
+    "C_grid": "union_of_predicted_class_quantiles_on_C",
+    "Q400_grid": "same_rule_on_all_400",
+    "local_support_thresholds": [
+      0,
+      0.5,
+      0.75,
+      1
+    ],
+    "risk_target_B": 0.05,
+    "risk_target_A": 0.05,
+    "minimum_accepted_per_enabled_action": 10,
+    "allow_off_per_action": true,
+    "objective": "maximize_0.5*(TN/N_B+TP/N_A)",
+    "tie_break": [
+      "maximize_min_UB_UA",
+      "minimize_FN_plus_FP",
+      "prefer_smaller_u_B_then_u_A",
+      "prefer_HIGH_B_then_HIGH_A",
+      "stable_candidate_id"
+    ],
+    "statistical_certification": false
+  },
+  "evaluation": {
+    "risk_target_B": 0.05,
+    "risk_target_A": 0.05,
+    "minimum_U_B": 0.1,
+    "minimum_U_A": 0.1,
+    "minimum_accepted_per_action": 100,
+    "minimum_windows_per_action": 10,
+    "utility_gain_minimum": 0.01,
+    "temporal_supported_segments": 3,
+    "main_comparators": [
+      "G1F",
+      "Q400"
+    ]
+  },
+  "mechanism": {
+    "confidence_edges": [
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      0.95,
+      0.99,
+      1
+    ],
+    "last_bin_includes_one": true,
+    "local_low_max": 0.5,
+    "local_high_min": 0.75,
+    "minimum_rows_per_group": 30,
+    "minimum_windows_per_group": 5,
+    "aggregation_weight": "min(n_low,n_high)_fixed_from_original_stratum",
+    "effect_minimum": 0.02,
+    "minimum_positive_segments": 2,
+    "invalid_replicate_when": "any_original_eligible_stratum_group_has_zero_denominator"
+  },
+  "bootstrap": {
+    "replicates": 1000,
+    "block_windows": 10,
+    "keep_last_short_block": true,
+    "generator": "numpy.Generator(PCG64)",
+    "seed": 20261001,
+    "percentiles": [
+      2.5,
+      97.5
+    ],
+    "minimum_valid_fraction": 0.9,
+    "paired_within_domain": true
+  },
+  "prohibited": [
+    "hash_checks",
+    "checksums",
+    "full_project_inventory",
+    "retraining",
+    "Platt",
+    "relabeling",
+    "resampling_to_fill_classes",
+    "G3",
+    "XGBoost",
+    "MLP",
+    "CIC",
+    "online_feedback",
+    "multi_detector_coordination",
+    "automatic_full_evaluation"
+  ],
+  "literature_claim": "none_of_the_working_thresholds_is_a_statistical_guarantee"
+}

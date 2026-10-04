@@ -1,0 +1,27 @@
+{
+  "version": "p7-outer-v1.0",
+  "status": "IMPLEMENTATION_SPECIFICATION_BEFORE_OUTER_EVALUATION",
+  "output": "outputs/outer_v2/P7",
+  "round1": "P4 primary 10k JSD frozen CRE; F1 F2 F3",
+  "round2": "P6 frozen 96 operating points and all stored budget entries; F1 F2 only",
+  "F2": "preserve no feasible threshold; never reselect on outer data",
+  "F3": "Round1 only; no new Round2 fallback fitted",
+  "window_scope": "existing heldout T_heldout complete 10k windows; initialization included; tail excluded and counted",
+  "prediction_boundary": "all folds and all frozen randomized mixture decisions committed before label evaluation",
+  "replay_chunk_rows": 262144,
+  "bootstrap": "reuse execution_v2 2000 paired 10-window blocks; independent domains; equal-domain Round1 aggregation",
+  "risk_empty": "null point risk; null CI if any bootstrap replicate has zero acceptance; disclose count",
+  "cost": "frozen P6 measured components with existing heldout-domain P3 JSD amortization; retain original development budgets",
+  "budget": "frozen cap pairs and lambda; independent seeded record choice; report outer expected and realized cost; no reselection",
+  "comparisons": "paired pointwise descriptive intervals at frozen budgets; no new superiority gate",
+  "excluded": [
+    "P5 outer sensitivity extension",
+    "Item3 P8",
+    "new fitting",
+    "threshold search",
+    "new F3 coordination policy"
+  ],
+  "execution": "explicit outer-p7 command; this implementation task does not run outer evaluation",
+  "registered_at_utc": "2026-09-08T02:59:23.108079+00:00",
+  "registration_note": "Actual configuration metadata registration after implementation checks; development results already exposed; real outer evaluation not run"
+}

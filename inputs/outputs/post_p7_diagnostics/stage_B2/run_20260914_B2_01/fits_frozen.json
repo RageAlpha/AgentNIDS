@@ -1,0 +1,6 @@
+{
+  "time_utc": "2026-09-14T08:30:27.438972+00:00",
+  "models": 18,
+  "status": "ALL_FITS_SAVED_BEFORE_ANY_B2_EVALUATION",
+  "source": "only each folds R_fit; R_cal/R_select/target not used for fitting"
+}

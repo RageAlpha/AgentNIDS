@@ -1,0 +1,88 @@
+{
+  "method": "Platt",
+  "input": "logit_raw_attack_probability",
+  "input_probability_epsilon": 1e-07,
+  "penalty": "none",
+  "fit_rows": 360000,
+  "label_counts": {
+    "Benign": 325600,
+    "Attack": 34400
+  },
+  "coefficient": 0.9662071811298174,
+  "intercept": 1.2451682482037534,
+  "solver": {
+    "coefficients": [
+      0.9662071811298174
+    ],
+    "intercept": 1.2451682482037534,
+    "final_objective": 0.0018180349487289086,
+    "gradient_l2_norm": 5.717942047479407e-05,
+    "iterations": 8,
+    "function_evaluations": 12,
+    "closure_calls": 12
+  },
+  "solver_config": {
+    "backend": "torch.optim.LBFGS",
+    "device": "cuda:0",
+    "dtype": "float64",
+    "max_iter": 2000,
+    "tolerance_grad": 0.0001,
+    "tolerance_change": 1e-12,
+    "line_search_fn": "strong_wolfe",
+    "history_size": 20,
+    "initial_parameters": 0,
+    "closure": "full_dataset_weighted_loss_and_gradient_accumulated_in_chunks"
+  },
+  "closure_rows": 262144,
+  "fit_seconds": 0.8530669339816086,
+  "model_id": "rf_Traffic",
+  "fit_domain": "UNSW",
+  "fit_partition": "S_prob_cal",
+  "device": "cuda:0",
+  "raw_metrics": {
+    "rows": 360000,
+    "prevalence": 0.09555555555555556,
+    "threshold": 0.5,
+    "confusion": {
+      "tn": 325509,
+      "fp": 91,
+      "fn": 65,
+      "tp": 34335
+    },
+    "accuracy": 0.9995666666666667,
+    "balanced_accuracy": 0.9989154905433975,
+    "precision_attack": 0.997356649044327,
+    "recall_attack": 0.9981104651162791,
+    "f1_attack": 0.997733414697934,
+    "auroc": 0.9999144776548483,
+    "average_precision": 0.9996007623394635,
+    "nll": 0.0022202672978765287,
+    "brier": 0.0004477938328663173,
+    "ece": 0.0005953956583632496,
+    "ece_bins": 15
+  },
+  "calibrated_metrics": {
+    "rows": 360000,
+    "prevalence": 0.09555555555555556,
+    "threshold": 0.5,
+    "confusion": {
+      "tn": 325488,
+      "fp": 112,
+      "fn": 34,
+      "tp": 34366
+    },
+    "accuracy": 0.9995944444444445,
+    "balanced_accuracy": 0.9993338237814982,
+    "precision_attack": 0.9967515517141365,
+    "recall_attack": 0.9990116279069767,
+    "f1_attack": 0.9978803101135341,
+    "auroc": 0.9999144964037769,
+    "average_precision": 0.9996007623394635,
+    "nll": 0.0018180349487287083,
+    "brier": 0.0003504962221509911,
+    "ece": 0.0002854466902996473,
+    "ece_bins": 15
+  },
+  "status": "COMPLETE",
+  "completed_at_utc": "2026-09-05T16:20:30.610861+00:00"
+}

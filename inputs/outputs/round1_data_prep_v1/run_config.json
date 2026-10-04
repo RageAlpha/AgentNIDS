@@ -1,0 +1,232 @@
+{
+  "version": "round1-data-prep-v1.0",
+  "status": "DATA_PREPARATION_COMPLETE_NOT_EXPERIMENT_FROZEN",
+  "started_at_utc": "2026-09-05T07:24:27.186813+00:00",
+  "python": "3.11.16 (main, Aug 27 2026, 14:44:21) [GCC 14.3.0]",
+  "executable": "/home/karri/miniconda3/envs/agentnids/bin/python",
+  "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "dependencies": {
+    "numpy": "2.4.6",
+    "pyarrow": "NOT_INSTALLED",
+    "pandas": "NOT_INSTALLED",
+    "scipy": "NOT_INSTALLED",
+    "scikit-learn": "NOT_INSTALLED",
+    "xgboost": "NOT_INSTALLED"
+  },
+  "data_root": "/home/karri/projects/NIDSProject/datasets",
+  "output": "/home/karri/projects/NIDSProject/outputs/round1_data_prep_v1",
+  "chunk_rows": 250000,
+  "command": "/home/karri/miniconda3/envs/agentnids/bin/python /home/karri/projects/NIDSProject/round1_handoff_v1/round1_setup/prepare_data.py --data-root /home/karri/projects/NIDSProject/datasets --output /home/karri/projects/NIDSProject/outputs/round1_data_prep_v1",
+  "disk_free_bytes": 986150883328,
+  "memory_info": "MemTotal:       32706224 kB\nMemFree:        29635740 kB\nMemAvailable:   30172980 kB\nBuffers:           14856 kB\nCached:           615672 kB\nSwapCached:            0 kB\nActive:           138488 kB\nInactive:        2059212 kB\nActive(anon):       2728 kB\nInactive(anon):  1568208 kB\nActive(file):     135760 kB\nInactive(file):   491004 kB\nUnevictable:           0 kB\nMlocked:               0 kB\nSwapTotal:       8388608 kB\nSwapFree:        8388608 kB\nDirty:               824 kB\nWriteback:             0 kB\nAnonPages:       1567752 kB\nMapped:           424372 kB\nShmem:              3648 kB\nKReclaimable:     288804 kB\nSlab:             439640 kB\nSReclaimable:     288804 kB\nSUnreclaim:       150836 kB\nKernelStack:       10096 kB\nPageTables:        34020 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:    24741720 kB\nCommitted_AS:    4821468 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:       43472 kB\nVmallocChunk:          0 kB\nPercpu:            10080 kB\nHardwareCorrupted:     0 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:         0 kB\nFilePmdMapped:         0 kB\nUnaccepted:            0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:       62464 kB\nDirectMap2M:    11311104 kB\nDirectMap1G:    30408704 kB\n",
+  "metadata_inventory": [
+    {
+      "path": "/home/karri/projects/NIDSProject/datasets/NF-BoT-IoT-v3.csv",
+      "bytes": 3817527532
+    },
+    {
+      "path": "/home/karri/projects/NIDSProject/datasets/NF-CICIDS2018-v3.csv",
+      "bytes": 4222783755
+    },
+    {
+      "path": "/home/karri/projects/NIDSProject/datasets/NF-ToN-IoT-v3.csv",
+      "bytes": 5302886266
+    },
+    {
+      "path": "/home/karri/projects/NIDSProject/datasets/NF-UNSW-NB15-v3.csv",
+      "bytes": 577360958
+    },
+    {
+      "path": "/home/karri/projects/NIDSProject/datasets/NetFlow_v3_Features.csv",
+      "bytes": 2935
+    }
+  ],
+  "group_mode": "nonoverlapping_chronological_10000_flow_groups_no_session_claim",
+  "source_rounding": "nearest_half_up_cumulative_all_groups_60_75_90_percent",
+  "development_rounding": "nearest_half_up_cumulative_full_groups_50_75_percent_tail_to_R_select",
+  "window_sizes": [
+    5000,
+    10000,
+    50000
+  ],
+  "bootstrap_block_windows": 10,
+  "minimum_bootstrap_units": 20,
+  "feature_view_counts": {
+    "Traffic": 17,
+    "Protocol": 17,
+    "Behavior": 15
+  },
+  "experiment_config": {
+    "version": "round1-three-fixes-v1.1",
+    "status": "DRAFT_NOT_FROZEN",
+    "scope": "Three implementation fixes only; this is not a complete training configuration.",
+    "data_root": "/home/karri/projects/NIDSProject/datasets",
+    "execution_environment": {
+      "host": "user_second_computer_WSL",
+      "conda_environment": "agentnids",
+      "python": "/home/karri/miniconda3/envs/agentnids/bin/python",
+      "python_version_reported_by_user": "3.11.16",
+      "version_tracking": "versioned_config_copies_run_timestamps_and_dependency_versions",
+      "current_local_data_audit_is_reference_only_for_remote_run": true,
+      "remote_data_audit_completed": false
+    },
+    "datasets": {
+      "UNSW": "NF-UNSW-NB15-v3.csv",
+      "CIC": "NF-CICIDS2018-v3.csv",
+      "BoT": "NF-BoT-IoT-v3.csv",
+      "ToN": "NF-ToN-IoT-v3.csv"
+    },
+    "feature_dictionary": "NetFlow_v3_Features.csv",
+    "feature_view_manifest": "feature_view_manifest_v1.csv",
+    "feature_view_manifest_status": "USER_PROVIDED_MAPPING_SCHEMA_VERIFIED_EXPERIMENT_NOT_FROZEN",
+    "data_audit_report": "data_audit.json",
+    "replay": {
+      "decision_stage": "completed_flow_record",
+      "availability_proxy": "FLOW_END_MILLISECONDS",
+      "export_and_transport_delay_modelled": false,
+      "sort_keys": [
+        "FLOW_END_MILLISECONDS",
+        "original_zero_based_row_index"
+      ],
+      "timestamp_ties": "same_availability_batch",
+      "stream_assignment": "whole_domain_until_independent_capture_metadata_is_verified",
+      "primary_window_flows": 10000,
+      "sensitivity_window_flows": [
+        5000,
+        50000
+      ],
+      "shift_context": "previous_complete_window_in_same_stream",
+      "shift_fixed_before_first_current_record": true,
+      "first_window_shift": 0.0,
+      "include_complete_initialization_windows": true,
+      "flag_initialization_windows": true,
+      "incomplete_tail": "exclude_from_complete_window_primary_analysis_and_count",
+      "invalid_timestamp_policy": "report_and_block_freeze_until_resolution_is_registered",
+      "timestamps_are_model_features": false,
+      "preserve_existing_indivisible_split_groups": true
+    },
+    "cre": {
+      "detector_specific_models": true,
+      "binary_attack_threshold": 0.5,
+      "correctness_target": "frozen_calibrated_detector_prediction_equals_binary_label",
+      "uncertainty": "normalized_binary_entropy_of_calibrated_detector_probability",
+      "constant_prior_partition": "R_fit_equal_domain_weighted_correctness_mean",
+      "historical_competence_partition": "S_competence",
+      "uncertainty_probability_baseline": [
+        "u"
+      ],
+      "primary_baseline": [
+        "h",
+        "u"
+      ],
+      "primary_proposed": [
+        "h",
+        "u",
+        "s"
+      ],
+      "raw_one_minus_entropy": "ranking_diagnostic_only",
+      "fit_partition": "R_fit",
+      "R_cal_role": "probability_quality_diagnostics_only_in_primary_round1",
+      "R_select_role": "development_gate_evaluation",
+      "additional_meta_calibration": "none_for_all_primary_fitted_cre_models",
+      "base_detector_platt_partition": "S_prob_cal_unchanged",
+      "scaler": {
+        "type": "StandardScaler",
+        "fit_partition": "R_fit",
+        "sample_weight": "same_equal_domain_weights_as_logistic_fit"
+      },
+      "logistic": {
+        "penalty": "l2",
+        "C": 1.0,
+        "solver": "lbfgs",
+        "fit_intercept": true,
+        "max_iter": 2000,
+        "tol": 0.0001,
+        "class_weight": null
+      },
+      "sample_weight_formula": "N_total/(2*N_domain) for each row; weight sum=N_total and each development domain has half the total weight",
+      "hyperparameter_search": "none_for_primary_cre_and_fitted_baselines",
+      "nonconvergence": "invalidate_fit_and_resolve_numerical_issue_before_heldout_inspection",
+      "probability_clip_for_nll": 1e-15
+    },
+    "gate": {
+      "threshold_status": "proposed_pre_result_defaults_pending_configuration_freeze",
+      "primary_condition": "feature_diverse_10000_flow_JSD",
+      "G0": {
+        "statistic": "equal_domain_mean(min_detector_error - all_three_wrong_rate)",
+        "minimum_effect": 0.01,
+        "best_detector_role": "retrospective_bound_not_deployment_selection"
+      },
+      "G1": {
+        "statistic": "equal_domain_mean(equal_primary_detector_mean(AURC_hu - AURC_hus))",
+        "minimum_effect": 0.001
+      },
+      "AURC": {
+        "scale": "0_to_1",
+        "risk": "binary_error_fraction_among_accepted",
+        "aggregation": "mean_risk_over_all_nonempty_prefixes",
+        "ties": "expected_random_order_within_exact_score_ties"
+      },
+      "bootstrap": {
+        "replicates": 2000,
+        "random_seed": 20260905,
+        "confidence_level": 0.95,
+        "interval": "percentile",
+        "paired_record_ids_across_methods": true,
+        "group_mode": "PENDING_METADATA_AUDIT",
+        "mode_rule": "genuine_indivisible_capture_units_if_available_and_adequate_else_nonoverlapping_consecutive_window_blocks",
+        "fallback_block_windows": 10,
+        "include_final_shorter_block": true,
+        "cross_stream_or_partition_blocks_allowed": false,
+        "minimum_units_per_domain": 20,
+        "insufficient_units": "INCONCLUSIVE",
+        "recompute_G0_best_single_per_replicate": true,
+        "recompute_shift_after_resampling": false,
+        "uncertainty_scope": "conditional_on_fitted_models_and_evaluated_domains"
+      },
+      "decision_rules": {
+        "PASS": "point_estimate >= minimum_effect AND lower_95CI > 0 AND estimability_checks_pass",
+        "BELOW_MINIMUM_EFFECT": "upper_95CI < minimum_effect AND estimability_checks_pass",
+        "INCONCLUSIVE": "all_other_cases_or_failed_estimability_checks"
+      },
+      "full_round2_progression": "G0_PASS_AND_G1_PASS",
+      "sensitivity_can_replace_primary_gate": false,
+      "probability_claim": "AURC_pass_alone_does_not_establish_improved_probability_calibration"
+    },
+    "heldout_policy": {
+      "development_progression_data": "current_fold_R_select_only",
+      "freeze_common_candidate_and_selection_rules_before_outer_inspection": true,
+      "freeze_all_three_fold_configs_before_any_outer_result": true,
+      "join_heldout_labels_after_predictions_are_fixed": true,
+      "outer_outcomes_may_activate_only_preregistered_branches": true,
+      "if_round2_design_open": "defer_outer_result_inspection_and_use_development_gates",
+      "outcome_driven_redesign": "new_exploratory_version_requires_independent_confirmation",
+      "later_time_block_in_used_domain": "temporal_validation_not_new_unseen_domain"
+    },
+    "freeze_requirements": {
+      "data_audit_reviewed": false,
+      "feature_view_manifest_verified": true,
+      "split_manifest_verified": false,
+      "window_and_bootstrap_manifest_verified": false,
+      "future_mutation_check_passed": false,
+      "heldout_label_mutation_check_passed": false,
+      "paired_cre_config_check_passed": false,
+      "numeric_gate_choices_recorded_before_results": false,
+      "full_round1_training_and_sensitivity_config_complete": false,
+      "outer_result_prior_exposure_audit_complete": false
+    },
+    "frozen_at_utc": null,
+    "freeze_record": null
+  },
+  "synthetic_checks": {
+    "long_flow_availability": "PASS",
+    "stable_ties_and_equal_time_predecessor": "PASS",
+    "partition_tails_and_context": "PASS",
+    "rounding_empty_small_and_short_groups": "PASS",
+    "runtime_future_feature_mutation": "PENDING_MODEL_PIPELINE",
+    "runtime_heldout_label_mutation": "PENDING_MODEL_PIPELINE",
+    "paired_CRE_fit": "PENDING_MODEL_PIPELINE"
+  },
+  "finished_at_utc": "2026-09-05T07:27:41.872749+00:00",
+  "peak_rss_kib": 845480
+}

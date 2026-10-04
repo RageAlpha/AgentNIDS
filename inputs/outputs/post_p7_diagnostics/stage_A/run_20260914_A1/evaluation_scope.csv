@@ -1,0 +1,5 @@
+domain,partition,fold,rank_start,rank_end_exclusive,rows,benign,attack,complete_windows,excluded_tail,source_tail_included,identity_check
+UNSW,S_source_test,source,2130000,2365424,235424,215407,20017,NA,0,5424,P2 source interval + P1/P3 rank contract
+ToN,T_heldout,F1,0,27520000,27520000,16791954,10728046,2752,260,0,all P7 rank/original_row/record_id
+CIC,T_heldout,F3,0,20110000,20110000,17509097,2600903,2011,5529,0,all P7 rank/original_row/record_id
+BoT,T_heldout,F2,0,16930000,16930000,51434,16878566,1693,3808,0,all P7 rank/original_row/record_id

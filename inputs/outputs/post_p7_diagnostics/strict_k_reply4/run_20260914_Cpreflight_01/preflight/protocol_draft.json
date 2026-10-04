@@ -1,0 +1,350 @@
+{
+  "status": "DRAFT_AFTER_C_PREFLIGHT_AWAITING_USER_REVIEW",
+  "created_at_utc": "2026-09-14T09:28:34.146999+00:00",
+  "design_context": "Exploratory design proposed after inspecting A/B1/B2 and already unblinded target domains; not retrospective old preregistration or new unseen-domain validation",
+  "source_plan": "/home/karri/projects/NIDSProject/docs/StrictK_Reply4_Experiment_Plan.md",
+  "source_plan_sha256": "0df7315ea8120376489311bc064cb1da3657291bfaf9d015a3da5afa3f3992ff",
+  "K": 400,
+  "per_domain_label_budget": 400,
+  "startup": {
+    "partition": "P7 T_heldout",
+    "first_complete_windows": 10,
+    "window_size": 10000,
+    "rank_interval": [
+      0,
+      100000
+    ],
+    "interval_convention": "half-open",
+    "exclude_entire_startup_from_evaluation": true
+  },
+  "sampling": {
+    "generator": "numpy.random.Generator",
+    "bit_generator": "PCG64",
+    "seed": 20260914,
+    "new_generator_per_domain": true,
+    "call": "choice(100000, size=400, replace=False)",
+    "sort_after_sampling": true,
+    "commit_before_label_read": true,
+    "shared_sample_across_all_methods": true,
+    "resampling": false,
+    "replenishment": false,
+    "class_balancing": false,
+    "numpy_version": "2.4.6"
+  },
+  "support": {
+    "benign_min": 20,
+    "attack_min": 20,
+    "failure": "TARGET_CLASS_SUPPORT_INSUFFICIENT",
+    "consequence": "retain domain report and C0; no deployable C1 or C2 threshold; label support limitation, not model performance failure"
+  },
+  "evaluation": [
+    {
+      "domain": "ToN",
+      "fold": "F1",
+      "startup_rank_start": 0,
+      "startup_rank_end_exclusive": 100000,
+      "startup_rows": 100000,
+      "startup_complete_windows": 10,
+      "unlabelled_startup_excluded": 99600,
+      "evaluation_rank_start": 100000,
+      "evaluation_rank_end_exclusive": 27520000,
+      "evaluation_rows": 27420000,
+      "evaluation_complete_windows": 2742,
+      "old_excluded_tail": 260,
+      "tail_rank_start": 27520000,
+      "tail_rank_end_exclusive": 27520260,
+      "first_startup_window_id": "ToN:heldout:10000:T_heldout:0",
+      "last_startup_window_id": "ToN:heldout:10000:T_heldout:9",
+      "first_evaluation_window_id": "ToN:heldout:10000:T_heldout:10",
+      "last_evaluation_window_id": "ToN:heldout:10000:T_heldout:2751",
+      "first_available_ms": 1556028590618,
+      "startup_last_available_ms": 1556028794066,
+      "evaluation_first_available_ms": 1556028794066,
+      "startup_wait_ms": 203448,
+      "startup_wait_seconds": 203.448,
+      "boundary_same_availability_batch": true,
+      "wait_definition": "FLOW_END_MILLISECONDS[rank 99999] - FLOW_END_MILLISECONDS[rank 0]; availability proxy, not wall-clock annotation latency"
+    },
+    {
+      "domain": "CIC",
+      "fold": "F3",
+      "startup_rank_start": 0,
+      "startup_rank_end_exclusive": 100000,
+      "startup_rows": 100000,
+      "startup_complete_windows": 10,
+      "unlabelled_startup_excluded": 99600,
+      "evaluation_rank_start": 100000,
+      "evaluation_rank_end_exclusive": 20110000,
+      "evaluation_rows": 20010000,
+      "evaluation_complete_windows": 2001,
+      "old_excluded_tail": 5529,
+      "tail_rank_start": 20110000,
+      "tail_rank_end_exclusive": 20115529,
+      "first_startup_window_id": "CIC:heldout:10000:T_heldout:0",
+      "last_startup_window_id": "CIC:heldout:10000:T_heldout:9",
+      "first_evaluation_window_id": "CIC:heldout:10000:T_heldout:10",
+      "last_evaluation_window_id": "CIC:heldout:10000:T_heldout:2010",
+      "first_available_ms": 1518611287705,
+      "startup_last_available_ms": 1518613214089,
+      "evaluation_first_available_ms": 1518613214089,
+      "startup_wait_ms": 1926384,
+      "startup_wait_seconds": 1926.384,
+      "boundary_same_availability_batch": true,
+      "wait_definition": "FLOW_END_MILLISECONDS[rank 99999] - FLOW_END_MILLISECONDS[rank 0]; availability proxy, not wall-clock annotation latency"
+    },
+    {
+      "domain": "BoT",
+      "fold": "F2",
+      "startup_rank_start": 0,
+      "startup_rank_end_exclusive": 100000,
+      "startup_rows": 100000,
+      "startup_complete_windows": 10,
+      "unlabelled_startup_excluded": 99600,
+      "evaluation_rank_start": 100000,
+      "evaluation_rank_end_exclusive": 16930000,
+      "evaluation_rows": 16830000,
+      "evaluation_complete_windows": 1683,
+      "old_excluded_tail": 3808,
+      "tail_rank_start": 16930000,
+      "tail_rank_end_exclusive": 16933808,
+      "first_startup_window_id": "BoT:heldout:10000:T_heldout:0",
+      "last_startup_window_id": "BoT:heldout:10000:T_heldout:9",
+      "first_evaluation_window_id": "BoT:heldout:10000:T_heldout:10",
+      "last_evaluation_window_id": "BoT:heldout:10000:T_heldout:1692",
+      "first_available_ms": 1526344151932,
+      "startup_last_available_ms": 1526353628570,
+      "evaluation_first_available_ms": 1526353628987,
+      "startup_wait_ms": 9476638,
+      "startup_wait_seconds": 9476.638,
+      "boundary_same_availability_batch": false,
+      "wait_definition": "FLOW_END_MILLISECONDS[rank 99999] - FLOW_END_MILLISECONDS[rank 0]; availability proxy, not wall-clock annotation latency"
+    }
+  ],
+  "folds": {
+    "F1": {
+      "development": [
+        "CIC",
+        "BoT"
+      ],
+      "heldout": "ToN"
+    },
+    "F2": {
+      "development": [
+        "CIC",
+        "ToN"
+      ],
+      "heldout": "BoT"
+    },
+    "F3": {
+      "development": [
+        "BoT",
+        "ToN"
+      ],
+      "heldout": "CIC"
+    }
+  },
+  "models_C1": [
+    "rf_Traffic",
+    "rf_All49",
+    "xgb_Protocol",
+    "xgb_All49",
+    "mlp_Behavior",
+    "mlp_All49"
+  ],
+  "models_C2": [
+    "rf_All49",
+    "xgb_All49",
+    "mlp_All49"
+  ],
+  "outputs": [
+    "Raw",
+    "Platt"
+  ],
+  "C0_class": {
+    "classification": "p>=0.5",
+    "acceptance": "all",
+    "recompute_only_after_approval": true
+  },
+  "C1": {
+    "status": "NOT_RUN",
+    "configurations": 36,
+    "classification": "p>=t_K",
+    "acceptance": "all",
+    "candidates": "unique 400 calibration probabilities plus 0, 0.5, nextafter(1,+infinity)",
+    "constraint": "20*FP<=N_Benign (empirical FPR<=5%); integer ratio comparisons",
+    "order": [
+      "maximize Attack recall",
+      "minimize FPR",
+      "minimize abs(t-0.5)",
+      "maximize t"
+    ],
+    "ties": "whole equal-probability group",
+    "include_calibration_t_half_control": true,
+    "zero_optimal_recall": "NO_NONTRIVIAL_CLASSIFICATION_SOLUTION; retain degenerate point, no automatic fallback to 0.5",
+    "save_threshold_before_evaluation_labels": true
+  },
+  "C2": {
+    "status": "NOT_RUN",
+    "configurations": 36,
+    "classification": "p>=0.5",
+    "scores": [
+      "1-u",
+      "own-fold frozen B2 f(u)"
+    ],
+    "entropy": "-(xlogy(p,p)+xlogy(1-p,1-p))/ln(2); float64; 0log0=0; no extra clipping/rounding/reversal",
+    "fu": "sigmoid(beta0+beta1*(u-anchor-mean_offset)/scale); reuse B2 implementation",
+    "candidates": "unique 400 scores plus full-accept boundary and full-reject sentinel",
+    "acceptance": "s>=a; whole ties",
+    "constraint": "20*accepted_errors<=accepted_rows and accepted_rows>=40",
+    "order": [
+      "maximize coverage",
+      "minimize empirical selective risk",
+      "maximize threshold"
+    ],
+    "no_solution": "NO_FEASIBLE_ACCEPTANCE_THRESHOLD; full reject: coverage=0, risk=NA, effective_attack_detection=0; not a safety success",
+    "support_gate": "overall 400 records Benign>=20 and Attack>=20; no accepted-subclass gate",
+    "finite_sample_risk_guarantee": false
+  },
+  "C0_select": {
+    "status": "NOT_RUN",
+    "scope": [
+      {
+        "fold": "F1",
+        "target": "ToN",
+        "domain": "CIC",
+        "partition": "R_select",
+        "rank_start": 15080000,
+        "rank_end_exclusive": 20110000,
+        "rows": 5030000,
+        "complete_windows": 503,
+        "excluded_tail": 5529,
+        "domain_weight": 0.5,
+        "label_cache_metadata_available": true,
+        "probability_cache_available": true,
+        "labels_read": false
+      },
+      {
+        "fold": "F1",
+        "target": "ToN",
+        "domain": "BoT",
+        "partition": "R_select",
+        "rank_start": 12700000,
+        "rank_end_exclusive": 16930000,
+        "rows": 4230000,
+        "complete_windows": 423,
+        "excluded_tail": 3808,
+        "domain_weight": 0.5,
+        "label_cache_metadata_available": true,
+        "probability_cache_available": true,
+        "labels_read": false
+      },
+      {
+        "fold": "F2",
+        "target": "BoT",
+        "domain": "CIC",
+        "partition": "R_select",
+        "rank_start": 15080000,
+        "rank_end_exclusive": 20110000,
+        "rows": 5030000,
+        "complete_windows": 503,
+        "excluded_tail": 5529,
+        "domain_weight": 0.5,
+        "label_cache_metadata_available": true,
+        "probability_cache_available": true,
+        "labels_read": false
+      },
+      {
+        "fold": "F2",
+        "target": "BoT",
+        "domain": "ToN",
+        "partition": "R_select",
+        "rank_start": 20640000,
+        "rank_end_exclusive": 27520000,
+        "rows": 6880000,
+        "complete_windows": 688,
+        "excluded_tail": 260,
+        "domain_weight": 0.5,
+        "label_cache_metadata_available": true,
+        "probability_cache_available": true,
+        "labels_read": false
+      },
+      {
+        "fold": "F3",
+        "target": "CIC",
+        "domain": "BoT",
+        "partition": "R_select",
+        "rank_start": 12700000,
+        "rank_end_exclusive": 16930000,
+        "rows": 4230000,
+        "complete_windows": 423,
+        "excluded_tail": 3808,
+        "domain_weight": 0.5,
+        "label_cache_metadata_available": true,
+        "probability_cache_available": true,
+        "labels_read": false
+      },
+      {
+        "fold": "F3",
+        "target": "CIC",
+        "domain": "ToN",
+        "partition": "R_select",
+        "rank_start": 20640000,
+        "rank_end_exclusive": 27520000,
+        "rows": 6880000,
+        "complete_windows": 688,
+        "excluded_tail": 260,
+        "domain_weight": 0.5,
+        "label_cache_metadata_available": true,
+        "probability_cache_available": true,
+        "labels_read": false
+      }
+    ],
+    "configurations": 36,
+    "classification": "p>=0.5",
+    "candidates": "union of unique scores from both complete R_select scopes plus full accept/reject sentinels",
+    "coverage": "(c_1+c_2)/2",
+    "risk": "(e_1+e_2)/(c_1+c_2); e_d=accepted errors / all domain records",
+    "constraint": "empirical risk<=5%, coverage>=10%",
+    "order": [
+      "maximize coverage",
+      "minimize risk",
+      "maximize threshold"
+    ],
+    "no_solution": "full reject; risk NA",
+    "baseline_is_new": true,
+    "equal_label_budget_causal_comparison": false
+  },
+  "information_boundary": {
+    "detectors_and_Platt": "frozen UNSW source training/calibration",
+    "fu": "frozen own-fold development R_fit only",
+    "target_labels_used_for_retraining": false,
+    "probability_values_read_in_preflight": false,
+    "cross_fold_role_reuse": "historical target records may be R_fit in other folds; preserve roles; not new independent samples"
+  },
+  "later_evaluation_rules": {
+    "temporal_segments": "four contiguous nearly equal window segments, early segments receive remainder; fixed threshold",
+    "bootstrap": "new shared per-domain 2000 paired resamples of 10 consecutive complete windows; retain short last block; >=20 blocks; never reuse matrices containing startup",
+    "undefined_rates": "NA; report valid replicate counts",
+    "interval_scope": "conditional on one 400-label draw, frozen models and current domains",
+    "metrics_reference": "source plan sections 8-9; C1 FPR/Recall/BA and C2 coverage/risk/attack outcomes and native categories; do not select winners by alternate endpoints"
+  },
+  "approval_sequence": [
+    "C-preflight review",
+    "C1 separately authorized",
+    "C1 review",
+    "C2 and C0-select separately authorized"
+  ],
+  "prohibited_this_run": [
+    "threshold search/selection",
+    "C1",
+    "C2",
+    "C0 performance",
+    "FPR/Recall/risk/AURC on evaluation records",
+    "bootstrap generation",
+    "Strict-K sensitivity",
+    "conformal",
+    "coordination",
+    "open-set",
+    "any refitting"
+  ]
+}

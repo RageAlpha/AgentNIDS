@@ -1,0 +1,2148 @@
+{
+  "coordinator": [
+    {
+      "cap": 1,
+      "tau_stop": null,
+      "tau_final": null,
+      "early_stop_status": "DISABLED_BY_CAP",
+      "final_status": "ABSTAIN_NO_FEASIBLE_THRESHOLD",
+      "domain_metrics": [
+        {
+          "domain": "CIC",
+          "rows": 5030000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.07306679920477137,
+          "mean_calls": 1.0,
+          "normalized_cost": 10.020980551354626,
+          "consultation_rate": 0.0,
+          "corrective_yield": 0.0,
+          "consultation_harm": 0.0
+        },
+        {
+          "domain": "ToN",
+          "rows": 6880000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.6221316860465116,
+          "mean_calls": 1.0,
+          "normalized_cost": 10.021044407074113,
+          "consultation_rate": 0.0,
+          "corrective_yield": 0.0,
+          "consultation_harm": 0.0
+        }
+      ],
+      "summary": {
+        "coverage": 0.0,
+        "accepted_error_mass": 0.0,
+        "full_error": 0.34759924262564146,
+        "mean_calls": 1.0,
+        "normalized_cost": 10.02101247921437,
+        "consultation_rate": 0.0,
+        "corrective_yield": 0.0,
+        "consultation_harm": 0.0,
+        "risk": null
+      }
+    },
+    {
+      "cap": 2,
+      "tau_stop": null,
+      "tau_final": null,
+      "early_stop_status": "DISABLED_NO_FEASIBLE_THRESHOLD",
+      "final_status": "ABSTAIN_NO_FEASIBLE_THRESHOLD",
+      "domain_metrics": [
+        {
+          "domain": "CIC",
+          "rows": 5030000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.07207495029821073,
+          "mean_calls": 2.0,
+          "normalized_cost": 13.116855208047156,
+          "consultation_rate": 1.0,
+          "corrective_yield": 0.0036443339960238567,
+          "consultation_harm": 0.0026524850894632207
+        },
+        {
+          "domain": "ToN",
+          "rows": 6880000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.5925351744186047,
+          "mean_calls": 2.0,
+          "normalized_cost": 13.118322213015205,
+          "consultation_rate": 1.0,
+          "corrective_yield": 0.030234156976744187,
+          "consultation_harm": 0.0006376453488372093
+        }
+      ],
+      "summary": {
+        "coverage": 0.0,
+        "accepted_error_mass": 0.0,
+        "full_error": 0.33230506235840773,
+        "mean_calls": 2.0,
+        "normalized_cost": 13.11758871053118,
+        "consultation_rate": 1.0,
+        "corrective_yield": 0.016939245486384022,
+        "consultation_harm": 0.001645065219150215,
+        "risk": null
+      }
+    },
+    {
+      "cap": 3,
+      "tau_stop": null,
+      "tau_final": null,
+      "early_stop_status": "DISABLED_NO_FEASIBLE_THRESHOLD",
+      "final_status": "ABSTAIN_NO_FEASIBLE_THRESHOLD",
+      "domain_metrics": [
+        {
+          "domain": "CIC",
+          "rows": 5030000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.07234990059642148,
+          "mean_calls": 3.0,
+          "normalized_cost": 14.45690792479109,
+          "consultation_rate": 1.0,
+          "corrective_yield": 0.003567395626242545,
+          "consultation_harm": 0.002850497017892644
+        },
+        {
+          "domain": "ToN",
+          "rows": 6880000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.6207420058139534,
+          "mean_calls": 3.0,
+          "normalized_cost": 14.456971780510571,
+          "consultation_rate": 1.0,
+          "corrective_yield": 0.0018902616279069767,
+          "consultation_harm": 0.0005005813953488372
+        }
+      ],
+      "summary": {
+        "coverage": 0.0,
+        "accepted_error_mass": 0.0,
+        "full_error": 0.34654595320518744,
+        "mean_calls": 3.0,
+        "normalized_cost": 14.45693985265083,
+        "consultation_rate": 1.0,
+        "corrective_yield": 0.002728828627074761,
+        "consultation_harm": 0.0016755392066207407,
+        "risk": null
+      }
+    }
+  ],
+  "learned_cascade": [
+    {
+      "cap": 1,
+      "tau_stop": null,
+      "tau_final": null,
+      "early_stop_status": "DISABLED_BY_CAP",
+      "final_status": "ABSTAIN_NO_FEASIBLE_THRESHOLD",
+      "domain_metrics": [
+        {
+          "domain": "CIC",
+          "rows": 5030000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.07306679920477137,
+          "mean_calls": 1.0,
+          "normalized_cost": 3.002798219688458,
+          "consultation_rate": 0.0,
+          "corrective_yield": 0.0,
+          "consultation_harm": 0.0
+        },
+        {
+          "domain": "ToN",
+          "rows": 6880000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.6221316860465116,
+          "mean_calls": 1.0,
+          "normalized_cost": 3.002862075407944,
+          "consultation_rate": 0.0,
+          "corrective_yield": 0.0,
+          "consultation_harm": 0.0
+        }
+      ],
+      "summary": {
+        "coverage": 0.0,
+        "accepted_error_mass": 0.0,
+        "full_error": 0.34759924262564146,
+        "mean_calls": 1.0,
+        "normalized_cost": 3.0028301475482007,
+        "consultation_rate": 0.0,
+        "corrective_yield": 0.0,
+        "consultation_harm": 0.0,
+        "risk": null
+      }
+    },
+    {
+      "cap": 2,
+      "tau_stop": null,
+      "tau_final": null,
+      "early_stop_status": "DISABLED_NO_FEASIBLE_THRESHOLD",
+      "final_status": "ABSTAIN_NO_FEASIBLE_THRESHOLD",
+      "domain_metrics": [
+        {
+          "domain": "CIC",
+          "rows": 5030000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.07207495029821073,
+          "mean_calls": 2.0,
+          "normalized_cost": 6.062136576764527,
+          "consultation_rate": 1.0,
+          "corrective_yield": 0.0036443339960238567,
+          "consultation_harm": 0.0026524850894632207
+        },
+        {
+          "domain": "ToN",
+          "rows": 6880000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.5925351744186047,
+          "mean_calls": 2.0,
+          "normalized_cost": 6.063603581732571,
+          "consultation_rate": 1.0,
+          "corrective_yield": 0.030234156976744187,
+          "consultation_harm": 0.0006376453488372093
+        }
+      ],
+      "summary": {
+        "coverage": 0.0,
+        "accepted_error_mass": 0.0,
+        "full_error": 0.33230506235840773,
+        "mean_calls": 2.0,
+        "normalized_cost": 6.062870079248549,
+        "consultation_rate": 1.0,
+        "corrective_yield": 0.016939245486384022,
+        "consultation_harm": 0.001645065219150215,
+        "risk": null
+      }
+    },
+    {
+      "cap": 3,
+      "tau_stop": null,
+      "tau_final": null,
+      "early_stop_status": "DISABLED_NO_FEASIBLE_THRESHOLD",
+      "final_status": "ABSTAIN_NO_FEASIBLE_THRESHOLD",
+      "domain_metrics": [
+        {
+          "domain": "CIC",
+          "rows": 5030000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.07234990059642148,
+          "mean_calls": 3.0,
+          "normalized_cost": 7.428226627133317,
+          "consultation_rate": 1.0,
+          "corrective_yield": 0.003567395626242545,
+          "consultation_harm": 0.002850497017892644
+        },
+        {
+          "domain": "ToN",
+          "rows": 6880000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.6207420058139534,
+          "mean_calls": 3.0,
+          "normalized_cost": 7.428290482852804,
+          "consultation_rate": 1.0,
+          "corrective_yield": 0.0018902616279069767,
+          "consultation_harm": 0.0005005813953488372
+        }
+      ],
+      "summary": {
+        "coverage": 0.0,
+        "accepted_error_mass": 0.0,
+        "full_error": 0.34654595320518744,
+        "mean_calls": 3.0,
+        "normalized_cost": 7.428258554993061,
+        "consultation_rate": 1.0,
+        "corrective_yield": 0.002728828627074761,
+        "consultation_harm": 0.0016755392066207407,
+        "risk": null
+      }
+    }
+  ],
+  "random": [
+    {
+      "cap": 1,
+      "tau_stop": null,
+      "tau_final": null,
+      "early_stop_status": "DISABLED_BY_CAP",
+      "final_status": "ABSTAIN_NO_FEASIBLE_THRESHOLD",
+      "domain_metrics": [
+        {
+          "domain": "CIC",
+          "rows": 5030000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.07306679920477137,
+          "mean_calls": 1.0,
+          "normalized_cost": 2.4829089997954132,
+          "consultation_rate": 0.0,
+          "corrective_yield": 0.0,
+          "consultation_harm": 0.0
+        },
+        {
+          "domain": "ToN",
+          "rows": 6880000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.6221316860465116,
+          "mean_calls": 1.0,
+          "normalized_cost": 2.4829728555148978,
+          "consultation_rate": 0.0,
+          "corrective_yield": 0.0,
+          "consultation_harm": 0.0
+        }
+      ],
+      "summary": {
+        "coverage": 0.0,
+        "accepted_error_mass": 0.0,
+        "full_error": 0.34759924262564146,
+        "mean_calls": 1.0,
+        "normalized_cost": 2.4829409276551555,
+        "consultation_rate": 0.0,
+        "corrective_yield": 0.0,
+        "consultation_harm": 0.0,
+        "risk": null
+      }
+    },
+    {
+      "cap": 2,
+      "tau_stop": null,
+      "tau_final": null,
+      "early_stop_status": "DISABLED_NO_FEASIBLE_THRESHOLD",
+      "final_status": "ABSTAIN_NO_FEASIBLE_THRESHOLD",
+      "domain_metrics": [
+        {
+          "domain": "CIC",
+          "rows": 5030000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.07281868787276342,
+          "mean_calls": 2.0,
+          "normalized_cost": 4.720211280437144,
+          "consultation_rate": 1.0,
+          "corrective_yield": 0.002485089463220676,
+          "consultation_harm": 0.0022369781312127236
+        },
+        {
+          "domain": "ToN",
+          "rows": 6880000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.6071610465116279,
+          "mean_calls": 2.0,
+          "normalized_cost": 4.720257721500482,
+          "consultation_rate": 1.0,
+          "corrective_yield": 0.015323401162790698,
+          "consultation_harm": 0.00035276162790697673
+        }
+      ],
+      "summary": {
+        "coverage": 0.0,
+        "accepted_error_mass": 0.0,
+        "full_error": 0.3399898671921957,
+        "mean_calls": 2.0,
+        "normalized_cost": 4.720234500968813,
+        "consultation_rate": 1.0,
+        "corrective_yield": 0.008904245313005687,
+        "consultation_harm": 0.0012948698795598502,
+        "risk": null
+      }
+    },
+    {
+      "cap": 3,
+      "tau_stop": null,
+      "tau_final": null,
+      "early_stop_status": "DISABLED_NO_FEASIBLE_THRESHOLD",
+      "final_status": "ABSTAIN_NO_FEASIBLE_THRESHOLD",
+      "domain_metrics": [
+        {
+          "domain": "CIC",
+          "rows": 5030000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.07234990059642148,
+          "mean_calls": 3.0,
+          "normalized_cost": 7.174453635250515,
+          "consultation_rate": 1.0,
+          "corrective_yield": 0.003567395626242545,
+          "consultation_harm": 0.002850497017892644
+        },
+        {
+          "domain": "ToN",
+          "rows": 6880000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.6207420058139534,
+          "mean_calls": 3.0,
+          "normalized_cost": 7.174517490970003,
+          "consultation_rate": 1.0,
+          "corrective_yield": 0.0018902616279069767,
+          "consultation_harm": 0.0005005813953488372
+        }
+      ],
+      "summary": {
+        "coverage": 0.0,
+        "accepted_error_mass": 0.0,
+        "full_error": 0.34654595320518744,
+        "mean_calls": 3.0,
+        "normalized_cost": 7.1744855631102595,
+        "consultation_rate": 1.0,
+        "corrective_yield": 0.002728828627074761,
+        "consultation_harm": 0.0016755392066207407,
+        "risk": null
+      }
+    }
+  ],
+  "cheapest": [
+    {
+      "cap": 1,
+      "tau_stop": null,
+      "tau_final": null,
+      "early_stop_status": "DISABLED_BY_CAP",
+      "final_status": "ABSTAIN_NO_FEASIBLE_THRESHOLD",
+      "domain_metrics": [
+        {
+          "domain": "CIC",
+          "rows": 5030000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.07306679920477137,
+          "mean_calls": 1.0,
+          "normalized_cost": 2.8653232044288623,
+          "consultation_rate": 0.0,
+          "corrective_yield": 0.0,
+          "consultation_harm": 0.0
+        },
+        {
+          "domain": "ToN",
+          "rows": 6880000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.6221316860465116,
+          "mean_calls": 1.0,
+          "normalized_cost": 2.86538706014835,
+          "consultation_rate": 0.0,
+          "corrective_yield": 0.0,
+          "consultation_harm": 0.0
+        }
+      ],
+      "summary": {
+        "coverage": 0.0,
+        "accepted_error_mass": 0.0,
+        "full_error": 0.34759924262564146,
+        "mean_calls": 1.0,
+        "normalized_cost": 2.865355132288606,
+        "consultation_rate": 0.0,
+        "corrective_yield": 0.0,
+        "consultation_harm": 0.0,
+        "risk": null
+      }
+    },
+    {
+      "cap": 2,
+      "tau_stop": null,
+      "tau_final": null,
+      "early_stop_status": "DISABLED_NO_FEASIBLE_THRESHOLD",
+      "final_status": "ABSTAIN_NO_FEASIBLE_THRESHOLD",
+      "domain_metrics": [
+        {
+          "domain": "CIC",
+          "rows": 5030000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.0714013916500994,
+          "mean_calls": 2.0,
+          "normalized_cost": 6.06989142620772,
+          "consultation_rate": 1.0,
+          "corrective_yield": 0.0035980119284294235,
+          "consultation_harm": 0.0019326043737574552
+        },
+        {
+          "domain": "ToN",
+          "rows": 6880000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.6208281976744187,
+          "mean_calls": 2.0,
+          "normalized_cost": 6.069955281927207,
+          "consultation_rate": 1.0,
+          "corrective_yield": 0.0014536337209302326,
+          "consultation_harm": 0.0001501453488372093
+        }
+      ],
+      "summary": {
+        "coverage": 0.0,
+        "accepted_error_mass": 0.0,
+        "full_error": 0.34611479466225903,
+        "mean_calls": 2.0,
+        "normalized_cost": 6.0699233540674635,
+        "consultation_rate": 1.0,
+        "corrective_yield": 0.002525822824679828,
+        "consultation_harm": 0.0010413748612973324,
+        "risk": null
+      }
+    },
+    {
+      "cap": 3,
+      "tau_stop": null,
+      "tau_final": null,
+      "early_stop_status": "DISABLED_NO_FEASIBLE_THRESHOLD",
+      "final_status": "ABSTAIN_NO_FEASIBLE_THRESHOLD",
+      "domain_metrics": [
+        {
+          "domain": "CIC",
+          "rows": 5030000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.07234990059642148,
+          "mean_calls": 3.0,
+          "normalized_cost": 8.765407382733816,
+          "consultation_rate": 1.0,
+          "corrective_yield": 0.003567395626242545,
+          "consultation_harm": 0.002850497017892644
+        },
+        {
+          "domain": "ToN",
+          "rows": 6880000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.6207420058139534,
+          "mean_calls": 3.0,
+          "normalized_cost": 8.765471238453301,
+          "consultation_rate": 1.0,
+          "corrective_yield": 0.0018902616279069767,
+          "consultation_harm": 0.0005005813953488372
+        }
+      ],
+      "summary": {
+        "coverage": 0.0,
+        "accepted_error_mass": 0.0,
+        "full_error": 0.34654595320518744,
+        "mean_calls": 3.0,
+        "normalized_cost": 8.765439310593559,
+        "consultation_rate": 1.0,
+        "corrective_yield": 0.002728828627074761,
+        "consultation_harm": 0.0016755392066207407,
+        "risk": null
+      }
+    }
+  ],
+  "uncertainty": [
+    {
+      "cap": 1,
+      "tau_stop": null,
+      "tau_final": null,
+      "early_stop_status": "DISABLED_BY_CAP",
+      "final_status": "ABSTAIN_NO_FEASIBLE_THRESHOLD",
+      "domain_metrics": [
+        {
+          "domain": "CIC",
+          "rows": 5030000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.07306679920477137,
+          "mean_calls": 1.0,
+          "normalized_cost": 3.822010551263524,
+          "consultation_rate": 0.0,
+          "corrective_yield": 0.0,
+          "consultation_harm": 0.0
+        },
+        {
+          "domain": "ToN",
+          "rows": 6880000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.6221316860465116,
+          "mean_calls": 1.0,
+          "normalized_cost": 3.8220744069830066,
+          "consultation_rate": 0.0,
+          "corrective_yield": 0.0,
+          "consultation_harm": 0.0
+        }
+      ],
+      "summary": {
+        "coverage": 0.0,
+        "accepted_error_mass": 0.0,
+        "full_error": 0.34759924262564146,
+        "mean_calls": 1.0,
+        "normalized_cost": 3.8220424791232652,
+        "consultation_rate": 0.0,
+        "corrective_yield": 0.0,
+        "consultation_harm": 0.0,
+        "risk": null
+      }
+    },
+    {
+      "cap": 2,
+      "tau_stop": null,
+      "tau_final": null,
+      "early_stop_status": "DISABLED_NO_FEASIBLE_THRESHOLD",
+      "final_status": "ABSTAIN_NO_FEASIBLE_THRESHOLD",
+      "domain_metrics": [
+        {
+          "domain": "CIC",
+          "rows": 5030000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.07423996023856859,
+          "mean_calls": 2.0,
+          "normalized_cost": 6.770774569593257,
+          "consultation_rate": 1.0,
+          "corrective_yield": 0.0013795228628230617,
+          "consultation_harm": 0.0025526838966202785
+        },
+        {
+          "domain": "ToN",
+          "rows": 6880000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.5934659883720931,
+          "mean_calls": 2.0,
+          "normalized_cost": 6.770838425312745,
+          "consultation_rate": 1.0,
+          "corrective_yield": 0.029249273255813953,
+          "consultation_harm": 0.0005835755813953489
+        }
+      ],
+      "summary": {
+        "coverage": 0.0,
+        "accepted_error_mass": 0.0,
+        "full_error": 0.33385297430533084,
+        "mean_calls": 2.0,
+        "normalized_cost": 6.770806497453002,
+        "consultation_rate": 1.0,
+        "corrective_yield": 0.015314398059318507,
+        "consultation_harm": 0.0015681297390078136,
+        "risk": null
+      }
+    },
+    {
+      "cap": 3,
+      "tau_stop": null,
+      "tau_final": null,
+      "early_stop_status": "DISABLED_NO_FEASIBLE_THRESHOLD",
+      "final_status": "ABSTAIN_NO_FEASIBLE_THRESHOLD",
+      "domain_metrics": [
+        {
+          "domain": "CIC",
+          "rows": 5030000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.07234990059642148,
+          "mean_calls": 3.0,
+          "normalized_cost": 8.291879273192702,
+          "consultation_rate": 1.0,
+          "corrective_yield": 0.003567395626242545,
+          "consultation_harm": 0.002850497017892644
+        },
+        {
+          "domain": "ToN",
+          "rows": 6880000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.6207420058139534,
+          "mean_calls": 3.0,
+          "normalized_cost": 8.29194312891218,
+          "consultation_rate": 1.0,
+          "corrective_yield": 0.0018902616279069767,
+          "consultation_harm": 0.0005005813953488372
+        }
+      ],
+      "summary": {
+        "coverage": 0.0,
+        "accepted_error_mass": 0.0,
+        "full_error": 0.34654595320518744,
+        "mean_calls": 3.0,
+        "normalized_cost": 8.291911201052441,
+        "consultation_rate": 1.0,
+        "corrective_yield": 0.002728828627074761,
+        "consultation_harm": 0.0016755392066207407,
+        "risk": null
+      }
+    }
+  ],
+  "best_single": [
+    {
+      "cap": 1,
+      "tau_stop": null,
+      "tau_final": null,
+      "early_stop_status": "DISABLED_BY_CAP",
+      "final_status": "ABSTAIN_NO_FEASIBLE_THRESHOLD",
+      "domain_metrics": [
+        {
+          "domain": "CIC",
+          "rows": 5030000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.07306679920477137,
+          "mean_calls": 1.0,
+          "normalized_cost": 1.868711472305365,
+          "consultation_rate": 0.0,
+          "corrective_yield": 0.0,
+          "consultation_harm": 0.0
+        },
+        {
+          "domain": "ToN",
+          "rows": 6880000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.6221316860465116,
+          "mean_calls": 1.0,
+          "normalized_cost": 1.8687753280248498,
+          "consultation_rate": 0.0,
+          "corrective_yield": 0.0,
+          "consultation_harm": 0.0
+        }
+      ],
+      "summary": {
+        "coverage": 0.0,
+        "accepted_error_mass": 0.0,
+        "full_error": 0.34759924262564146,
+        "mean_calls": 1.0,
+        "normalized_cost": 1.8687434001651075,
+        "consultation_rate": 0.0,
+        "corrective_yield": 0.0,
+        "consultation_harm": 0.0,
+        "risk": null
+      }
+    }
+  ],
+  "uniform": [
+    {
+      "cap": 1,
+      "tau_stop": null,
+      "tau_final": null,
+      "early_stop_status": "DISABLED_BY_CAP",
+      "final_status": "ABSTAIN_NO_FEASIBLE_THRESHOLD",
+      "domain_metrics": [
+        {
+          "domain": "CIC",
+          "rows": 5030000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.07306679920477137,
+          "mean_calls": 1.0,
+          "normalized_cost": 1.892986163241621,
+          "consultation_rate": 0.0,
+          "corrective_yield": 0.0,
+          "consultation_harm": 0.0
+        },
+        {
+          "domain": "ToN",
+          "rows": 6880000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.6221316860465116,
+          "mean_calls": 1.0,
+          "normalized_cost": 1.8930500189611055,
+          "consultation_rate": 0.0,
+          "corrective_yield": 0.0,
+          "consultation_harm": 0.0
+        }
+      ],
+      "summary": {
+        "coverage": 0.0,
+        "accepted_error_mass": 0.0,
+        "full_error": 0.34759924262564146,
+        "mean_calls": 1.0,
+        "normalized_cost": 1.8930180911013632,
+        "consultation_rate": 0.0,
+        "corrective_yield": 0.0,
+        "consultation_harm": 0.0,
+        "risk": null
+      }
+    },
+    {
+      "cap": 2,
+      "tau_stop": null,
+      "tau_final": null,
+      "early_stop_status": "DISABLED_BY_METHOD",
+      "final_status": "ABSTAIN_NO_FEASIBLE_THRESHOLD",
+      "domain_metrics": [
+        {
+          "domain": "CIC",
+          "rows": 5030000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.17925228628230616,
+          "mean_calls": 2.0,
+          "normalized_cost": 3.2280646476677237,
+          "consultation_rate": 1.0,
+          "corrective_yield": 0.004374353876739563,
+          "consultation_harm": 0.11055984095427436
+        },
+        {
+          "domain": "ToN",
+          "rows": 6880000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.5014828488372093,
+          "mean_calls": 2.0,
+          "normalized_cost": 3.228128503387211,
+          "consultation_rate": 1.0,
+          "corrective_yield": 0.1321315406976744,
+          "consultation_harm": 0.011482703488372093
+        }
+      ],
+      "summary": {
+        "coverage": 0.0,
+        "accepted_error_mass": 0.0,
+        "full_error": 0.3403675675597577,
+        "mean_calls": 2.0,
+        "normalized_cost": 3.2280965755274673,
+        "consultation_rate": 1.0,
+        "corrective_yield": 0.06825294728720699,
+        "consultation_harm": 0.061021272221323225,
+        "risk": null
+      }
+    },
+    {
+      "cap": 3,
+      "tau_stop": null,
+      "tau_final": null,
+      "early_stop_status": "DISABLED_BY_METHOD",
+      "final_status": "ABSTAIN_NO_FEASIBLE_THRESHOLD",
+      "domain_metrics": [
+        {
+          "domain": "CIC",
+          "rows": 5030000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.32880437375745525,
+          "mean_calls": 3.0,
+          "normalized_cost": 5.102270738751564,
+          "consultation_rate": 1.0,
+          "corrective_yield": 0.005125646123260438,
+          "consultation_harm": 0.2608632206759443
+        },
+        {
+          "domain": "ToN",
+          "rows": 6880000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.5357412790697674,
+          "mean_calls": 3.0,
+          "normalized_cost": 5.102334594471052,
+          "consultation_rate": 1.0,
+          "corrective_yield": 0.10587543604651163,
+          "consultation_harm": 0.019485029069767443
+        }
+      ],
+      "summary": {
+        "coverage": 0.0,
+        "accepted_error_mass": 0.0,
+        "full_error": 0.4322728264136113,
+        "mean_calls": 3.0,
+        "normalized_cost": 5.102302666611308,
+        "consultation_rate": 1.0,
+        "corrective_yield": 0.055500541084886036,
+        "consultation_harm": 0.14017412487285588,
+        "risk": null
+      }
+    }
+  ],
+  "static": [
+    {
+      "cap": 1,
+      "tau_stop": null,
+      "tau_final": null,
+      "early_stop_status": "DISABLED_BY_CAP",
+      "final_status": "ABSTAIN_NO_FEASIBLE_THRESHOLD",
+      "domain_metrics": [
+        {
+          "domain": "CIC",
+          "rows": 5030000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.07306679920477137,
+          "mean_calls": 1.0,
+          "normalized_cost": 1.8850007031306588,
+          "consultation_rate": 0.0,
+          "corrective_yield": 0.0,
+          "consultation_harm": 0.0
+        },
+        {
+          "domain": "ToN",
+          "rows": 6880000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.6221316860465116,
+          "mean_calls": 1.0,
+          "normalized_cost": 1.8850645588501436,
+          "consultation_rate": 0.0,
+          "corrective_yield": 0.0,
+          "consultation_harm": 0.0
+        }
+      ],
+      "summary": {
+        "coverage": 0.0,
+        "accepted_error_mass": 0.0,
+        "full_error": 0.34759924262564146,
+        "mean_calls": 1.0,
+        "normalized_cost": 1.885032630990401,
+        "consultation_rate": 0.0,
+        "corrective_yield": 0.0,
+        "consultation_harm": 0.0,
+        "risk": null
+      }
+    },
+    {
+      "cap": 2,
+      "tau_stop": null,
+      "tau_final": null,
+      "early_stop_status": "DISABLED_BY_METHOD",
+      "final_status": "ABSTAIN_NO_FEASIBLE_THRESHOLD",
+      "domain_metrics": [
+        {
+          "domain": "CIC",
+          "rows": 5030000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.14201391650099404,
+          "mean_calls": 2.0,
+          "normalized_cost": 3.301890843154527,
+          "consultation_rate": 1.0,
+          "corrective_yield": 0.003152882703777336,
+          "consultation_harm": 0.0721
+        },
+        {
+          "domain": "ToN",
+          "rows": 6880000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.5164704941860465,
+          "mean_calls": 2.0,
+          "normalized_cost": 3.301954698874013,
+          "consultation_rate": 1.0,
+          "corrective_yield": 0.11235523255813953,
+          "consultation_harm": 0.006694040697674418
+        }
+      ],
+      "summary": {
+        "coverage": 0.0,
+        "accepted_error_mass": 0.0,
+        "full_error": 0.3292422053435203,
+        "mean_calls": 2.0,
+        "normalized_cost": 3.30192277101427,
+        "consultation_rate": 1.0,
+        "corrective_yield": 0.057754057630958436,
+        "consultation_harm": 0.03939702034883721,
+        "risk": null
+      }
+    },
+    {
+      "cap": 3,
+      "tau_stop": null,
+      "tau_final": null,
+      "early_stop_status": "DISABLED_BY_METHOD",
+      "final_status": "ABSTAIN_NO_FEASIBLE_THRESHOLD",
+      "domain_metrics": [
+        {
+          "domain": "CIC",
+          "rows": 5030000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.23923677932405565,
+          "mean_calls": 3.0,
+          "normalized_cost": 5.262322666926701,
+          "consultation_rate": 1.0,
+          "corrective_yield": 0.004276739562624254,
+          "consultation_harm": 0.17044671968190855
+        },
+        {
+          "domain": "ToN",
+          "rows": 6880000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.5413484011627907,
+          "mean_calls": 3.0,
+          "normalized_cost": 5.262386522646183,
+          "consultation_rate": 1.0,
+          "corrective_yield": 0.09694156976744187,
+          "consultation_harm": 0.01615828488372093
+        }
+      ],
+      "summary": {
+        "coverage": 0.0,
+        "accepted_error_mass": 0.0,
+        "full_error": 0.39029259024342317,
+        "mean_calls": 3.0,
+        "normalized_cost": 5.262354594786442,
+        "consultation_rate": 1.0,
+        "corrective_yield": 0.05060915466503306,
+        "consultation_harm": 0.09330250228281474,
+        "risk": null
+      }
+    }
+  ],
+  "confidence": [
+    {
+      "cap": 1,
+      "tau_stop": null,
+      "tau_final": null,
+      "early_stop_status": "DISABLED_BY_CAP",
+      "final_status": "ABSTAIN_NO_FEASIBLE_THRESHOLD",
+      "domain_metrics": [
+        {
+          "domain": "CIC",
+          "rows": 5030000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.07306679920477137,
+          "mean_calls": 1.0,
+          "normalized_cost": 1.8878598502331585,
+          "consultation_rate": 0.0,
+          "corrective_yield": 0.0,
+          "consultation_harm": 0.0
+        },
+        {
+          "domain": "ToN",
+          "rows": 6880000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.6221316860465116,
+          "mean_calls": 1.0,
+          "normalized_cost": 1.8879237059526444,
+          "consultation_rate": 0.0,
+          "corrective_yield": 0.0,
+          "consultation_harm": 0.0
+        }
+      ],
+      "summary": {
+        "coverage": 0.0,
+        "accepted_error_mass": 0.0,
+        "full_error": 0.34759924262564146,
+        "mean_calls": 1.0,
+        "normalized_cost": 1.8878917780929014,
+        "consultation_rate": 0.0,
+        "corrective_yield": 0.0,
+        "consultation_harm": 0.0,
+        "risk": null
+      }
+    },
+    {
+      "cap": 2,
+      "tau_stop": null,
+      "tau_final": null,
+      "early_stop_status": "DISABLED_BY_METHOD",
+      "final_status": "ABSTAIN_NO_FEASIBLE_THRESHOLD",
+      "domain_metrics": [
+        {
+          "domain": "CIC",
+          "rows": 5030000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.17925228628230616,
+          "mean_calls": 2.0,
+          "normalized_cost": 3.2280374992533547,
+          "consultation_rate": 1.0,
+          "corrective_yield": 0.004374353876739563,
+          "consultation_harm": 0.11055984095427436
+        },
+        {
+          "domain": "ToN",
+          "rows": 6880000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.5014828488372093,
+          "mean_calls": 2.0,
+          "normalized_cost": 3.2281013549728415,
+          "consultation_rate": 1.0,
+          "corrective_yield": 0.1321315406976744,
+          "consultation_harm": 0.011482703488372093
+        }
+      ],
+      "summary": {
+        "coverage": 0.0,
+        "accepted_error_mass": 0.0,
+        "full_error": 0.3403675675597577,
+        "mean_calls": 2.0,
+        "normalized_cost": 3.2280694271130983,
+        "consultation_rate": 1.0,
+        "corrective_yield": 0.06825294728720699,
+        "consultation_harm": 0.061021272221323225,
+        "risk": null
+      }
+    },
+    {
+      "cap": 3,
+      "tau_stop": null,
+      "tau_final": null,
+      "early_stop_status": "DISABLED_BY_METHOD",
+      "final_status": "ABSTAIN_NO_FEASIBLE_THRESHOLD",
+      "domain_metrics": [
+        {
+          "domain": "CIC",
+          "rows": 5030000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.37360536779324055,
+          "mean_calls": 3.0,
+          "normalized_cost": 5.074297850725111,
+          "consultation_rate": 1.0,
+          "corrective_yield": 0.006860039761431412,
+          "consultation_harm": 0.30739860834990057
+        },
+        {
+          "domain": "ToN",
+          "rows": 6880000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.5016861918604651,
+          "mean_calls": 3.0,
+          "normalized_cost": 5.074361706444592,
+          "consultation_rate": 1.0,
+          "corrective_yield": 0.1399703488372093,
+          "consultation_harm": 0.01952485465116279
+        }
+      ],
+      "summary": {
+        "coverage": 0.0,
+        "accepted_error_mass": 0.0,
+        "full_error": 0.4376457798268528,
+        "mean_calls": 3.0,
+        "normalized_cost": 5.074329778584852,
+        "consultation_rate": 1.0,
+        "corrective_yield": 0.07341519429932035,
+        "consultation_harm": 0.16346173150053167,
+        "risk": null
+      }
+    }
+  ],
+  "soft_moe": [
+    {
+      "cap": 1,
+      "tau_stop": null,
+      "tau_final": null,
+      "early_stop_status": "DISABLED_BY_CAP",
+      "final_status": "ABSTAIN_NO_FEASIBLE_THRESHOLD",
+      "domain_metrics": [
+        {
+          "domain": "CIC",
+          "rows": 5030000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.07306679920477137,
+          "mean_calls": 1.0,
+          "normalized_cost": 2.13631138849147,
+          "consultation_rate": 0.0,
+          "corrective_yield": 0.0,
+          "consultation_harm": 0.0
+        },
+        {
+          "domain": "ToN",
+          "rows": 6880000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.6221316860465116,
+          "mean_calls": 1.0,
+          "normalized_cost": 2.136375244210953,
+          "consultation_rate": 0.0,
+          "corrective_yield": 0.0,
+          "consultation_harm": 0.0
+        }
+      ],
+      "summary": {
+        "coverage": 0.0,
+        "accepted_error_mass": 0.0,
+        "full_error": 0.34759924262564146,
+        "mean_calls": 1.0,
+        "normalized_cost": 2.1363433163512116,
+        "consultation_rate": 0.0,
+        "corrective_yield": 0.0,
+        "consultation_harm": 0.0,
+        "risk": null
+      }
+    },
+    {
+      "cap": 2,
+      "tau_stop": null,
+      "tau_final": null,
+      "early_stop_status": "DISABLED_BY_METHOD",
+      "final_status": "ABSTAIN_NO_FEASIBLE_THRESHOLD",
+      "domain_metrics": [
+        {
+          "domain": "CIC",
+          "rows": 5030000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.07306679920477137,
+          "mean_calls": 2.0,
+          "normalized_cost": 3.8764824781632283,
+          "consultation_rate": 1.0,
+          "corrective_yield": 0.0,
+          "consultation_harm": 0.0
+        },
+        {
+          "domain": "ToN",
+          "rows": 6880000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.6221316860465116,
+          "mean_calls": 2.0,
+          "normalized_cost": 3.876546333882714,
+          "consultation_rate": 1.0,
+          "corrective_yield": 0.0,
+          "consultation_harm": 0.0
+        }
+      ],
+      "summary": {
+        "coverage": 0.0,
+        "accepted_error_mass": 0.0,
+        "full_error": 0.34759924262564146,
+        "mean_calls": 2.0,
+        "normalized_cost": 3.876514406022971,
+        "consultation_rate": 1.0,
+        "corrective_yield": 0.0,
+        "consultation_harm": 0.0,
+        "risk": null
+      }
+    },
+    {
+      "cap": 3,
+      "tau_stop": null,
+      "tau_final": null,
+      "early_stop_status": "DISABLED_BY_METHOD",
+      "final_status": "ABSTAIN_NO_FEASIBLE_THRESHOLD",
+      "domain_metrics": [
+        {
+          "domain": "CIC",
+          "rows": 5030000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.08031371769383698,
+          "mean_calls": 3.0,
+          "normalized_cost": 6.006901274340586,
+          "consultation_rate": 1.0,
+          "corrective_yield": 0.0015590457256461233,
+          "consultation_harm": 0.008805964214711729
+        },
+        {
+          "domain": "ToN",
+          "rows": 6880000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.5783515988372093,
+          "mean_calls": 3.0,
+          "normalized_cost": 6.006965130060069,
+          "consultation_rate": 1.0,
+          "corrective_yield": 0.04813779069767442,
+          "consultation_harm": 0.004357703488372093
+        }
+      ],
+      "summary": {
+        "coverage": 0.0,
+        "accepted_error_mass": 0.0,
+        "full_error": 0.32933265826552316,
+        "mean_calls": 3.0,
+        "normalized_cost": 6.006933202200328,
+        "consultation_rate": 1.0,
+        "corrective_yield": 0.02484841821166027,
+        "consultation_harm": 0.00658183385154191,
+        "risk": null
+      }
+    }
+  ],
+  "hard_moe": [
+    {
+      "cap": 1,
+      "tau_stop": null,
+      "tau_final": null,
+      "early_stop_status": "DISABLED_BY_CAP",
+      "final_status": "ABSTAIN_NO_FEASIBLE_THRESHOLD",
+      "domain_metrics": [
+        {
+          "domain": "CIC",
+          "rows": 5030000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.07306679920477137,
+          "mean_calls": 1.0,
+          "normalized_cost": 2.8147212931076107,
+          "consultation_rate": 0.0,
+          "corrective_yield": 0.0,
+          "consultation_harm": 0.0
+        },
+        {
+          "domain": "ToN",
+          "rows": 6880000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.6221316860465116,
+          "mean_calls": 1.0,
+          "normalized_cost": 2.814785148827095,
+          "consultation_rate": 0.0,
+          "corrective_yield": 0.0,
+          "consultation_harm": 0.0
+        }
+      ],
+      "summary": {
+        "coverage": 0.0,
+        "accepted_error_mass": 0.0,
+        "full_error": 0.34759924262564146,
+        "mean_calls": 1.0,
+        "normalized_cost": 2.814753220967353,
+        "consultation_rate": 0.0,
+        "corrective_yield": 0.0,
+        "consultation_harm": 0.0,
+        "risk": null
+      }
+    },
+    {
+      "cap": 2,
+      "tau_stop": null,
+      "tau_final": null,
+      "early_stop_status": "DISABLED_BY_METHOD",
+      "final_status": "ABSTAIN_NO_FEASIBLE_THRESHOLD",
+      "domain_metrics": [
+        {
+          "domain": "CIC",
+          "rows": 5030000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.08467355864811134,
+          "mean_calls": 1.0195630218687872,
+          "normalized_cost": 2.844720077770681,
+          "consultation_rate": 0.019563021868787275,
+          "corrective_yield": 0.1898741895489929,
+          "consultation_harm": 0.7831751387166928
+        },
+        {
+          "domain": "ToN",
+          "rows": 6880000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.5951026162790698,
+          "mean_calls": 1.038627034883721,
+          "normalized_cost": 2.877373040738949,
+          "consultation_rate": 0.03862703488372093,
+          "corrective_yield": 0.8150507612303107,
+          "consultation_harm": 0.11530588438932246
+        }
+      ],
+      "summary": {
+        "coverage": 0.0,
+        "accepted_error_mass": 0.0,
+        "full_error": 0.33988808746359056,
+        "mean_calls": 1.029095028376254,
+        "normalized_cost": 2.861046559254815,
+        "consultation_rate": 0.0290950283762541,
+        "corrective_yield": 0.5024624753896518,
+        "consultation_harm": 0.4492405115530076,
+        "risk": null
+      }
+    }
+  ],
+  "fixed_012": [
+    {
+      "cap": 1,
+      "tau_stop": null,
+      "tau_final": null,
+      "early_stop_status": "DISABLED_BY_CAP",
+      "final_status": "ABSTAIN_NO_FEASIBLE_THRESHOLD",
+      "domain_metrics": [
+        {
+          "domain": "CIC",
+          "rows": 5030000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.8411019880715705,
+          "mean_calls": 1.0,
+          "normalized_cost": 2.268779616647471,
+          "consultation_rate": 0.0,
+          "corrective_yield": 0.0,
+          "consultation_harm": 0.0
+        },
+        {
+          "domain": "ToN",
+          "rows": 6880000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.4975059593023256,
+          "mean_calls": 1.0,
+          "normalized_cost": 2.268843472366957,
+          "consultation_rate": 0.0,
+          "corrective_yield": 0.0,
+          "consultation_harm": 0.0
+        }
+      ],
+      "summary": {
+        "coverage": 0.0,
+        "accepted_error_mass": 0.0,
+        "full_error": 0.669303973686948,
+        "mean_calls": 1.0,
+        "normalized_cost": 2.268811544507214,
+        "consultation_rate": 0.0,
+        "corrective_yield": 0.0,
+        "consultation_harm": 0.0,
+        "risk": null
+      }
+    },
+    {
+      "cap": 2,
+      "tau_stop": null,
+      "tau_final": null,
+      "early_stop_status": "DISABLED_NO_FEASIBLE_THRESHOLD",
+      "final_status": "ABSTAIN_NO_FEASIBLE_THRESHOLD",
+      "domain_metrics": [
+        {
+          "domain": "CIC",
+          "rows": 5030000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.07423996023856859,
+          "mean_calls": 2.0,
+          "normalized_cost": 4.478265709917763,
+          "consultation_rate": 1.0,
+          "corrective_yield": 0.8317493041749503,
+          "consultation_harm": 0.06488727634194831
+        },
+        {
+          "domain": "ToN",
+          "rows": 6880000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.5934659883720931,
+          "mean_calls": 2.0,
+          "normalized_cost": 4.478329565637247,
+          "consultation_rate": 1.0,
+          "corrective_yield": 0.14363938953488373,
+          "consultation_harm": 0.23959941860465117
+        }
+      ],
+      "summary": {
+        "coverage": 0.0,
+        "accepted_error_mass": 0.0,
+        "full_error": 0.33385297430533084,
+        "mean_calls": 2.0,
+        "normalized_cost": 4.478297637777505,
+        "consultation_rate": 1.0,
+        "corrective_yield": 0.487694346854917,
+        "consultation_harm": 0.15224334747329973,
+        "risk": null
+      }
+    },
+    {
+      "cap": 3,
+      "tau_stop": null,
+      "tau_final": null,
+      "early_stop_status": "DISABLED_NO_FEASIBLE_THRESHOLD",
+      "final_status": "ABSTAIN_NO_FEASIBLE_THRESHOLD",
+      "domain_metrics": [
+        {
+          "domain": "CIC",
+          "rows": 5030000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.07234990059642148,
+          "mean_calls": 3.0,
+          "normalized_cost": 5.865917372074875,
+          "consultation_rate": 1.0,
+          "corrective_yield": 0.833727833001988,
+          "consultation_harm": 0.06497574552683896
+        },
+        {
+          "domain": "ToN",
+          "rows": 6880000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.6207420058139534,
+          "mean_calls": 3.0,
+          "normalized_cost": 5.8659812277943635,
+          "consultation_rate": 1.0,
+          "corrective_yield": 0.14463343023255815,
+          "consultation_harm": 0.26786947674418604
+        }
+      ],
+      "summary": {
+        "coverage": 0.0,
+        "accepted_error_mass": 0.0,
+        "full_error": 0.34654595320518744,
+        "mean_calls": 3.0,
+        "normalized_cost": 5.86594929993462,
+        "consultation_rate": 1.0,
+        "corrective_yield": 0.4891806316172731,
+        "consultation_harm": 0.1664226111355125,
+        "risk": null
+      }
+    }
+  ],
+  "fixed_021": [
+    {
+      "cap": 1,
+      "tau_stop": null,
+      "tau_final": null,
+      "early_stop_status": "DISABLED_BY_CAP",
+      "final_status": "ABSTAIN_NO_FEASIBLE_THRESHOLD",
+      "domain_metrics": [
+        {
+          "domain": "CIC",
+          "rows": 5030000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.8411019880715705,
+          "mean_calls": 1.0,
+          "normalized_cost": 2.268779616647471,
+          "consultation_rate": 0.0,
+          "corrective_yield": 0.0,
+          "consultation_harm": 0.0
+        },
+        {
+          "domain": "ToN",
+          "rows": 6880000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.4975059593023256,
+          "mean_calls": 1.0,
+          "normalized_cost": 2.268843472366957,
+          "consultation_rate": 0.0,
+          "corrective_yield": 0.0,
+          "consultation_harm": 0.0
+        }
+      ],
+      "summary": {
+        "coverage": 0.0,
+        "accepted_error_mass": 0.0,
+        "full_error": 0.669303973686948,
+        "mean_calls": 1.0,
+        "normalized_cost": 2.268811544507214,
+        "consultation_rate": 0.0,
+        "corrective_yield": 0.0,
+        "consultation_harm": 0.0,
+        "risk": null
+      }
+    },
+    {
+      "cap": 2,
+      "tau_stop": null,
+      "tau_final": null,
+      "early_stop_status": "DISABLED_NO_FEASIBLE_THRESHOLD",
+      "final_status": "ABSTAIN_NO_FEASIBLE_THRESHOLD",
+      "domain_metrics": [
+        {
+          "domain": "CIC",
+          "rows": 5030000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.33964433399602384,
+          "mean_calls": 2.0,
+          "normalized_cost": 4.038008984308063,
+          "consultation_rate": 1.0,
+          "corrective_yield": 0.5641351888667993,
+          "consultation_harm": 0.06267753479125249
+        },
+        {
+          "domain": "ToN",
+          "rows": 6880000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.5551739825581395,
+          "mean_calls": 2.0,
+          "normalized_cost": 4.038072840027547,
+          "consultation_rate": 1.0,
+          "corrective_yield": 0.14079447674418605,
+          "consultation_harm": 0.1984625
+        }
+      ],
+      "summary": {
+        "coverage": 0.0,
+        "accepted_error_mass": 0.0,
+        "full_error": 0.4474091582770817,
+        "mean_calls": 2.0,
+        "normalized_cost": 4.038040912167805,
+        "consultation_rate": 1.0,
+        "corrective_yield": 0.3524648328054927,
+        "consultation_harm": 0.13057001739562624,
+        "risk": null
+      }
+    },
+    {
+      "cap": 3,
+      "tau_stop": null,
+      "tau_final": null,
+      "early_stop_status": "DISABLED_NO_FEASIBLE_THRESHOLD",
+      "final_status": "ABSTAIN_NO_FEASIBLE_THRESHOLD",
+      "domain_metrics": [
+        {
+          "domain": "CIC",
+          "rows": 5030000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.07234990059642148,
+          "mean_calls": 3.0,
+          "normalized_cost": 5.865917372074875,
+          "consultation_rate": 1.0,
+          "corrective_yield": 0.833727833001988,
+          "consultation_harm": 0.06497574552683896
+        },
+        {
+          "domain": "ToN",
+          "rows": 6880000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.6207420058139534,
+          "mean_calls": 3.0,
+          "normalized_cost": 5.8659812277943635,
+          "consultation_rate": 1.0,
+          "corrective_yield": 0.14463343023255815,
+          "consultation_harm": 0.26786947674418604
+        }
+      ],
+      "summary": {
+        "coverage": 0.0,
+        "accepted_error_mass": 0.0,
+        "full_error": 0.34654595320518744,
+        "mean_calls": 3.0,
+        "normalized_cost": 5.86594929993462,
+        "consultation_rate": 1.0,
+        "corrective_yield": 0.4891806316172731,
+        "consultation_harm": 0.1664226111355125,
+        "risk": null
+      }
+    }
+  ],
+  "fixed_102": [
+    {
+      "cap": 1,
+      "tau_stop": null,
+      "tau_final": null,
+      "early_stop_status": "DISABLED_BY_CAP",
+      "final_status": "ABSTAIN_NO_FEASIBLE_THRESHOLD",
+      "domain_metrics": [
+        {
+          "domain": "CIC",
+          "rows": 5030000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.07306679920477137,
+          "mean_calls": 1.0,
+          "normalized_cost": 2.210790239147858,
+          "consultation_rate": 0.0,
+          "corrective_yield": 0.0,
+          "consultation_harm": 0.0
+        },
+        {
+          "domain": "ToN",
+          "rows": 6880000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.6221316860465116,
+          "mean_calls": 1.0,
+          "normalized_cost": 2.2108540948673436,
+          "consultation_rate": 0.0,
+          "corrective_yield": 0.0,
+          "consultation_harm": 0.0
+        }
+      ],
+      "summary": {
+        "coverage": 0.0,
+        "accepted_error_mass": 0.0,
+        "full_error": 0.34759924262564146,
+        "mean_calls": 1.0,
+        "normalized_cost": 2.210822167007601,
+        "consultation_rate": 0.0,
+        "corrective_yield": 0.0,
+        "consultation_harm": 0.0,
+        "risk": null
+      }
+    },
+    {
+      "cap": 2,
+      "tau_stop": null,
+      "tau_final": null,
+      "early_stop_status": "DISABLED_NO_FEASIBLE_THRESHOLD",
+      "final_status": "ABSTAIN_NO_FEASIBLE_THRESHOLD",
+      "domain_metrics": [
+        {
+          "domain": "CIC",
+          "rows": 5030000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.07423996023856859,
+          "mean_calls": 2.0,
+          "normalized_cost": 4.478265709917763,
+          "consultation_rate": 1.0,
+          "corrective_yield": 0.0013795228628230617,
+          "consultation_harm": 0.0025526838966202785
+        },
+        {
+          "domain": "ToN",
+          "rows": 6880000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.5934659883720931,
+          "mean_calls": 2.0,
+          "normalized_cost": 4.478329565637247,
+          "consultation_rate": 1.0,
+          "corrective_yield": 0.029249273255813953,
+          "consultation_harm": 0.0005835755813953489
+        }
+      ],
+      "summary": {
+        "coverage": 0.0,
+        "accepted_error_mass": 0.0,
+        "full_error": 0.33385297430533084,
+        "mean_calls": 2.0,
+        "normalized_cost": 4.478297637777505,
+        "consultation_rate": 1.0,
+        "corrective_yield": 0.015314398059318507,
+        "consultation_harm": 0.0015681297390078136,
+        "risk": null
+      }
+    },
+    {
+      "cap": 3,
+      "tau_stop": null,
+      "tau_final": null,
+      "early_stop_status": "DISABLED_NO_FEASIBLE_THRESHOLD",
+      "final_status": "ABSTAIN_NO_FEASIBLE_THRESHOLD",
+      "domain_metrics": [
+        {
+          "domain": "CIC",
+          "rows": 5030000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.07234990059642148,
+          "mean_calls": 3.0,
+          "normalized_cost": 5.865917372074875,
+          "consultation_rate": 1.0,
+          "corrective_yield": 0.003567395626242545,
+          "consultation_harm": 0.002850497017892644
+        },
+        {
+          "domain": "ToN",
+          "rows": 6880000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.6207420058139534,
+          "mean_calls": 3.0,
+          "normalized_cost": 5.8659812277943635,
+          "consultation_rate": 1.0,
+          "corrective_yield": 0.0018902616279069767,
+          "consultation_harm": 0.0005005813953488372
+        }
+      ],
+      "summary": {
+        "coverage": 0.0,
+        "accepted_error_mass": 0.0,
+        "full_error": 0.34654595320518744,
+        "mean_calls": 3.0,
+        "normalized_cost": 5.86594929993462,
+        "consultation_rate": 1.0,
+        "corrective_yield": 0.002728828627074761,
+        "consultation_harm": 0.0016755392066207407,
+        "risk": null
+      }
+    }
+  ],
+  "fixed_120": [
+    {
+      "cap": 1,
+      "tau_stop": null,
+      "tau_final": null,
+      "early_stop_status": "DISABLED_BY_CAP",
+      "final_status": "ABSTAIN_NO_FEASIBLE_THRESHOLD",
+      "domain_metrics": [
+        {
+          "domain": "CIC",
+          "rows": 5030000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.07306679920477137,
+          "mean_calls": 1.0,
+          "normalized_cost": 2.210790239147858,
+          "consultation_rate": 0.0,
+          "corrective_yield": 0.0,
+          "consultation_harm": 0.0
+        },
+        {
+          "domain": "ToN",
+          "rows": 6880000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.6221316860465116,
+          "mean_calls": 1.0,
+          "normalized_cost": 2.2108540948673436,
+          "consultation_rate": 0.0,
+          "corrective_yield": 0.0,
+          "consultation_harm": 0.0
+        }
+      ],
+      "summary": {
+        "coverage": 0.0,
+        "accepted_error_mass": 0.0,
+        "full_error": 0.34759924262564146,
+        "mean_calls": 1.0,
+        "normalized_cost": 2.210822167007601,
+        "consultation_rate": 0.0,
+        "corrective_yield": 0.0,
+        "consultation_harm": 0.0,
+        "risk": null
+      }
+    },
+    {
+      "cap": 2,
+      "tau_stop": null,
+      "tau_final": null,
+      "early_stop_status": "DISABLED_NO_FEASIBLE_THRESHOLD",
+      "final_status": "ABSTAIN_NO_FEASIBLE_THRESHOLD",
+      "domain_metrics": [
+        {
+          "domain": "CIC",
+          "rows": 5030000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.0714013916500994,
+          "mean_calls": 2.0,
+          "normalized_cost": 3.9800196068084492,
+          "consultation_rate": 1.0,
+          "corrective_yield": 0.0035980119284294235,
+          "consultation_harm": 0.0019326043737574552
+        },
+        {
+          "domain": "ToN",
+          "rows": 6880000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.6208281976744187,
+          "mean_calls": 2.0,
+          "normalized_cost": 3.980083462527935,
+          "consultation_rate": 1.0,
+          "corrective_yield": 0.0014536337209302326,
+          "consultation_harm": 0.0001501453488372093
+        }
+      ],
+      "summary": {
+        "coverage": 0.0,
+        "accepted_error_mass": 0.0,
+        "full_error": 0.34611479466225903,
+        "mean_calls": 2.0,
+        "normalized_cost": 3.980051534668192,
+        "consultation_rate": 1.0,
+        "corrective_yield": 0.002525822824679828,
+        "consultation_harm": 0.0010413748612973324,
+        "risk": null
+      }
+    },
+    {
+      "cap": 3,
+      "tau_stop": null,
+      "tau_final": null,
+      "early_stop_status": "DISABLED_NO_FEASIBLE_THRESHOLD",
+      "final_status": "ABSTAIN_NO_FEASIBLE_THRESHOLD",
+      "domain_metrics": [
+        {
+          "domain": "CIC",
+          "rows": 5030000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.07234990059642148,
+          "mean_calls": 3.0,
+          "normalized_cost": 5.865917372074875,
+          "consultation_rate": 1.0,
+          "corrective_yield": 0.003567395626242545,
+          "consultation_harm": 0.002850497017892644
+        },
+        {
+          "domain": "ToN",
+          "rows": 6880000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.6207420058139534,
+          "mean_calls": 3.0,
+          "normalized_cost": 5.8659812277943635,
+          "consultation_rate": 1.0,
+          "corrective_yield": 0.0018902616279069767,
+          "consultation_harm": 0.0005005813953488372
+        }
+      ],
+      "summary": {
+        "coverage": 0.0,
+        "accepted_error_mass": 0.0,
+        "full_error": 0.34654595320518744,
+        "mean_calls": 3.0,
+        "normalized_cost": 5.86594929993462,
+        "consultation_rate": 1.0,
+        "corrective_yield": 0.002728828627074761,
+        "consultation_harm": 0.0016755392066207407,
+        "risk": null
+      }
+    }
+  ],
+  "fixed_201": [
+    {
+      "cap": 1,
+      "tau_stop": null,
+      "tau_final": null,
+      "early_stop_status": "DISABLED_BY_CAP",
+      "final_status": "ABSTAIN_NO_FEASIBLE_THRESHOLD",
+      "domain_metrics": [
+        {
+          "domain": "CIC",
+          "rows": 5030000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.3275576540755467,
+          "mean_calls": 1.0,
+          "normalized_cost": 1.7705335135381584,
+          "consultation_rate": 0.0,
+          "corrective_yield": 0.0,
+          "consultation_harm": 0.0
+        },
+        {
+          "domain": "ToN",
+          "rows": 6880000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.5008164244186046,
+          "mean_calls": 1.0,
+          "normalized_cost": 1.770597369257644,
+          "consultation_rate": 0.0,
+          "corrective_yield": 0.0,
+          "consultation_harm": 0.0
+        }
+      ],
+      "summary": {
+        "coverage": 0.0,
+        "accepted_error_mass": 0.0,
+        "full_error": 0.4141870392470757,
+        "mean_calls": 1.0,
+        "normalized_cost": 1.7705654413979013,
+        "consultation_rate": 0.0,
+        "corrective_yield": 0.0,
+        "consultation_harm": 0.0,
+        "risk": null
+      }
+    },
+    {
+      "cap": 2,
+      "tau_stop": null,
+      "tau_final": null,
+      "early_stop_status": "DISABLED_NO_FEASIBLE_THRESHOLD",
+      "final_status": "ABSTAIN_NO_FEASIBLE_THRESHOLD",
+      "domain_metrics": [
+        {
+          "domain": "CIC",
+          "rows": 5030000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.33964433399602384,
+          "mean_calls": 2.0,
+          "normalized_cost": 4.038008984308063,
+          "consultation_rate": 1.0,
+          "corrective_yield": 0.0048282306163021866,
+          "consultation_harm": 0.016914910536779324
+        },
+        {
+          "domain": "ToN",
+          "rows": 6880000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.5551739825581395,
+          "mean_calls": 2.0,
+          "normalized_cost": 4.038072840027547,
+          "consultation_rate": 1.0,
+          "corrective_yield": 0.006678197674418605,
+          "consultation_harm": 0.061035755813953485
+        }
+      ],
+      "summary": {
+        "coverage": 0.0,
+        "accepted_error_mass": 0.0,
+        "full_error": 0.4474091582770817,
+        "mean_calls": 2.0,
+        "normalized_cost": 4.038040912167805,
+        "consultation_rate": 1.0,
+        "corrective_yield": 0.005753214145360395,
+        "consultation_harm": 0.0389753331753664,
+        "risk": null
+      }
+    },
+    {
+      "cap": 3,
+      "tau_stop": null,
+      "tau_final": null,
+      "early_stop_status": "DISABLED_NO_FEASIBLE_THRESHOLD",
+      "final_status": "ABSTAIN_NO_FEASIBLE_THRESHOLD",
+      "domain_metrics": [
+        {
+          "domain": "CIC",
+          "rows": 5030000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.07234990059642148,
+          "mean_calls": 3.0,
+          "normalized_cost": 5.865917372074875,
+          "consultation_rate": 1.0,
+          "corrective_yield": 0.2593508946322068,
+          "consultation_harm": 0.004143141153081511
+        },
+        {
+          "domain": "ToN",
+          "rows": 6880000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.6207420058139534,
+          "mean_calls": 3.0,
+          "normalized_cost": 5.8659812277943635,
+          "consultation_rate": 1.0,
+          "corrective_yield": 0.023742587209302324,
+          "consultation_harm": 0.14366816860465118
+        }
+      ],
+      "summary": {
+        "coverage": 0.0,
+        "accepted_error_mass": 0.0,
+        "full_error": 0.34654595320518744,
+        "mean_calls": 3.0,
+        "normalized_cost": 5.86594929993462,
+        "consultation_rate": 1.0,
+        "corrective_yield": 0.14154674092075456,
+        "consultation_harm": 0.07390565487886634,
+        "risk": null
+      }
+    }
+  ],
+  "fixed_210": [
+    {
+      "cap": 1,
+      "tau_stop": null,
+      "tau_final": null,
+      "early_stop_status": "DISABLED_BY_CAP",
+      "final_status": "ABSTAIN_NO_FEASIBLE_THRESHOLD",
+      "domain_metrics": [
+        {
+          "domain": "CIC",
+          "rows": 5030000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.3275576540755467,
+          "mean_calls": 1.0,
+          "normalized_cost": 1.7705335135381584,
+          "consultation_rate": 0.0,
+          "corrective_yield": 0.0,
+          "consultation_harm": 0.0
+        },
+        {
+          "domain": "ToN",
+          "rows": 6880000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.5008164244186046,
+          "mean_calls": 1.0,
+          "normalized_cost": 1.770597369257644,
+          "consultation_rate": 0.0,
+          "corrective_yield": 0.0,
+          "consultation_harm": 0.0
+        }
+      ],
+      "summary": {
+        "coverage": 0.0,
+        "accepted_error_mass": 0.0,
+        "full_error": 0.4141870392470757,
+        "mean_calls": 1.0,
+        "normalized_cost": 1.7705654413979013,
+        "consultation_rate": 0.0,
+        "corrective_yield": 0.0,
+        "consultation_harm": 0.0,
+        "risk": null
+      }
+    },
+    {
+      "cap": 2,
+      "tau_stop": null,
+      "tau_final": null,
+      "early_stop_status": "DISABLED_NO_FEASIBLE_THRESHOLD",
+      "final_status": "ABSTAIN_NO_FEASIBLE_THRESHOLD",
+      "domain_metrics": [
+        {
+          "domain": "CIC",
+          "rows": 5030000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.0714013916500994,
+          "mean_calls": 2.0,
+          "normalized_cost": 3.9800196068084492,
+          "consultation_rate": 1.0,
+          "corrective_yield": 0.26026679920477136,
+          "consultation_harm": 0.0041105367793240555
+        },
+        {
+          "domain": "ToN",
+          "rows": 6880000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.6208281976744187,
+          "mean_calls": 2.0,
+          "normalized_cost": 3.980083462527935,
+          "consultation_rate": 1.0,
+          "corrective_yield": 0.024077906976744185,
+          "consultation_harm": 0.14408968023255814
+        }
+      ],
+      "summary": {
+        "coverage": 0.0,
+        "accepted_error_mass": 0.0,
+        "full_error": 0.34611479466225903,
+        "mean_calls": 2.0,
+        "normalized_cost": 3.980051534668192,
+        "consultation_rate": 1.0,
+        "corrective_yield": 0.14217235309075776,
+        "consultation_harm": 0.07410010850594109,
+        "risk": null
+      }
+    },
+    {
+      "cap": 3,
+      "tau_stop": null,
+      "tau_final": null,
+      "early_stop_status": "DISABLED_NO_FEASIBLE_THRESHOLD",
+      "final_status": "ABSTAIN_NO_FEASIBLE_THRESHOLD",
+      "domain_metrics": [
+        {
+          "domain": "CIC",
+          "rows": 5030000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.07234990059642148,
+          "mean_calls": 3.0,
+          "normalized_cost": 5.865917372074875,
+          "consultation_rate": 1.0,
+          "corrective_yield": 0.2593508946322068,
+          "consultation_harm": 0.004143141153081511
+        },
+        {
+          "domain": "ToN",
+          "rows": 6880000,
+          "coverage": 0.0,
+          "accepted_error_mass": 0.0,
+          "full_error": 0.6207420058139534,
+          "mean_calls": 3.0,
+          "normalized_cost": 5.8659812277943635,
+          "consultation_rate": 1.0,
+          "corrective_yield": 0.023742587209302324,
+          "consultation_harm": 0.14366816860465118
+        }
+      ],
+      "summary": {
+        "coverage": 0.0,
+        "accepted_error_mass": 0.0,
+        "full_error": 0.34654595320518744,
+        "mean_calls": 3.0,
+        "normalized_cost": 5.86594929993462,
+        "consultation_rate": 1.0,
+        "corrective_yield": 0.14154674092075456,
+        "consultation_harm": 0.07390565487886634,
+        "risk": null
+      }
+    }
+  ]
+}

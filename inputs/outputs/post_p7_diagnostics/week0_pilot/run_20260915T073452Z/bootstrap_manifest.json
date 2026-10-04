@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "created_at_utc": "2026-09-15T07:41:34.942721+00:00",
+  "replicates": 2000,
+  "blocks": 276,
+  "windows": 2752,
+  "final_block_windows": 2,
+  "seed": 20260915,
+  "rng": "PCG64",
+  "draws_per_replicate": 276,
+  "shared_for_all_metrics": true,
+  "method": "percentile 95%, numpy.quantile(method=linear); undefined omitted per metric with effective count",
+  "files": {
+    "bootstrap_blocks.csv": "73a67b0f68d1253ced31a14f39c483d3a6bf1b69b4e07275904067c8ea8b87e3",
+    "bootstrap_indices.npy": "637399bc31705dc8c169233d572b7cba6c8aa5e1bf0ecb9b78cc71e4228d8cb6",
+    "bootstrap_multiplicity.npy": "5ceda1cfc6414a621ed6ce97ec2ae3eee4188b455c602a032887541fe58660d3",
+    "bootstrap_block_counts.npz": "a01045488d92aa4f702b33b274bf255133111e43caf2b7f09320e4913198d6b2",
+    "bootstrap_replicate_metrics.csv": "357b280a52fbfabc3c8c152c012a966babcb2da8edd1b41d447deae34ef9418e",
+    "bootstrap_intervals.csv": "b085eae88ddbf3b62b77efae2df689689ab225be3489be7630582c8779f203de"
+  },
+  "q_sha256": "360d7152301ee08660f366239e4e3a9dad8c28c24a834b121020f79a186ed3c9",
+  "protocol_sha256": "6ff336d907bf23a84efcbe2edcad3c360c1a234665439092581eefb5cfa3a696",
+  "code_hashes": {
+    "bootstrap.py": "82789e3b204fee50a7cff087e252849174c62779f3ebdeab844a3be3e507fbcb",
+    "common.py": "ca8ec4e0bb4498e0e89f5c63bb9b1f72f5b3578404b41e874e02994fd49b8d41"
+  },
+  "source_CI": false,
+  "temporal_CI": false,
+  "category_CI": false,
+  "source_target_paired_CI": false
+}

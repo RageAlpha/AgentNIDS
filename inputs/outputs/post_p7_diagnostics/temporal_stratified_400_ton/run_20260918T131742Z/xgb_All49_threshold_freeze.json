@@ -1,0 +1,36 @@
+{
+  "Early-400": {
+    "q_Benign": 0.009039638563990593,
+    "q_Attack": 0.9996102542208973,
+    "q_Benign_plus_q_Attack": 1.008649892784888,
+    "Attack_inclusion_lower_bound": 0.00038974577910266817,
+    "Benign_inclusion_lower_bound": 0.9909603614360094,
+    "frozen_at_utc": "2026-09-18T07:06:27.998451+00:00",
+    "precision": "float64",
+    "serialization": "Python float shortest round-trip decimal; no rounding",
+    "epsilon": 0.1,
+    "sample_count": 400,
+    "per_class": {
+      "Benign": 200,
+      "Attack": 200
+    },
+    "order_statistic_one_based": 181,
+    "order_statistic_zero_based": 180,
+    "gate_branch": "A / Outcome B",
+    "gate_status": "Full evaluation has not been carried out due to the suspension of the threshold; Outcome B by mail, without adding conformal experiments."
+  },
+  "Temporal-Stratified-400": {
+    "q_Benign": 0.009039638563990593,
+    "q_Attack": 0.9995743403269444,
+    "threshold_sum": 1.008613978890935,
+    "one_minus_q_Benign": 0.9909603614360094,
+    "one_minus_q_Attack": 0.0004256596730556339,
+    "frozen_at_utc": "2026-09-18T13:21:50.019804+00:00",
+    "sample_manifest": "/home/karri/projects/NIDSProject/outputs/post_p7_diagnostics/temporal_stratified_400_ton/run_20260918T131742Z/calibration_sample_manifest.csv",
+    "per_class": 200,
+    "order_statistic_one_based": 181,
+    "order_statistic_zero_based": 180,
+    "precision": "float64",
+    "evaluation_not_started": true
+  }
+}

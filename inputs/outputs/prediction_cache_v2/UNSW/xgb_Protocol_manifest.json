@@ -1,0 +1,77 @@
+{
+  "model_id": "xgb_Protocol",
+  "domain": "UNSW",
+  "rows": 2365424,
+  "feature_indices": [
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33
+  ],
+  "feature_names": [
+    "L4_SRC_PORT",
+    "L4_DST_PORT",
+    "PROTOCOL",
+    "L7_PROTO",
+    "TCP_FLAGS",
+    "CLIENT_TCP_FLAGS",
+    "SERVER_TCP_FLAGS",
+    "MIN_TTL",
+    "MAX_TTL",
+    "TCP_WIN_MAX_IN",
+    "TCP_WIN_MAX_OUT",
+    "ICMP_TYPE",
+    "ICMP_IPV4_TYPE",
+    "DNS_QUERY_ID",
+    "DNS_QUERY_TYPE",
+    "DNS_TTL_ANSWER",
+    "FTP_COMMAND_RET_CODE"
+  ],
+  "device": "cuda:0",
+  "gpu_input_and_output_verified": true,
+  "prediction_cuda_event_ms": 65.05110442638397,
+  "range": {
+    "raw_probability": [
+      8.401078055442213e-09,
+      0.9999972581863403
+    ],
+    "probability": [
+      1.7974350400961303e-07,
+      0.9999951964435619
+    ],
+    "predicted_class": [
+      0.0,
+      1.0
+    ],
+    "u": [
+      4.2869278557463795e-06,
+      0.997739491893247
+    ],
+    "h": [
+      0.9999674415575959,
+      0.9999968680509881
+    ]
+  },
+  "seconds": 0.6387849280145019,
+  "gpu_memory": {
+    "baseline_used_mib": 1325.5,
+    "peak_used_mib": 1453.5,
+    "peak_increment_mib": 128.0,
+    "measurement": "CUDA_memGetInfo_total_minus_free_sampled_at_100ms"
+  },
+  "file": "outputs/prediction_cache_v2/UNSW/xgb_Protocol.npy",
+  "bytes": 78059184
+}

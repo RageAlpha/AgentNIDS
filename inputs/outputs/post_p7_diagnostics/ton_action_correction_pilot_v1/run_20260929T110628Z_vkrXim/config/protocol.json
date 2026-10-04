@@ -1,0 +1,169 @@
+{
+  "experiment": "ton_action_correction_pilot_v1",
+  "version": 1,
+  "registered_at": "2026-09-29T11:10:27.259885+00:00",
+  "domain": "ToN",
+  "methods": [
+    "RAW",
+    "OLD_G2",
+    "E1_FIXED",
+    "LOCAL_ALL",
+    "LOCAL_GATE",
+    "P_TAIL_C",
+    "P_TAIL_400",
+    "P1D_GATE"
+  ],
+  "E1_source": "/home/karri/projects/NIDSProject/outputs/post_p7_diagnostics/ton_local_action_correction_v1/run_20260929T105356Z_w5yzUa/calibration/selected_rules.json",
+  "old_run": "/home/karri/projects/NIDSProject/outputs/post_p7_diagnostics/reliability_local_evidence_v1/run_20260929T074336Z_8Aw2gr",
+  "calibration_run": "/home/karri/projects/NIDSProject/outputs/post_p7_diagnostics/ton_local_action_correction_v1/run_20260929T105356Z_w5yzUa",
+  "source_inputs": [
+    "/home/karri/projects/NIDSProject/outputs/post_p7_diagnostics/reliability_local_evidence_v1/run_20260929T074336Z_8Aw2gr/calibration/sample_roles.csv",
+    "/home/karri/projects/NIDSProject/outputs/post_p7_diagnostics/reliability_local_evidence_v1/run_20260929T074336Z_8Aw2gr/calibration/ToN_selection_evidence.npz",
+    "/home/karri/projects/NIDSProject/outputs/post_p7_diagnostics/ton_local_action_correction_v1/run_20260929T105356Z_w5yzUa/calibration/C_sample_labels.csv",
+    "/home/karri/projects/NIDSProject/outputs/post_p7_diagnostics/reliability_local_evidence_v1/run_20260929T074336Z_8Aw2gr/calibration/frozen_rules.json"
+  ],
+  "R": 200,
+  "C": 200,
+  "label_budget": 400,
+  "RF": "frozen rf_All49 raw_probability",
+  "distance": {
+    "k": 15,
+    "weights": "uniform",
+    "distance_dtype": "float64",
+    "feature_count": 48,
+    "excluded_features": [
+      "DNS_QUERY_ID"
+    ],
+    "categorical_features": [
+      "L4_SRC_PORT",
+      "L4_DST_PORT",
+      "PROTOCOL",
+      "L7_PROTO",
+      "TCP_FLAGS",
+      "CLIENT_TCP_FLAGS",
+      "SERVER_TCP_FLAGS",
+      "ICMP_TYPE",
+      "ICMP_IPV4_TYPE",
+      "DNS_QUERY_TYPE",
+      "FTP_COMMAND_RET_CODE"
+    ],
+    "numeric_feature_count": 37,
+    "numeric_distance": "min(abs(x-r)/frozen_source_scale,10)/10",
+    "categorical_distance": "1[x!=r]",
+    "aggregation": "mean_over_48_features",
+    "tie_break": "reference_availability_rank_ascending",
+    "reference_only": "R",
+    "feature_imputation": "frozen_source_fill",
+    "fit_new_feature_transform": false
+  },
+  "k": 15,
+  "original_grid": [
+    0.5,
+    0.5202673673629761,
+    0.6165555715560913,
+    0.6741976737976074,
+    0.6888619661331177,
+    0.780666708946228,
+    0.838333323597908,
+    0.8476666659116745,
+    0.8482757806777954,
+    0.8577222228050232,
+    0.9872222086414695,
+    1.0
+  ],
+  "E1_reselection": false,
+  "baselines": {
+    "LOCAL_GATE": "h_L; local support>=u or OFF; no RF s; u=0,.5,.75,1",
+    "P_TAIL_C": "C only; NORMAL p or REVERSE 1-p; all unique r plus -1,2; b<a; inclusive tails",
+    "P_TAIL_400": "same family selected on all historical400",
+    "P1D_GATE": "R200 abs(raw_p-p_R), k15 uniform; ties ascending reference rank; C selects original G2 gate family"
+  },
+  "gate_risk_max": 0.05,
+  "gate_minimum_accepted": 10,
+  "gate_selection_tie_order": [
+    "maximize_min_UB_UA",
+    "minimize_FN_plus_FP",
+    "prefer_smaller_u_B_then_u_A",
+    "prefer_HIGH_B_then_HIGH_A",
+    "stable_candidate_id"
+  ],
+  "tail_tie_order": [
+    "maximum U_bal",
+    "maximum min(U_B,U_A)",
+    "minimum FN+FP",
+    "NORMAL before REVERSE",
+    "ascending b index",
+    "ascending a index"
+  ],
+  "local_tie_order": [
+    "maximum U_bal",
+    "maximum min(U_B,U_A)",
+    "minimum FN+FP",
+    "minimum u_B",
+    "minimum u_A",
+    "stable ID"
+  ],
+  "evaluation": {
+    "expected_rows": 274200,
+    "segment_boundaries": [
+      100000,
+      6960000,
+      13820000,
+      20670000,
+      27520000
+    ],
+    "segment_rows": [
+      68600,
+      68600,
+      68500,
+      68500
+    ],
+    "window_rows": 100,
+    "window_rank_width": 10000,
+    "practical_target": {
+      "risk_target_B": 0.05,
+      "risk_target_A": 0.05,
+      "minimum_U_B": 0.1,
+      "minimum_U_A": 0.1,
+      "minimum_accepted_per_action": 100,
+      "minimum_windows_per_action": 10,
+      "utility_gain_minimum": 0.01,
+      "temporal_supported_segments": 3,
+      "main_comparators": [
+        "G1F",
+        "Q400"
+      ]
+    },
+    "probability_comparators": [
+      "P_TAIL_C",
+      "P_TAIL_400",
+      "P1D_GATE"
+    ],
+    "rf_gate_comparator": "LOCAL_GATE"
+  },
+  "bootstrap": {
+    "replicates": 1000,
+    "block_windows": 10,
+    "keep_last_short_block": true,
+    "generator": "numpy.Generator(PCG64)",
+    "seed": 20261001,
+    "percentiles": [
+      2.5,
+      97.5
+    ],
+    "minimum_valid_fraction": 0.9,
+    "paired_within_domain": true
+  },
+  "E1_risk_intervals": "same whole-series block multiplicities; mask counts outside each segment to zero; ratios recomputed; no segment re-seeding",
+  "research_status": "repeated development evaluation: C repeatedly reused and previous pilot labels already viewed",
+  "forbidden": [
+    "new sampling",
+    "new labels",
+    "RF training",
+    "BoT",
+    "full evaluation",
+    "feedback",
+    "other models",
+    "changing E1 or k/distance"
+  ]
+}

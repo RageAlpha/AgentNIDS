@@ -1,0 +1,33 @@
+{
+  "version": "source-competence-v2.0",
+  "status": "COMPLETE",
+  "completed_at_utc": "2026-09-05T16:21:28.931080+00:00",
+  "model_id": "rf_All49",
+  "fit_domain": "UNSW",
+  "fit_partition": "S_competence",
+  "fit_rank_start": 1780000,
+  "fit_rank_end_exclusive": 2130000,
+  "fit_rows": 350000,
+  "label_counts": {
+    "Benign": 319288,
+    "Attack": 30712
+  },
+  "formula": "(correct_in_predicted_class+1)/(count_in_predicted_class+2)",
+  "attack_threshold": 0.5,
+  "table": [
+    {
+      "predicted_class": 0,
+      "predicted_class_name": "Benign",
+      "predicted_count": 319279,
+      "correct_count": 319278,
+      "h": 0.9999937359254074
+    },
+    {
+      "predicted_class": 1,
+      "predicted_class_name": "Attack",
+      "predicted_count": 30721,
+      "correct_count": 30711,
+      "h": 0.9996419620479771
+    }
+  ]
+}

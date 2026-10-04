@@ -1,0 +1,6 @@
+{
+  "started_at_utc": "2026-09-16T09:04:53.163333+00:00",
+  "threshold_source": "/home/karri/projects/NIDSProject/outputs/post_p7_diagnostics/variant_b_ton_pilot/run_20260916T085242Z/threshold_freeze.json",
+  "q_Benign": 0.16166667640209198,
+  "q_Attack": 0.9805555418133736
+}

@@ -1,0 +1,3 @@
+domain,partition,rank_start,rank_end_exclusive,rows,full_10k_windows,retained_partial_rows,excluded_tail,exclude_startup_rows,source
+UNSW,S_source_test,2130000,2365424,235424,23,5424,0,0,/home/karri/projects/NIDSProject/outputs/round1_data_prep_v1/split_manifest.csv
+ToN,T_heldout,0,27520000,27520000,2752,0,260,0,/home/karri/projects/NIDSProject/outputs/outer_v2/P7/F1/data_audit.json

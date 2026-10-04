@@ -1,0 +1,19 @@
+{
+  "version": "week0-protocol-freeze-v1.0",
+  "frozen_at_utc": "2026-09-15T07:41:00.190728+00:00",
+  "protocol_sha256": "6ff336d907bf23a84efcbe2edcad3c360c1a234665439092581eefb5cfa3a696",
+  "sources_sha256": "6692fc7d5f69d7f25ef48f6acc04fe89275866c0789b17c408507da2364871c1",
+  "implementation_sha256": "d99f1728abe382c7e13800ba999c6b14b3199254e3175771b4cd317f04982cae",
+  "code_hashes": {
+    "implementation.py": "d99f1728abe382c7e13800ba999c6b14b3199254e3175771b4cd317f04982cae",
+    "bootstrap.py": "82789e3b204fee50a7cff087e252849174c62779f3ebdeab844a3be3e507fbcb",
+    "verify.py": "4a17053bbf402b98191053165bf6650455caa56657dd73fd086ecc675520dd2e",
+    "prepare.py": "23d6ff6d9a68a8902b49c5306ff9bc8e9f5fd5b0c4d8078b96e510d6219f16cb",
+    "calibrate.py": "e0b3bcc89632a77cac190f47cfe80745b9962d099de744b5593ccb679aa1ef80",
+    "common.py": "ca8ec4e0bb4498e0e89f5c63bb9b1f72f5b3578404b41e874e02994fd49b8d41",
+    "evaluate.py": "af87924f29040f3e9283d728d88d91363a6fbe928bd98142f2ae45bce949e4c5"
+  },
+  "authorization": "User reviewed preflight and authorized this Week0 run; no Week1",
+  "calibration_started": false,
+  "evaluation_started": false
+}

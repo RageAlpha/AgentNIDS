@@ -1,0 +1,98 @@
+{
+  "rows": 18530000,
+  "correct": 11773581,
+  "incorrect": 6756419,
+  "domain_rows": [
+    10060000,
+    8470000
+  ],
+  "domain_weights": [
+    0.9209741550695825,
+    1.0938606847697756
+  ],
+  "domain_total_weight": [
+    9265000.0,
+    9265000.0
+  ],
+  "weight_sum": 18530000,
+  "anchor": 0.1004014106429271,
+  "mean_offset": 0.48993212060178276,
+  "mean": 0.5903335312447099,
+  "scale": 0.2894807033059962,
+  "variance": 0.08379907758653418,
+  "constant_input": false,
+  "prior": 0.6474443821721385,
+  "training_audits": [
+    {
+      "domain": "CIC",
+      "partition": "R_fit",
+      "rank_start": 0,
+      "rank_end_exclusive": 10060000,
+      "rows": 10060000,
+      "windows": 1006,
+      "excluded_tail": 0,
+      "benign": 7857490,
+      "attack": 2202510,
+      "initialization_rows": 10000,
+      "correct": 5098795,
+      "incorrect": 4961205,
+      "benign_correct": 3425532,
+      "attack_correct": 1673263
+    },
+    {
+      "domain": "BoT",
+      "partition": "R_fit",
+      "rank_start": 0,
+      "rank_end_exclusive": 8470000,
+      "rows": 8470000,
+      "windows": 847,
+      "excluded_tail": 0,
+      "benign": 49511,
+      "attack": 8420489,
+      "initialization_rows": 10000,
+      "correct": 6674786,
+      "incorrect": 1795214,
+      "benign_correct": 38113,
+      "attack_correct": 6636673
+    }
+  ],
+  "fit_partition": "R_fit",
+  "objective": "weighted BCE / N + beta1^2/(2*C*N); intercept unpenalized",
+  "C": 1,
+  "solver": {
+    "backend": "torch.optim.LBFGS",
+    "device": "cuda:0",
+    "dtype": "float64",
+    "max_iter": 2000,
+    "tolerance_grad": 0.0001,
+    "tolerance_change": 1e-12,
+    "line_search_fn": "strong_wolfe",
+    "history_size": 20,
+    "initial_parameters": 0,
+    "closure": "full_dataset_weighted_loss_and_gradient_accumulated_in_chunks"
+  },
+  "closure_rows": 262144,
+  "true_class_reweighting": false,
+  "scaler_arithmetic": "P4 translation-centered equal-domain weighted population variance",
+  "beta0": 0.6114030826699365,
+  "beta1": 0.15831909660304588,
+  "status": "COMPLETE",
+  "objective_value": 0.6461350972913514,
+  "gradient_inf": 1.975416403157161e-06,
+  "gradient_l2": 2.0208843065419686e-06,
+  "converged_gradient": true,
+  "iterations": 4,
+  "function_evaluations": 5,
+  "closure_calls": 6,
+  "seconds": 0.22983264923095703,
+  "fold": "F1",
+  "model": "rf_All49",
+  "output": "Platt",
+  "development": [
+    "CIC",
+    "BoT"
+  ],
+  "target": "ToN",
+  "saved_at_utc": "2026-09-14T08:30:17.666055+00:00",
+  "probability_target": "base classification correctness"
+}

@@ -1,0 +1,16 @@
+{
+  "frozen_at_utc": "2026-09-15T01:18:38.377631+00:00",
+  "status": "ALL_24_C1_THRESHOLDS_AND_12_UNSUPPORTED_RECORDS_FROZEN_BEFORE_EVALUATION_LABEL_ACCESS",
+  "evaluation_labels_read": false,
+  "calibration_labels_per_domain": 400,
+  "thresholds_selected": 24,
+  "unsupported": 12,
+  "files": {
+    "/home/karri/projects/NIDSProject/outputs/post_p7_diagnostics/strict_k_reply4/run_20260915_C1_01/classification_candidates.csv": "591ddf2d5d87862151ddad2cb7ce168b52bcfdf12f46807065a54b83d9016901",
+    "/home/karri/projects/NIDSProject/outputs/post_p7_diagnostics/strict_k_reply4/run_20260915_C1_01/classification_thresholds.csv": "6d33d63b0d11c9f050b46afe06bcbb07f7a2906723fc1050d79c140d56b8e391",
+    "/home/karri/projects/NIDSProject/outputs/post_p7_diagnostics/strict_k_reply4/run_20260915_C1_01/configuration_status.csv": "b5400cecda13d4a31a3952c3b64af8c1287a769937628634ad3b7091c274ba01",
+    "/home/karri/projects/NIDSProject/outputs/post_p7_diagnostics/strict_k_reply4/run_20260915_C1_01/calibration_metrics_frozen.csv": "8d5ac22e791d18193fc3746597e30b06aa63ad1415e532f261180dfaa8a50aae",
+    "/home/karri/projects/NIDSProject/outputs/post_p7_diagnostics/strict_k_reply4/run_20260915_C1_01/candidate_validation.json": "cbdf89a390c45e799bff9268b3eae82fe3e71dbf532c93b68bbdf2a0c8e2ec47"
+  },
+  "protocol_sha256": "d26fa716675df9cad98cd7fbff370c1e21ff1901920534a24c0afef9d12d197c"
+}

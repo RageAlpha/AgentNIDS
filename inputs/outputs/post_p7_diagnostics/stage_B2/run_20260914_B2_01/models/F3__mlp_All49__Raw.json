@@ -1,0 +1,98 @@
+{
+  "rows": 22230000,
+  "correct": 12980341,
+  "incorrect": 9249659,
+  "domain_rows": [
+    8470000,
+    13760000
+  ],
+  "domain_weights": [
+    1.3122786304604486,
+    0.8077761627906976
+  ],
+  "domain_total_weight": [
+    11115000.0,
+    11115000.0
+  ],
+  "weight_sum": 22230000,
+  "anchor": 2.913796300279812e-06,
+  "mean_offset": 0.038101258482423975,
+  "mean": 0.03810417227872426,
+  "scale": 0.14771131652655792,
+  "variance": 0.021818633030008985,
+  "constant_input": false,
+  "prior": 0.5028636426700943,
+  "training_audits": [
+    {
+      "domain": "BoT",
+      "partition": "R_fit",
+      "rank_start": 0,
+      "rank_end_exclusive": 8470000,
+      "rows": 8470000,
+      "windows": 847,
+      "excluded_tail": 0,
+      "benign": 49511,
+      "attack": 8420489,
+      "initialization_rows": 10000,
+      "correct": 1374520,
+      "incorrect": 7095480,
+      "benign_correct": 43225,
+      "attack_correct": 1331295
+    },
+    {
+      "domain": "ToN",
+      "partition": "R_fit",
+      "rank_start": 0,
+      "rank_end_exclusive": 13760000,
+      "rows": 13760000,
+      "windows": 1376,
+      "excluded_tail": 0,
+      "benign": 10495665,
+      "attack": 3264335,
+      "initialization_rows": 10000,
+      "correct": 11605821,
+      "incorrect": 2154179,
+      "benign_correct": 10086932,
+      "attack_correct": 1518889
+    }
+  ],
+  "fit_partition": "R_fit",
+  "objective": "weighted BCE / N + beta1^2/(2*C*N); intercept unpenalized",
+  "C": 1,
+  "solver": {
+    "backend": "torch.optim.LBFGS",
+    "device": "cuda:0",
+    "dtype": "float64",
+    "max_iter": 2000,
+    "tolerance_grad": 0.0001,
+    "tolerance_change": 1e-12,
+    "line_search_fn": "strong_wolfe",
+    "history_size": 20,
+    "initial_parameters": 0,
+    "closure": "full_dataset_weighted_loss_and_gradient_accumulated_in_chunks"
+  },
+  "closure_rows": 262144,
+  "true_class_reweighting": false,
+  "scaler_arithmetic": "P4 translation-centered equal-domain weighted population variance",
+  "beta0": 0.011451391942108206,
+  "beta1": -0.05295424511802519,
+  "status": "COMPLETE",
+  "objective_value": 0.6927795880423924,
+  "gradient_inf": 6.679749155356908e-05,
+  "gradient_l2": 6.78358246995675e-05,
+  "converged_gradient": true,
+  "iterations": 2,
+  "function_evaluations": 3,
+  "closure_calls": 4,
+  "seconds": 0.1939101219177246,
+  "fold": "F3",
+  "model": "mlp_All49",
+  "output": "Raw",
+  "development": [
+    "BoT",
+    "ToN"
+  ],
+  "target": "CIC",
+  "saved_at_utc": "2026-09-14T08:30:26.935586+00:00",
+  "probability_target": "base classification correctness"
+}

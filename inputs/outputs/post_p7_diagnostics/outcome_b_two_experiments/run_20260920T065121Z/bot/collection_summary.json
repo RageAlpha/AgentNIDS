@@ -1,0 +1,29 @@
+{
+  "collected_per_class": [
+    200,
+    200
+  ],
+  "total_collected": 400,
+  "class_200th_rank": {
+    "1": 226,
+    "0": 14863
+  },
+  "stop_rank_inclusive": 14863,
+  "actual_labels_scanned_for_collection": 14864,
+  "startup_support_check_labels": 100000,
+  "startup_support": [
+    9071,
+    90929
+  ],
+  "startup": [
+    0,
+    100000
+  ],
+  "shared_models": [
+    "rf_All49",
+    "xgb_All49",
+    "mlp_All49"
+  ],
+  "selection": "earliest 200 per true class; stop when both full",
+  "completed_at_utc": "2026-09-20T06:53:47.432005+00:00"
+}

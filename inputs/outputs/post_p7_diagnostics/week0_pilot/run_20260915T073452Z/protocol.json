@@ -1,0 +1,274 @@
+{
+  "version": "week0-pilot-v1.0",
+  "run_id": "run_20260915T073452Z",
+  "created_at_utc": "2026-09-15T07:41:00.189585+00:00",
+  "status": "AUTHORIZED_FROZEN_BEFORE_CALIBRATION",
+  "provenance": {
+    "roadmap_explicit": {
+      "path": "/home/karri/projects/NIDSProject/docs/Research_Roadmap_Phase2_Conformal_Coordination.md",
+      "sections": [
+        "3.1",
+        "3.2",
+        "4.2",
+        "4.5",
+        "7 pre-registration",
+        "9 Week 0"
+      ],
+      "rules": [
+        "existing RF-All49",
+        "ToN",
+        "Variant A Strict-0 source calibration",
+        "primary epsilon 0.10",
+        "prediction sets with <=",
+        "pilot before Week 1; professor informed and pilot confirmation required"
+      ]
+    },
+    "inherited_frozen_protocol": [
+      "frozen exact partitions and availability-rank identities",
+      "P1 float32 features and S_train-only fill",
+      "P2 cuML RF with classes [0,1]",
+      "P3 raw_probability attack column, float64 cache",
+      "P7 original complete ToN windows and excluded tail",
+      "A/B1 full source test including 5424 tail; raw_pred >=0.5",
+      "2000 bootstrap replicates, 10 windows/block and final short block"
+    ],
+    "approved_execution_refinements": [
+      "RF-only float32 origin checked without modifying p; float64 direct complement comparisons",
+      "Complete original source test with tail and complete P7 ToN including startup",
+      "One source-calibrated q frozen before all evaluation",
+      "ToN overall shared 2000-replicate PCG64(20260915) 276-block bootstrap; 10 windows/block, final 2",
+      "Source, temporal and taxonomy analyses descriptive; no source-target paired CI",
+      "Human joint evidence assessment, no new numerical gate cutoffs",
+      "Previously unblinded exploratory pilot; no Week1 or professor confirmation inferred"
+    ]
+  },
+  "model_id": "rf_All49",
+  "model_path": "/home/karri/projects/NIDSProject/outputs/source_v2/models/rf_All49/model.pkl",
+  "target": "ToN",
+  "variant": "A",
+  "strict_k": 0,
+  "epsilon": {
+    "numerator": 1,
+    "denominator": 10
+  },
+  "calibration": {
+    "domain": "UNSW",
+    "partition": "S_prob_cal",
+    "rank_start": 1420000,
+    "rank_end_exclusive": 1780000,
+    "rows": 360000,
+    "benign": 325600,
+    "attack": 34400,
+    "all_records": true,
+    "balance_or_resample": false,
+    "probability_field": "raw_probability",
+    "k_one_based": 324001,
+    "k_zero_based": 324000,
+    "q": null,
+    "q_status": "TO_BE_COMPUTED_ONCE_AND_SAVED_IN_Q_FREEZE",
+    "q_freeze_path": "/home/karri/projects/NIDSProject/outputs/post_p7_diagnostics/week0_pilot/run_20260915T073452Z/q_freeze.json"
+  },
+  "evaluation": {
+    "source": {
+      "rank_start": 2130000,
+      "rank_end_exclusive": 2365424,
+      "rows": 235424,
+      "retained_tail": 5424
+    },
+    "ToN": {
+      "rank_start": 0,
+      "rank_end_exclusive": 27520000,
+      "rows": 27520000,
+      "windows": 2752,
+      "excluded_tail": 260,
+      "startup_exclusion": 0,
+      "window_reference": "/home/karri/projects/NIDSProject/outputs/post_p7_diagnostics/week0_pilot/run_20260915T073452Z/evaluation_window_references.csv"
+    },
+    "comparison_subrange": null
+  },
+  "algorithm": {
+    "p": "raw_probability; p_Benign=1-p, p_Attack=p",
+    "score": "where(y==0,p,1-p)",
+    "k": "ceil((n+1)*9/10), implemented as ((n+1)*9+9)//10; one-based",
+    "q": "sort(scores)[k-1] if k<=n else +infinity",
+    "prediction_set": "Benign iff p<=q; Attack iff 1-p<=q",
+    "ties": "inclusive <=; entire equal-score group, deterministic",
+    "quantile_interpolation": null,
+    "extra_softmax": false,
+    "extra_clipping": false,
+    "rounding": false,
+    "dtype": "float64; preserve existing float32 inference rounded values stored exactly as float64",
+    "serialization": "float64.hex/fromhex; +infinity as {kind:positive_infinity}; no JSON nonfinite numeric literals",
+    "label_boundary": "test set generation function accepts only p and q, never y",
+    "input_contract": "Only RF-native float32 probabilities losslessly stored in float64 are admitted; validate exact float32 roundtrip without modifying probabilities. Nonconforming values stop execution. Entire source calibration verified. Future pilot validates target chunks before scores/sets."
+  },
+  "metrics": {
+    "prediction_set_coverage": "sum(1[y in C])/N; overall and separately true Benign/Attack",
+    "acceptance_rate": "sum(1[|C|=1])/N",
+    "singleton_rate": "acceptance_rate (same quantity, explicit alias)",
+    "multi_label_rate": "sum(1[|C|=2])/N",
+    "empty_set_rate": "sum(1[|C|=0])/N",
+    "mean_set_size": "sum(|C|)/N",
+    "raw_pred": "1[p>=0.5]",
+    "raw_error": "raw_pred != y",
+    "four_set_counts": "For {}, {Benign}, {Attack}, {Benign,Attack}: N, Raw correct count, Raw error count, Raw error/N_set",
+    "rejection_rate": "P(R)=N_R/N, R={|C|!=1}",
+    "raw_error_given_rejected": "E_R/N_R",
+    "raw_error_given_accepted": "E_A/N_A",
+    "rejected_given_raw_error": "E_R/E_all",
+    "rejected_given_raw_correct": "(N_R-E_R)/(N-E_all)",
+    "accepted_confusion": "TN/FP/FN/TP using unique label of singleton as accepted prediction",
+    "selective_risk": "(FP+FN)/(TN+FP+FN+TP)",
+    "accepted_benign_FPR": "FP/(TN+FP)",
+    "accepted_attack_miss_rate": "FN/(TP+FN)",
+    "effective_attack_detection": "TP/N_all_Attack",
+    "wrong_accepted_attack_fraction": "FN/N_all_Attack",
+    "attack_abstention_rate": "(N_all_Attack-TP-FN)/N_all_Attack",
+    "benign_acceptance_rate": "(TN+FP)/N_all_Benign",
+    "attack_acceptance_rate": "(TP+FN)/N_all_Attack",
+    "correct_record_loss": "N(rejected AND raw_correct)/N(raw_correct)",
+    "stratification": "overall, true Benign/Attack, frozen original attack_code taxonomy (including ToN scanning), and four chronological segments",
+    "zero_denominators": "JSON null + NA reason; CSV NA; counts 0 when appropriate, rates never zero merely because denominator is zero"
+  },
+  "time": {
+    "window_counts": [
+      688,
+      688,
+      688,
+      688
+    ],
+    "rank_intervals": [
+      [
+        0,
+        6880000
+      ],
+      [
+        6880000,
+        13760000
+      ],
+      [
+        13760000,
+        20640000
+      ],
+      [
+        20640000,
+        27520000
+      ]
+    ],
+    "threshold": "same frozen source q in all segments",
+    "retune": false
+  },
+  "statistics": {
+    "scope": "ToN overall only; source/time/category descriptive",
+    "replicates": 2000,
+    "block_windows": 10,
+    "blocks": 276,
+    "final_block_windows": 2,
+    "rng": "numpy.random.Generator(PCG64(20260915))",
+    "seed": 20260915,
+    "sampling": "rng.integers(0,276,size=(2000,276),dtype=np.int64); independent draws of whole blocks with replacement",
+    "shared_matrix": true,
+    "interval": "95% percentile numpy.quantile(method=linear), bootstrap estimates only",
+    "undefined": "NA; exclude nonfinite estimates separately per metric, report valid and invalid replicate counts",
+    "difference_intervals": "compute two gaps within each same replicate, then percentile; never subtract separate CI endpoints",
+    "source": "only 3 blocks at frozen length, below minimum20; no CI, no changed blocks or removed tail",
+    "source_target_difference": "descriptive only",
+    "conditioned_on": "Frozen RF, fixed source calibration q, observed target sequence; excludes source-calibration resampling and gives no future-domain coverage/risk guarantee",
+    "metrics": [
+      "prediction_set_coverage",
+      "rejection_rate",
+      "acceptance_rate",
+      "singleton_rate",
+      "multi_label_rate",
+      "empty_set_rate",
+      "mean_set_size",
+      "benign_prediction_set_coverage",
+      "attack_prediction_set_coverage",
+      "selective_risk",
+      "raw_error_given_rejected",
+      "raw_error_given_accepted",
+      "rejected_given_raw_error",
+      "rejected_given_raw_correct",
+      "effective_attack_detection",
+      "wrong_accepted_attack_fraction",
+      "attack_abstention_rate",
+      "benign_acceptance_rate",
+      "attack_acceptance_rate",
+      "accepted_benign_FPR",
+      "accepted_attack_miss_rate",
+      "raw_error_rate_gap",
+      "rejection_rate_error_correct_gap"
+    ]
+  },
+  "gate": "gate_definition.md",
+  "open_protocol_choices": [],
+  "forbidden": [
+    "retrain or replace model",
+    "fit Platt",
+    "use Platt probability/predicted_class/f(u)/C1/C2 thresholds",
+    "target calibration or Mondrian",
+    "epsilon/model/scope selection after target results",
+    "Week 1",
+    "message professor automatically"
+  ],
+  "boundary": "Previously unblinded P7/A/B1/B2/C1/C2 domains; exploratory follow-up, not first target contact or independent outer validation.",
+  "inputs": {
+    "UNSW": {
+      "probability_cache": "/home/karri/projects/NIDSProject/outputs/prediction_cache_v2/UNSW/rf_All49.npy",
+      "probability_manifest": "/home/karri/projects/NIDSProject/outputs/prediction_cache_v2/UNSW/rf_All49_manifest.json",
+      "labels": "/home/karri/projects/NIDSProject/outputs/feature_store_v2/UNSW_label.npy",
+      "attack_codes": "/home/karri/projects/NIDSProject/outputs/feature_store_v2/UNSW_attack_code.npy",
+      "feature_manifest": "/home/karri/projects/NIDSProject/outputs/feature_store_v2/UNSW_manifest.json",
+      "original_rows": "/home/karri/projects/NIDSProject/outputs/round1_data_prep_v1/UNSW_sorted_original_rows.npy",
+      "availability_times": "/home/karri/projects/NIDSProject/outputs/round1_data_prep_v1/UNSW_sorted_end_ms.npy",
+      "attack_codebook": {
+        "0": "Benign",
+        "1": "Fuzzers",
+        "2": "Exploits",
+        "3": "Backdoor",
+        "4": "Reconnaissance",
+        "5": "Generic",
+        "6": "DoS",
+        "7": "Shellcode",
+        "8": "Analysis",
+        "9": "Worms"
+      }
+    },
+    "ToN": {
+      "probability_cache": "/home/karri/projects/NIDSProject/outputs/prediction_cache_v2/ToN/rf_All49.npy",
+      "probability_manifest": "/home/karri/projects/NIDSProject/outputs/prediction_cache_v2/ToN/rf_All49_manifest.json",
+      "labels": "/home/karri/projects/NIDSProject/outputs/feature_store_v2/ToN_label.npy",
+      "attack_codes": "/home/karri/projects/NIDSProject/outputs/feature_store_v2/ToN_attack_code.npy",
+      "feature_manifest": "/home/karri/projects/NIDSProject/outputs/feature_store_v2/ToN_manifest.json",
+      "original_rows": "/home/karri/projects/NIDSProject/outputs/round1_data_prep_v1/ToN_sorted_original_rows.npy",
+      "availability_times": "/home/karri/projects/NIDSProject/outputs/round1_data_prep_v1/ToN_sorted_end_ms.npy",
+      "attack_codebook": {
+        "0": "Benign",
+        "1": "scanning",
+        "2": "dos",
+        "3": "injection",
+        "4": "ddos",
+        "5": "password",
+        "6": "xss",
+        "7": "ransomware",
+        "8": "Backdoor",
+        "9": "mitm"
+      }
+    },
+    "hash_inventory": "/home/karri/projects/NIDSProject/outputs/post_p7_diagnostics/week0_pilot/run_20260915T073452Z/source_hashes.csv"
+  },
+  "approved_choices": {
+    "authorized_by": "Current user instruction: preflight reviewed, execute formal Week0 only",
+    "background_summary": "NOT_SYNCED",
+    "gate": "Predefined four states with joint evidence human review; no numeric effect threshold",
+    "source_selection_boundary": "Existing saved code/logs show no S_prob_cal-driven current Raw RF selection; undocumented human attempts not ruled out"
+  },
+  "execution_sequence": [
+    "prepare.py",
+    "calibrate.py (exclusive q_freeze creation)",
+    "evaluate.py (loads q; no calibration call)",
+    "bootstrap.py",
+    "verify.py",
+    "report.py"
+  ]
+}

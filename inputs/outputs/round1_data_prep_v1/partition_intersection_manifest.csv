@@ -1,0 +1,16 @@
+domain,scheme,partition_a,partition_b,shared_records
+UNSW,source,S_train,S_prob_cal,0
+UNSW,source,S_train,S_competence,0
+UNSW,source,S_train,S_source_test,0
+UNSW,source,S_prob_cal,S_competence,0
+UNSW,source,S_prob_cal,S_source_test,0
+UNSW,source,S_competence,S_source_test,0
+CIC,development,R_fit,R_cal,0
+CIC,development,R_fit,R_select,0
+CIC,development,R_cal,R_select,0
+BoT,development,R_fit,R_cal,0
+BoT,development,R_fit,R_select,0
+BoT,development,R_cal,R_select,0
+ToN,development,R_fit,R_cal,0
+ToN,development,R_fit,R_select,0
+ToN,development,R_cal,R_select,0

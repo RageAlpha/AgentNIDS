@@ -1,0 +1,75 @@
+{
+  "created_at_utc": "2026-09-20T06:53:20.295282+00:00",
+  "authority": [
+    "/home/karri/projects/NIDSProject/docs/OutcomeB_2Expirements/Reply_to_Siyuan_OutcomeB_BeginWriting.md",
+    "/home/karri/projects/NIDSProject/docs/OutcomeB_2Expirements/OutcomeB_Two_Experiments_Plan_ZH.md"
+  ],
+  "historical_rf": "/home/karri/projects/NIDSProject/outputs/post_p7_diagnostics/variant_b_ton_pilot/run_20260916T085242Z",
+  "historical_xgb": "/home/karri/projects/NIDSProject/outputs/post_p7_diagnostics/xgboost_variant_b_ton_pilot/run_20260918T070417Z",
+  "historical_C1": "/home/karri/projects/NIDSProject/outputs/post_p7_diagnostics/strict_k_reply4/run_20260915_C1_01/protocol.json",
+  "epsilon": 0.1,
+  "per_class": 200,
+  "probability": "raw_probability=P(Attack); 1-p=P(Benign); unchanged float64",
+  "labels": {
+    "0": "Benign",
+    "1": "Attack"
+  },
+  "preprocessing_manifest": "/home/karri/projects/NIDSProject/outputs/source_v2/preprocessing/preprocessing_manifest.json",
+  "preprocessing_stats": "/home/karri/projects/NIDSProject/outputs/source_v2/preprocessing/preprocessing_stats.npz",
+  "threshold": "ascending true-class scores, index 180, no interpolation",
+  "gate": {
+    "stop": "q_Attack>=0.90",
+    "evaluate": "q_Attack<0.80",
+    "pending": "0.80<=q_Attack<0.90"
+  },
+  "startup": [
+    0,
+    100000
+  ],
+  "segments": {
+    "ToN": [
+      100000,
+      6960000,
+      13820000,
+      20670000,
+      27520000
+    ],
+    "BoT": [
+      100000,
+      4310000,
+      8520000,
+      12730000,
+      16930000
+    ]
+  },
+  "source_if_ton_permitted": [
+    2130000,
+    2365424
+  ],
+  "bootstrap_if_ton_permitted": {
+    "block_windows": 10,
+    "blocks": 275,
+    "last_block_windows": 2,
+    "replicates": 2000,
+    "generator": "PCG64",
+    "seed": 20260915,
+    "percentiles": [
+      2.5,
+      97.5
+    ]
+  },
+  "reporting_order": [
+    "MLP/ToN thresholds",
+    "BoT all thresholds",
+    "permitted MLP/ToN evaluation",
+    "permitted BoT RF, XGBoost, MLP evaluations"
+  ],
+  "no_digests": true,
+  "no_retraining": true,
+  "no_probability_modification": true,
+  "code_evidence": [
+    "src/nids/data/feature_store.py: Label copied then gathered once by original row order",
+    "src/nids/replay/predictions.py: RF class 1, XGB binary:logistic, MLP sigmoid; raw saved before Platt",
+    "src/nids/p2.py: frozen source model and preprocessing manifests"
+  ]
+}

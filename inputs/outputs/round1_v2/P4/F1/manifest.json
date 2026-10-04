@@ -1,0 +1,66 @@
+{
+  "status": "COMPLETE",
+  "fold": "F1",
+  "domains": [
+    "CIC",
+    "BoT"
+  ],
+  "training_audits": [
+    {
+      "domain": "CIC",
+      "partition": "R_fit",
+      "rows": 10060000,
+      "windows": 1006,
+      "rank_start": 0,
+      "rank_end_exclusive": 10060000,
+      "excluded_tail": 0,
+      "initialization_rows": 10000,
+      "benign": 7857490,
+      "attack": 2202510
+    },
+    {
+      "domain": "BoT",
+      "partition": "R_fit",
+      "rows": 8470000,
+      "windows": 847,
+      "rank_start": 0,
+      "rank_end_exclusive": 8470000,
+      "excluded_tail": 0,
+      "initialization_rows": 10000,
+      "benign": 49511,
+      "attack": 8420489
+    }
+  ],
+  "seconds": 107.96487845800584,
+  "gpu_memory": {
+    "baseline_used_mib": 1283.5,
+    "peak_used_mib": 5285.5,
+    "peak_increment_mib": 4002.0,
+    "measurement": "CUDA_memGetInfo_total_minus_free_sampled_at_100ms"
+  },
+  "gates": {
+    "G0": {
+      "estimate": 0.035210908309011184,
+      "CI95": [
+        0.025663186318118095,
+        0.046227676685314995
+      ],
+      "minimum_effect": 0.01,
+      "estimable": true,
+      "status": "PASS",
+      "replicates": 2000
+    },
+    "G1": {
+      "estimate": 0.011925266528509788,
+      "CI95": [
+        0.008005583325302513,
+        0.015688627257212852
+      ],
+      "minimum_effect": 0.001,
+      "estimable": true,
+      "status": "PASS",
+      "replicates": 2000
+    }
+  },
+  "completed_at_utc": "2026-09-06T09:41:08.385716+00:00"
+}

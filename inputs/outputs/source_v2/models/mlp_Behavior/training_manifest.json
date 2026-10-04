@@ -1,0 +1,102 @@
+{
+  "version": "base-model-v2.0",
+  "status": "COMPLETE",
+  "completed_at_utc": "2026-09-05T16:23:15.231819+00:00",
+  "model_id": "mlp_Behavior",
+  "family": "mlp",
+  "backend": "torch",
+  "view": "Behavior",
+  "feature_count": 15,
+  "feature_indices": [
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48
+  ],
+  "feature_names": [
+    "FLOW_DURATION_MILLISECONDS",
+    "DURATION_IN",
+    "DURATION_OUT",
+    "RETRANSMITTED_IN_BYTES",
+    "RETRANSMITTED_IN_PKTS",
+    "RETRANSMITTED_OUT_BYTES",
+    "RETRANSMITTED_OUT_PKTS",
+    "SRC_TO_DST_IAT_MIN",
+    "SRC_TO_DST_IAT_MAX",
+    "SRC_TO_DST_IAT_AVG",
+    "SRC_TO_DST_IAT_STDDEV",
+    "DST_TO_SRC_IAT_MIN",
+    "DST_TO_SRC_IAT_MAX",
+    "DST_TO_SRC_IAT_AVG",
+    "DST_TO_SRC_IAT_STDDEV"
+  ],
+  "preprocessing": "S_train_imputed_source_standardized",
+  "seed": 20260905,
+  "parameters": {
+    "backend": "torch",
+    "views": [
+      "Behavior",
+      "All49"
+    ],
+    "hidden_sizes": [
+      128,
+      64
+    ],
+    "activation": "ReLU",
+    "optimizer": "Adam",
+    "learning_rate": 0.001,
+    "weight_decay": 0,
+    "epochs": 30,
+    "loss": "BCEWithLogitsLoss",
+    "dtype": "float32",
+    "shuffle_within_source_train_each_epoch": true
+  },
+  "training_domain": "UNSW",
+  "training_partition": "S_train",
+  "training_rank_start": 0,
+  "training_rank_end_exclusive": 1420000,
+  "training_rows": 1420000,
+  "training_label_counts": {
+    "Benign": 1377436,
+    "Attack": 42564
+  },
+  "natural_training_prevalence": 0.029974647887323944,
+  "device": {
+    "type": "cuda",
+    "index": 0,
+    "name": "NVIDIA RTX A5000"
+  },
+  "gpu_memory": {
+    "baseline_used_mib": 1283.5,
+    "peak_used_mib": 1801.5,
+    "peak_increment_mib": 518.0,
+    "measurement": "CUDA_memGetInfo_total_minus_free_sampled_at_100ms"
+  },
+  "fit": {
+    "training_seconds": 6.755430474993773,
+    "epochs": 30,
+    "final_training_bce": 0.039794722686435136
+  },
+  "inference_seconds": {
+    "S_prob_cal": 0.06435425899690017,
+    "S_competence": 0.03078286099480465,
+    "S_source_test": 0.019818151980871335
+  },
+  "total_seconds": 7.93501164499321,
+  "artifact": "model.pt",
+  "artifact_size_bytes": 44093,
+  "calibrator": "outputs/source_v2/calibrators/mlp_Behavior.json",
+  "competence": "outputs/source_v2/competence/mlp_Behavior.json",
+  "source_metrics": "outputs/source_v2/source_metrics/mlp_Behavior.json"
+}

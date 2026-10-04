@@ -1,0 +1,10 @@
+numpy==2.4.6
+pyarrow==23.0.1
+cupy-cuda12x==14.2.0
+torch==2.11.0+cu128
+xgboost==3.2.0
+cuml-cu12==26.8.0
+cudf-cu12==26.8.1
+scipy==1.17.1
+scikit-learn==1.9.0
+pandas==3.0.3

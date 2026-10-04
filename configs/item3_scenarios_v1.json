@@ -1,0 +1,741 @@
+{
+  "version": "item3-scenarios-v1.0",
+  "status": "FROZEN_BEFORE_ITEM3_SCENARIO_FITTING_AFTER_DATA_SUPPORT_AUDIT",
+  "frozen_at_utc": "2026-09-07T23:57:41.942021+00:00",
+  "scope": "Item3_O1_O4_new_scenario_rules_only",
+  "execution_authorized": false,
+  "fit_or_evaluation_started": false,
+  "old_P4_P6_freeze_history_unchanged": true,
+  "seed": 20260905,
+  "taxonomy": {
+    "version": "taxonomy-v2.0",
+    "status": "REGISTERED_BEFORE_MODEL_RESULTS",
+    "canonical_families": {
+      "Availability_Flooding": {
+        "UNSW": [
+          "DoS"
+        ],
+        "BoT": [
+          "DoS",
+          "DDoS"
+        ],
+        "ToN": [
+          "dos",
+          "ddos"
+        ],
+        "CIC": [
+          "DDOS_attack-HOIC",
+          "DDoS_attacks-LOIC-HTTP",
+          "DDOS_attack-LOIC-UDP",
+          "DoS_attacks-SlowHTTPTest",
+          "DoS_attacks-Hulk",
+          "DoS_attacks-GoldenEye",
+          "DoS_attacks-Slowloris"
+        ]
+      },
+      "Reconnaissance_Probing": {
+        "UNSW": [
+          "Reconnaissance"
+        ],
+        "BoT": [
+          "Reconnaissance"
+        ],
+        "ToN": [
+          "scanning"
+        ],
+        "CIC": []
+      }
+    },
+    "scenarios": {
+      "O1": {
+        "target": "BoT",
+        "known": "Reconnaissance_Probing",
+        "unknown": "Availability_Flooding"
+      },
+      "O2": {
+        "target": "BoT",
+        "known": "Availability_Flooding",
+        "unknown": "Reconnaissance_Probing"
+      },
+      "O3": {
+        "target": "ToN",
+        "known": "Reconnaissance_Probing",
+        "unknown": "Availability_Flooding"
+      },
+      "O4": {
+        "target": "ToN",
+        "known": "Availability_Flooding",
+        "unknown": "Reconnaissance_Probing"
+      }
+    },
+    "excluded_mapping_decisions": {
+      "CIC_Infilteration": "not_reconnaissance",
+      "Backdoor": "exploratory",
+      "Web_Application_Exploitation": "sensitivity_only"
+    }
+  },
+  "feature_order": [
+    "IN_BYTES",
+    "OUT_BYTES",
+    "IN_PKTS",
+    "OUT_PKTS",
+    "LONGEST_FLOW_PKT",
+    "SHORTEST_FLOW_PKT",
+    "MIN_IP_PKT_LEN",
+    "MAX_IP_PKT_LEN",
+    "SRC_TO_DST_SECOND_BYTES",
+    "DST_TO_SRC_SECOND_BYTES",
+    "SRC_TO_DST_AVG_THROUGHPUT",
+    "DST_TO_SRC_AVG_THROUGHPUT",
+    "NUM_PKTS_UP_TO_128_BYTES",
+    "NUM_PKTS_128_TO_256_BYTES",
+    "NUM_PKTS_256_TO_512_BYTES",
+    "NUM_PKTS_512_TO_1024_BYTES",
+    "NUM_PKTS_1024_TO_1514_BYTES",
+    "L4_SRC_PORT",
+    "L4_DST_PORT",
+    "PROTOCOL",
+    "L7_PROTO",
+    "TCP_FLAGS",
+    "CLIENT_TCP_FLAGS",
+    "SERVER_TCP_FLAGS",
+    "MIN_TTL",
+    "MAX_TTL",
+    "TCP_WIN_MAX_IN",
+    "TCP_WIN_MAX_OUT",
+    "ICMP_TYPE",
+    "ICMP_IPV4_TYPE",
+    "DNS_QUERY_ID",
+    "DNS_QUERY_TYPE",
+    "DNS_TTL_ANSWER",
+    "FTP_COMMAND_RET_CODE",
+    "FLOW_DURATION_MILLISECONDS",
+    "DURATION_IN",
+    "DURATION_OUT",
+    "RETRANSMITTED_IN_BYTES",
+    "RETRANSMITTED_IN_PKTS",
+    "RETRANSMITTED_OUT_BYTES",
+    "RETRANSMITTED_OUT_PKTS",
+    "SRC_TO_DST_IAT_MIN",
+    "SRC_TO_DST_IAT_MAX",
+    "SRC_TO_DST_IAT_AVG",
+    "SRC_TO_DST_IAT_STDDEV",
+    "DST_TO_SRC_IAT_MIN",
+    "DST_TO_SRC_IAT_MAX",
+    "DST_TO_SRC_IAT_AVG",
+    "DST_TO_SRC_IAT_STDDEV"
+  ],
+  "nominal_features": [
+    "L4_SRC_PORT",
+    "L4_DST_PORT",
+    "PROTOCOL",
+    "L7_PROTO",
+    "TCP_FLAGS",
+    "CLIENT_TCP_FLAGS",
+    "SERVER_TCP_FLAGS",
+    "ICMP_TYPE",
+    "ICMP_IPV4_TYPE",
+    "DNS_QUERY_ID",
+    "DNS_QUERY_TYPE",
+    "FTP_COMMAND_RET_CODE"
+  ],
+  "data": {
+    "fit_classes": [
+      "Benign",
+      "designated_Known"
+    ],
+    "unknown": "excluded_from_all_source_and_development_fitting",
+    "other": "excluded_from_primary_fit_and_evaluation_report_counts",
+    "evaluation_classes": [
+      "Benign",
+      "designated_Known",
+      "designated_Unknown"
+    ],
+    "outer_exposure": "Strict_0_labels_and_adaptation_rows_for_fitting",
+    "source_roles": {
+      "S_train": "preprocessing_reference_detectors_prototype",
+      "S_prob_cal": "Platt_only",
+      "S_competence": "h_and_fixed_Known_distance_quantile",
+      "S_source_test": "frozen_source_evaluation_only"
+    },
+    "development_roles": {
+      "R_fit": "CRE_corrective_PostCRE_policy_models",
+      "R_cal": "initial_detector_and_diagnostics",
+      "R_select": "policy_and_reliability_threshold_selection"
+    },
+    "weight": "N_total/(2*N_domain)",
+    "all_other_partitions_transform_only": true
+  },
+  "scenarios": {
+    "O1": {
+      "source": "UNSW",
+      "development": [
+        "CIC",
+        "ToN"
+      ],
+      "outer": "BoT",
+      "known": "Reconnaissance_Probing",
+      "unknown": "Availability_Flooding",
+      "full_coordination_status": "CONDITIONAL_ON_NEW_PREDICTION_TARGET_AND_THRESHOLD_SUPPORT",
+      "full_experiment_enabled": false,
+      "selection_scope": "BENIGN_CONDITIONAL_SELECTION",
+      "R_select_known_support_domains": [],
+      "R_cal_known_support_domains": [],
+      "activation_requires": "separate_execution_authorization_and_preflight_support_checks",
+      "O3_full_experiment_prohibited": false
+    },
+    "O2": {
+      "source": "UNSW",
+      "development": [
+        "CIC",
+        "ToN"
+      ],
+      "outer": "BoT",
+      "known": "Availability_Flooding",
+      "unknown": "Reconnaissance_Probing",
+      "full_coordination_status": "CONDITIONAL_ON_NEW_PREDICTION_TARGET_AND_THRESHOLD_SUPPORT",
+      "full_experiment_enabled": false,
+      "selection_scope": "BENIGN_CONDITIONAL_SELECTION",
+      "R_select_known_support_domains": [],
+      "R_cal_known_support_domains": [
+        "ToN"
+      ],
+      "activation_requires": "separate_execution_authorization_and_preflight_support_checks",
+      "O3_full_experiment_prohibited": false
+    },
+    "O3": {
+      "source": "UNSW",
+      "development": [
+        "CIC",
+        "BoT"
+      ],
+      "outer": "ToN",
+      "known": "Reconnaissance_Probing",
+      "unknown": "Availability_Flooding",
+      "full_coordination_status": "NOT_ESTIMABLE_EMPTY_DEVELOPMENT_WINDOWS",
+      "full_experiment_enabled": false,
+      "selection_scope": "NOT_ESTIMABLE",
+      "R_select_known_support_domains": [],
+      "R_cal_known_support_domains": [],
+      "activation_requires": "separate_execution_authorization_and_preflight_support_checks",
+      "O3_full_experiment_prohibited": true
+    },
+    "O4": {
+      "source": "UNSW",
+      "development": [
+        "CIC",
+        "BoT"
+      ],
+      "outer": "ToN",
+      "known": "Availability_Flooding",
+      "unknown": "Reconnaissance_Probing",
+      "full_coordination_status": "CONDITIONAL_ON_NEW_PREDICTION_TARGET_AND_THRESHOLD_SUPPORT",
+      "full_experiment_enabled": false,
+      "selection_scope": "TWO_DOMAIN_SELECTION_KNOWN_SUPPORTED_BY_BoT_ONLY",
+      "R_select_known_support_domains": [
+        "BoT"
+      ],
+      "R_cal_known_support_domains": [
+        "BoT"
+      ],
+      "activation_requires": "separate_execution_authorization_and_preflight_support_checks",
+      "O3_full_experiment_prohibited": false
+    }
+  },
+  "prototype": {
+    "features": "all_49_original_blocks",
+    "numeric_count": 37,
+    "nominal_count": 12,
+    "shared_numeric_scaler_fit": "allowed_S_train_Benign_plus_Known",
+    "numeric_fill": "finite_median",
+    "all_missing_fill": 0,
+    "standardization": "population_mean_std_after_imputation",
+    "constant_scale": 1,
+    "nominal_input": "P1_float64_categorical_auxiliary",
+    "nominal_vocab_fit": "allowed_S_train_Benign_plus_Known",
+    "nominal_encoding": "per_original_feature_one_hot_implicit_allowed",
+    "missing_category": "MISSING",
+    "unseen_category": "OTHER",
+    "missing_distinct_from_OTHER": true,
+    "rare_merge": false,
+    "one_hot_column_standardization": false,
+    "fit_rows": "Known_only_S_train",
+    "numeric_center": "mean_standardized_Known",
+    "nominal_center": "Known_category_frequency_vector",
+    "distance": "(sum_numeric_squared_deviation + 0.5*sum_nominal_squared_onehot_frequency_distance)/49",
+    "original_block_weight": 0.02040816326530612,
+    "nominal_squared_distance_multiplier": 0.5,
+    "representation_or_weight_tuning": false,
+    "minimum_known_records": 100,
+    "minimum_original_source_10k_groups": 20,
+    "minimum_groups_are_not_independence_claim": true,
+    "failure": "PROTOTYPE_NOT_ESTIMABLE_STOP_DEPENDENT_OPENSET"
+  },
+  "match_threshold": {
+    "fit": "Known_only_S_competence",
+    "quantile": 0.95,
+    "order_index": "ceil((n+1)*0.95)",
+    "interpolation": "none",
+    "accept": "D_K<=t_K",
+    "minimum_known_records": 1000,
+    "minimum_original_source_10k_groups": 20,
+    "all_distances_finite_required": true,
+    "k_greater_than_n": "NOT_ESTIMABLE",
+    "failure": "MATCH_THRESHOLD_NOT_ESTIMABLE_STOP_DEPENDENT_OPENSET",
+    "pseudo_unknown": "NOT_APPLICABLE_SINGLE_KNOWN_FAMILY",
+    "quantile_search": false,
+    "claim": "source_Known_empirical_distance_only_no_cross_domain_or_unknown_guarantee"
+  },
+  "attack_threshold": {
+    "value": 0.5,
+    "selection": "fixed_before_new_fit_not_optimized",
+    "input": "new_scenario_Platt_or_coordination_fused_probability",
+    "R_select_limit": "O1_O2_O3_no_Known_recall_estimate",
+    "O2_R_cal": "ToN_Known_recall_diagnostic_after_new_predictions_not_selection_evidence"
+  },
+  "reliability": {
+    "bootstrap": {
+      "replicates": 2000,
+      "block_windows": 10,
+      "include_final_short_block": true,
+      "confidence_level": 0.95,
+      "interval": "percentile",
+      "minimum_units_per_evaluation_domain": 20,
+      "paired_methods": true,
+      "recompute_best_single_G0": true,
+      "shift": "retain_original_causal_values",
+      "device": "cuda",
+      "uncertainty_scope": "conditional_on_fitted_models_and_evaluated_domains"
+    },
+    "upper": "one_sided_95th_percentile_2000_paired_10_window_blocks",
+    "mixture": "equal_domain_error_mass_divided_by_equal_domain_accepted_mass",
+    "empty_resample_risk": 1,
+    "interval": "pointwise_development_selection_not_simultaneous_guarantee",
+    "alpha_stop": 0.05,
+    "alpha_final": 0.05,
+    "minimum_coverage": 0.1,
+    "grid": [
+      0.0,
+      0.01,
+      0.02,
+      0.03,
+      0.04,
+      0.05,
+      0.06,
+      0.07,
+      0.08,
+      0.09,
+      0.1,
+      0.11,
+      0.12,
+      0.13,
+      0.14,
+      0.15,
+      0.16,
+      0.17,
+      0.18,
+      0.19,
+      0.2,
+      0.21,
+      0.22,
+      0.23,
+      0.24,
+      0.25,
+      0.26,
+      0.27,
+      0.28,
+      0.29,
+      0.3,
+      0.31,
+      0.32,
+      0.33,
+      0.34,
+      0.35,
+      0.36,
+      0.37,
+      0.38,
+      0.39,
+      0.4,
+      0.41,
+      0.42,
+      0.43,
+      0.44,
+      0.45,
+      0.46,
+      0.47,
+      0.48,
+      0.49,
+      0.5,
+      0.51,
+      0.52,
+      0.53,
+      0.54,
+      0.55,
+      0.56,
+      0.57,
+      0.58,
+      0.59,
+      0.6,
+      0.61,
+      0.62,
+      0.63,
+      0.64,
+      0.65,
+      0.66,
+      0.67,
+      0.68,
+      0.69,
+      0.7,
+      0.71,
+      0.72,
+      0.73,
+      0.74,
+      0.75,
+      0.76,
+      0.77,
+      0.78,
+      0.79,
+      0.8,
+      0.81,
+      0.82,
+      0.83,
+      0.84,
+      0.85,
+      0.86,
+      0.87,
+      0.88,
+      0.89,
+      0.9,
+      0.91,
+      0.92,
+      0.93,
+      0.94,
+      0.95,
+      0.96,
+      0.97,
+      0.98,
+      0.99,
+      1.0
+    ],
+    "stop_coverage": "early_accepted_fraction_of_all_records",
+    "final_coverage": "terminal_accepted_fraction_of_terminal_population",
+    "tie": "max_coverage_then_min_empirical_risk_then_max_threshold",
+    "no_stop": "disable_early_stopping",
+    "no_final": "abstain_terminal_population",
+    "final_population": "remaining_after_frozen_early_stop",
+    "target": "binary_Benign_vs_Attack_correctness_not_Known_Unknown_semantic_correctness",
+    "empty_domain": "NOT_ESTIMABLE_EMPTY_DOMAIN",
+    "insufficient_blocks": "NOT_ESTIMABLE_INSUFFICIENT_BLOCKS",
+    "zero_accepted_point_risk": null,
+    "limits": "O1_O2_Benign_conditional_only_O3_blocked_O4_attack_support_BoT_only"
+  },
+  "windows": {
+    "size": 10000,
+    "keep_original_domain_stream_partition_rank": true,
+    "filter_then_pack_within_original_partition": true,
+    "source_supervised_statistics": "all_retained_rows_including_tail",
+    "development": "complete_10k_only_include_initialization_drop_tail",
+    "outer": "all_three_class_retained_rows_tail_predictions_included",
+    "outer_tail_updates_complete_window_statistics": false,
+    "shift": "previous_completed_complete_window_same_stream",
+    "initial_shift": 0,
+    "cross_partition_predecessor": "only_existing_explicitly_allowed_causal_context",
+    "no_partition_or_domain_expansion": true,
+    "no_small_window_fallback": true
+  },
+  "upstream_new_fits": {
+    "required": [
+      "numeric_fill_scaler",
+      "JSD_bins_vocab_reference",
+      "six_detectors",
+      "Platt",
+      "h",
+      "CRE",
+      "corrective",
+      "PostCRE",
+      "policy",
+      "thresholds",
+      "prototype"
+    ],
+    "old_predictions_reusable_as_new_scenario_predictions": false,
+    "base_model_settings": {
+      "rf": {
+        "backend": "cuml.ensemble.RandomForestClassifier",
+        "views": [
+          "Traffic",
+          "All49"
+        ],
+        "n_estimators": 300,
+        "max_depth": 16,
+        "min_samples_leaf": 2,
+        "min_samples_split": 2,
+        "max_features": "sqrt",
+        "n_bins": 128,
+        "bootstrap": true,
+        "max_samples": 1,
+        "n_streams": 1,
+        "split_criterion": "gini"
+      },
+      "xgb": {
+        "backend": "xgboost",
+        "views": [
+          "Protocol",
+          "All49"
+        ],
+        "device": "cuda:0",
+        "tree_method": "hist",
+        "objective": "binary:logistic",
+        "n_estimators": 400,
+        "max_depth": 6,
+        "learning_rate": 0.05,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "reg_lambda": 1,
+        "min_child_weight": 1,
+        "max_bin": 256
+      },
+      "mlp": {
+        "backend": "torch",
+        "views": [
+          "Behavior",
+          "All49"
+        ],
+        "hidden_sizes": [
+          128,
+          64
+        ],
+        "activation": "ReLU",
+        "optimizer": "Adam",
+        "learning_rate": 0.001,
+        "weight_decay": 0,
+        "epochs": 30,
+        "loss": "BCEWithLogitsLoss",
+        "dtype": "float32",
+        "shuffle_within_source_train_each_epoch": true
+      },
+      "training_prevalence": "natural_S_train",
+      "schedule": [
+        "rf_Traffic",
+        "rf_All49",
+        "xgb_Protocol",
+        "xgb_All49",
+        "mlp_Behavior",
+        "mlp_All49"
+      ]
+    },
+    "calibration": {
+      "method": "Platt",
+      "fit_partition": "S_prob_cal",
+      "input": "logit_raw_attack_probability",
+      "input_probability_epsilon": 1e-07,
+      "penalty": "none",
+      "backend": "torch_cuda_lbfgs"
+    },
+    "logistic_solver": {
+      "backend": "torch.optim.LBFGS",
+      "device": "cuda:0",
+      "dtype": "float64",
+      "max_iter": 2000,
+      "tolerance_grad": 0.0001,
+      "tolerance_change": 1e-12,
+      "line_search_fn": "strong_wolfe",
+      "history_size": 20,
+      "initial_parameters": 0,
+      "closure": "full_dataset_weighted_loss_and_gradient_accumulated_in_chunks"
+    },
+    "cre": {
+      "models_per_detector": [
+        [
+          "u"
+        ],
+        [
+          "h",
+          "u"
+        ],
+        [
+          "h",
+          "u",
+          "s"
+        ]
+      ],
+      "other_baselines": [
+        "R_fit_equal_domain_correctness_prior",
+        "raw_h",
+        "raw_1_minus_u_ranking"
+      ],
+      "fit_partition": "R_fit",
+      "diagnostic_partition": "R_cal",
+      "gate_partition": "R_select",
+      "domain_weight": "N_total/(2*N_domain)",
+      "scaler": "R_fit_weighted_mean_and_population_variance",
+      "constant_scale": 1,
+      "objective": "weighted_BCE_sum/W + squared_beta_norm/(2*C*W)",
+      "C": 1,
+      "intercept_penalty": 0,
+      "correctness_class_weight": "natural",
+      "additional_meta_calibration": "none",
+      "nonlinear_sensitivity": {
+        "backend": "xgboost_cuda",
+        "inputs": [
+          [
+            "h",
+            "u"
+          ],
+          [
+            "h",
+            "u",
+            "s"
+          ]
+        ],
+        "n_estimators": 200,
+        "max_depth": 3,
+        "learning_rate": 0.05,
+        "other_parameters": "models.xgb"
+      }
+    },
+    "corrective": {
+      "inputs": [
+        "h_i",
+        "u_i",
+        "s",
+        "yhat_i"
+      ],
+      "target": "current_wrong_and_peer_correct",
+      "model": "CUDA_logistic",
+      "solver": {
+        "backend": "torch.optim.LBFGS",
+        "device": "cuda:0",
+        "dtype": "float64",
+        "max_iter": 2000,
+        "tolerance_grad": 0.0001,
+        "tolerance_change": 1e-12,
+        "line_search_fn": "strong_wolfe",
+        "history_size": 20,
+        "initial_parameters": 0,
+        "closure": "full_dataset_weighted_loss_and_gradient_accumulated_in_chunks"
+      },
+      "C": 1,
+      "single_label": "equal_domain_Laplace_rate_(weighted_positive+1)/(W+2)"
+    },
+    "post": {
+      "inputs": [
+        "mask_RF",
+        "mask_XGB",
+        "mask_MLP",
+        "p_RF",
+        "p_XGB",
+        "p_MLP",
+        "r_RF",
+        "r_XGB",
+        "r_MLP",
+        "fused_probability",
+        "max_observed_probability_difference",
+        "s"
+      ],
+      "absent_slots": 0,
+      "subsets": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "target": "fused_prediction_correct",
+      "model": "CUDA_logistic",
+      "solver": {
+        "backend": "torch.optim.LBFGS",
+        "device": "cuda:0",
+        "dtype": "float64",
+        "max_iter": 2000,
+        "tolerance_grad": 0.0001,
+        "tolerance_change": 1e-12,
+        "line_search_fn": "strong_wolfe",
+        "history_size": 20,
+        "initial_parameters": 0,
+        "closure": "full_dataset_weighted_loss_and_gradient_accumulated_in_chunks"
+      },
+      "C": 1,
+      "weights": "expanded_rows/(14*domain_rows); W=7*N_total",
+      "scaler": "weighted_mean_population_variance_R_fit_only"
+    },
+    "initial_detector": "minimum_equal_domain_error_on_R_cal_tie_RF_XGB_MLP",
+    "methods": {
+      "coordinator": "corrective_g_over_normalized_cost; PreCRE_fusion; PostCRE",
+      "fixed_cascade": "six_fixed_permutations; PreCRE_fusion; PostCRE",
+      "learned_cascade": "corrective_g_without_cost; PreCRE_fusion; PostCRE",
+      "random": "seeded_uniform_next; PreCRE_fusion; PostCRE",
+      "cheapest": "min_unqueried_cost; PreCRE_fusion; PostCRE",
+      "uncertainty": "pair_corrective_logistic_using_only_current_u; PreCRE_fusion; PostCRE",
+      "best_single": "R_cal_selected_initial; PreCRE_reliability",
+      "uniform": "R_cal_error_order_up_to_cap; uniform_fusion",
+      "static": "R_cal_error_order_up_to_cap; R_fit_equal_domain_correctness_weights",
+      "confidence": "R_cal_error_order_up_to_cap; weights_1-u",
+      "soft_moe": "query_R_cal_order_up_to_cap_then_softmax_linear_gate_over_queried; features_mask_p_r_s; R_fit_all_7_subsets_equal_weight; weighted_attack_BCE; CUDA_LBFGS_C1",
+      "hard_moe": "initial_evidence_logistic_models_predict_each_peer_correctness; select_max_expected_correctness_including_initial; tie_RF_XGB_MLP; charge_initial_plus_selected; max_2_calls"
+    },
+    "budget": {
+      "calls": [
+        1,
+        1.25,
+        1.5,
+        1.75,
+        2,
+        2.25,
+        2.5,
+        2.75,
+        3
+      ],
+      "normalized_cost": "call_budget/3*(sum_three_query_costs+maximum_measured_full_method_overhead+maximum_shared_shift_amortization)",
+      "randomized_mixtures": "all_pairs_of_cap_operating_points_lambda_grid_0_to_1_step_0.01; expected_counts_and_cost; independent_seeded_record_choice_at_runtime",
+      "selection": "max_expected_coverage_subject_risk<=.05_coverage>=.10_calls_and_cost_budgets; tie_min_risk_then_min_cost_then_cap_ids_lambda",
+      "infeasible": "NO_FEASIBLE_MATCHED_OPERATING_POINT",
+      "statistics": "development_selection_only; no_heldout_claim"
+    },
+    "latency": {
+      "warmup": 30,
+      "measurements": 1000,
+      "records": "500_uniform_R_cal_positions_per_development_domain; warmup_first30",
+      "query_cost": "host_one_flow_to_source_preprocess_view_detector_Platt_h_u_and_synchronized_host_evidence",
+      "normalization": "median_of_three_query_medians",
+      "components": "query_chain_plus_method_specific_stage_overhead_including_PreCRE_route_fusion_PostCRE_plus_P3_measured_JSD_amortization; report_estimated_composite_cost_from_measured_components",
+      "timing": "perf_counter_ns_with_CUDA_synchronize",
+      "batch": "same_1000_records_one_batch_throughput_separately"
+    },
+    "visibility": "runtime_accessor_reads_detector_evidence_only_after_query; training_labels_separate; poison_unqueried_and_future_evidence_invariance_checks",
+    "h": "(correct+1)/(predicted_count+2); empty_count_0.5_prior_flag",
+    "CRE_single_label": "NOT_FITTABLE_SINGLE_CORRECTNESS_CLASS_STOP_DEPENDENT_CHAIN",
+    "corrective_PostCRE_single_label": "CONSTANT_SINGLE_LABEL_Laplace_no_learned_correction_claim",
+    "Platt_single_label": "NOT_FITTABLE",
+    "GPU": "when_supported",
+    "minimum_required_followup": [
+      "new_correctness_labels_support",
+      "new_joint_corrective_labels_support",
+      "solver_convergence",
+      "actual_threshold_feasibility"
+    ]
+  },
+  "decision": {
+    "on_reliability_accept": "a<0.5:Benign; else D<=t_K:Known; else:Unknown",
+    "otherwise": "Abstain",
+    "missing_class_match": "NOT_ESTIMABLE_not_all_Unknown",
+    "report_binary_and_three_class_risk_separately": true
+  },
+  "exposure_record": {
+    "recorded_at_utc": "2026-09-07T23:57:41.942021+00:00",
+    "development_support_counts_seen": true,
+    "outer_class_counts_seen": true,
+    "old_P4_P6_results_and_Item12_audit_seen": true,
+    "new_scenario_predictions_or_outer_performance_seen": false,
+    "not_original_preregistration": true,
+    "evidence": [
+      "item3_data_support_audit_20260908/Item3_Data_Support_Audit.md",
+      "item3_protocol_revision_draft_20260908/Item3_Feasibility_Check.md",
+      "item3_protocol_revision_draft_20260908/candidate_partition_counts.csv",
+      "item3_protocol_revision_draft_20260908/candidate_evaluation_scope_counts.csv"
+    ],
+    "interpretation": "post_support_audit_rule_freeze_before_new_scenario_fit; no retrospective_freeze"
+  },
+  "normative_rules_zh": "## A. Scenario scope [frozen]\n\n| Scenario | Source | Development | Outer | Fitted Known | Specified Unknown |\n|---|---|---|---|---|---|\n| O1 | UNSW | CIC、ToN | BoT | Reconnaissance_Probing | Availability_Flooding |\n| O2 | UNSW | CIC、ToN | BoT | Availability_Flooding | Reconnaissance_Probing |\n| O3 | UNSW | CIC、BoT | ToN | Reconnaissance_Probing | Availability_Flooding |\n| O4 | UNSW | CIC、BoT | ToN | Availability_Flooding | Reconnaissance_Probing |\n\nFit strictly Benign and specified Known. Quarantine Unknown before all fitting;exclude other attacks from the entire main scenario. Other is neither Benign nor Unknown and contributes to no vocabulary,imputation,scaling,models,prototypes,h,thresholds/policies. Follow taxonomy/native labels without creating separate Known families from DoS/DDoS sublabels.\n\nSource S_train trains detectors/scenario preprocessing/reference/prototypes;S_prob_cal fits Platt;S_competence estimates h/Known distance thresholds;S_source_test only evaluates frozen models. Filter all source partitions first. Register S_competence’s dual role;do not select representations/distances/quantiles there. Its coverage is source calibration,not independent testing.\n\nTwo development R_fit domains fit CRE,corrective/Post-CRE;R_cal selects initial detector/diagnoses;R_select selects registered policies/reliability thresholds. Keep equal domain weights N/(2N_d),even when Known is absent. Outer records/labels cannot supplement development support.\n\nQuarantined source/development Unknown remains raw data,without an additional tuning/validation channel. Main outer evaluation retains only Benign,Known,specified Unknown;exclude Other from metrics/replay and disclose counts/retention. This taxonomy-filtered controlled scenario does not represent full native traffic. Labels are used only for predefined data construction,not inference.\n\nBoT O1/O2 each exclude1,615 Theft records;ToN O3/O4 each exclude5,024,357 Other records. Other partition counts are in candidate_partition_counts.csv;do not adjust them by scenario outcomes.\n\n## B. Retained rows, windows and insufficient support [frozen]\n\nPreserve domain,stream,partition,record_id/availability order. Filter/form sequential windows only within original partitions,without borrowing rows across boundaries.\n\nSource supervised fitting,Platt,h/prototype-distance samples use all retained rows,including tails shorter than10k. JSD reference uses all allowed S_train. Development CRE/selection use filtered complete10k windows,including initialization but excluding incomplete tails. Shift uses the prior completed full window,initial0;cross-partition context requires existing explicit permission. Tails are never full predecessors.\n\nFuture outer replay forms windows on the predefined retained three-class stream. Tail records still receive predictions/3×4 counts,using the preceding completed full window without updating full-window statistics. Initialize0 if absent and flag it. Separate full-window/block metrics from all-row metrics. This tail rule is frozen here.\n\nIf a development partition has0 complete windows,mark the two-domain task NOT_ESTIMABLE_EMPTY_DOMAIN. Do not assign the other domain weight1 or describe this as no threshold passing. O3 already has this blocker and does not execute full outer coordination. Feasible source tasks do not remove it. Any substitute branch requires a separately proposed/frozen rule.\n\n## C. Features, prototypes and distance [frozen]\n\nRetain49 features and17/17/15 views. Prototypes use49 original-feature blocks:37 numeric/12 nominal per current shift list. Model views remain unchanged.\n\n1. Convert numeric±Inf to missing;impute valid medians from allowed scenario S_train (Benign+Known). Entirely missing columns use0 and are logged. Standardize to z with the same population mean/standard deviation,scale=1 for constants. Other partitions only transform. Do not reuse old full-S_train prototype statistics.\n2. Nominal values use P1 float64 auxiliary originals;build vocabulary only from allowed scenario S_train. Reserve distinct MISSING/OTHER symbols;nonfinite values→MISSING,valid unseen values→OTHER. No rare-category merging,target vocabulary expansion or ordinal Euclidean encoding.\n3. Represent each categorical original feature with its own one-hot block,without per-column variance standardization. Compute high-cardinality blocks implicitly if desired;dense matrices are unnecessary. This is class-match representation only. Detectors retain numeric encodings/imputation but refit source fills per scenario;do not mix representations.\n4. Known prototypes use only corresponding S_train:mean z vector μ_K and category-frequency vectors π_Kj. Benign contributes shared preprocessing only,not Known centers. Do not fit Unknown/Other prototypes.\n5. Fixed squared distance:\n\n   D_K(x) = [Σ_(j∈numeric)(z_j−μ_Kj)² + 0.5 Σ_(j∈categorical)||e_j(x)−π_Kj||²] / 49。\n\n   Each original-feature block has weight1/49;categorical0.5 gives distinct one-hot points contribution1. Categorical distance is(1−2π_Kj[value]+Σπ_Kj²)/2,preventing automatic weighting by block width. Numeric squares may exceed1,so equal weights do not imply equal empirical contributions. This is a new fixed rule,not derived from mean JSD.\n6. Do not fit PCA,embeddings,covariance/distance weights or select features by development results. All distance inputs/outputs must be finite;repair the responsible module rather than discarding anomalous records for support.\n\nJSD remains causal shift over49 marginals;refit bins/vocabularies on allowed scenario S_train. Save separate OTHER/prototype encoding manifests rather than reusing old vocabularies and claiming quarantine.\n\n## D. Source distance quantile and minimum support [frozen]\n\nFix q=0.95 without a grid. After S_train fixes μ,π/preprocessing,sort all scenario S_competence Known distances D_(1)…D_(n),take k=ceil((n+1)q),t_K=D_(k). D_K≤t_K matches,D_K>t_K does not;include equality,no interpolation. k>n is non-estimable,not an infinite threshold. This order statistic does not guarantee distribution-free coverage with temporal dependence/cross-domain shift.\n\nPrototype minimum:100 Known records spanning≥20 original source10k groups. Threshold minimum:1,000 Known distances spanning≥20 original source10k groups. Groups describe temporal coverage,not independence. These operational limits lack established statistical sufficiency and are distinct from G0/G1 gates.\n\nCurrent support:Recon S_train=5,386/46 groups,S_competence=4,520/35;Flood=1,739/46 and1,551/35. Both pass candidate counts. Threshold order indices k=4,295/1,475;distance/threshold values remain uncomputed.\n\nInsufficient n/group coverage/finiteness gives PROTOTYPE_NOT_ESTIMABLE or MATCH_THRESHOLD_NOT_ESTIMABLE. Do not lower limits,borrow R_fit/outer rows or classify everything Unknown when a prototype is missing. Stop the four-action scheme;future separately authorized source binary metrics are not a complete open-set experiment.\n\nSingle-Known scenarios use NOT_APPLICABLE_SINGLE_KNOWN_FAMILY. Remove mandatory leave-one-known-family-out here,without substituting native sublabels or specified outer Unknown. Future multi-family extensions need independent rules/confirmation,not post-hoc attribution to this main experiment.\n\n## E. Three thresholds and four actions [frozen]\n\n### E1. Class-matching threshold t_K\n\nFrom S_competence Known distances per section D. It concerns source Known distance distribution,not Attack probability,unknown-detection guarantees or reliability probability.\n\n### E2. Attack-evidence threshold τ_A\n\nAll O scenarios fix τ_A=0.5 for new Platt/fused probability a(x),matching binary correctness’s0.5 boundary. Specify uniformly before fitting;even O4 with development Known does not optimize this threshold.\n\nDo not maximize Attack F1/Youden/open-set thresholds on R_select lacking Known. O1–O3 cannot assess Known recall there. O2 ToN R_cal supports future recall diagnostics after new predictions,but does not replace R_select. No scenario selects τ_A with quarantined Unknown. Fixed0.5 defines actions without guaranteeing calibrated fusion or good Known/Unknown recall.\n\n### E3. Early stopping and final acceptance/abstention τ_stop,τ_final\n\nApply P6 candidates to new populations:equal-domain R_select,grid0…1 step0.01,stop/final risk limit0.05,minimum coverage0.10,2,000 paired replicates in10-complete-window blocks,retaining final short blocks;≥20 blocks/domain. Share draws/retain causal shift. One-sided95% percentile upper bounds are pointwise development evidence,not simultaneous post-selection or outer safety guarantees.\n\nEarly coverage counts early accepts/all records;final coverage counts final accepts/remaining terminal population. Ties:max coverage,min empirical risk,max threshold. No early threshold disables early stopping;no final threshold abstains on the terminal population. Zero-accept risk is undefined;original bootstrap treats zero-accept replicate risk as1. Empty domains/inadequate blocks are non-estimable,not failed candidate scans.\n\nO1/O2 thresholds are BENIGN_CONDITIONAL_SELECTION only:support for false alarms/Benign correctness,without validation of misses/open-set class errors. O3 lacks two-domain selection;do not invent thresholds. O4 supports overall two-domain selection with Attack evidence from BoT;report by domain.\n\nFuture R_fit predictions must verify correctness labels. Single-label primary P4 CRE remains NOT_FITTABLE_SINGLE_CORRECTNESS_CLASS,without an automatic constant substitute completing the chain. Six corrective models/Post-CRE retain P6 Laplace constants,but label CONSTANT_SINGLE_LABEL and absent empirical positive/negative support,without claiming learned correction. Empty h predicted classes likewise have prior support0. Register every scenario-specific application.\n\n### E4. Action order and risk interpretation\n\nWhen prerequisites/thresholds are estimable,acquire evidence under the new frozen policy. After passing early/final reliability,output Benign if a(x)<0.5;otherwise Known if D_K≤t_K,Unknown if D_K>t_K. Failed reliability gives Abstain. Missing matching thresholds make the entire open-set scheme non-estimable,not Unknown.\n\nPre/Post-CRE predicts binary Benign/Attack correctness. Passing τ_final does not imply Known/Unknown semantic correctness≥0.95. Separately report binary selective risk,three-class semantic errors,3×4 truth-action matrix and abstention. Measure prototype cost separately in future scenarios without rewriting old P6 costs.\n\n## F. Non-estimable branches and claims [frozen]\n\nO3 full coordination remains NOT_ESTIMABLE,without outer main comparison. Do not transfer O1 thresholds,substitute source for two-domain policy thresholds or resplit. O1/O2 only support Benign-conditional selection;outer attacks are first evaluated after freezing. O4 has Attack validation in only one development domain.\n\nSupported discussion covers controlled-family source prototypes,source Known matching coverage,applicable Benign-conditional selection and one frozen descriptive outer open-set evaluation. Development risk bounds cannot validate unknown recognition,all-family coverage or transfer of old P4 G0/G1/P6 eligibility to filtered populations.\n\nList every O scenario,including unrun,non-estimable and negative outcomes. Do not report only runnable/favorable ones."
+}
